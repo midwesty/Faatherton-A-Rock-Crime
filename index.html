@@ -3,7 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>FAATHERTON — Prototype</title>
+<title>FAATHERTON — A Rock Crime</title>
+<meta name="description" content="Seven guys, one lineup, since 2000. A browser RPG made for Faatherton's reunion show — recruit the band, build the rig, play the set.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0710'/%3E%3Cpath d='M3 21 L7 9 L11 21 L15 7 L19 21 L23 9 L27 21' fill='none' stroke='%23ffb43c' stroke-width='2.4' stroke-linejoin='miter'/%3E%3Crect x='3' y='24' width='26' height='3' fill='%23ff2d7a'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0710'/%3E%3Cpath d='M3 21 L7 9 L11 21 L15 7 L19 21 L23 9 L27 21' fill='none' stroke='%23ffb43c' stroke-width='2.4' stroke-linejoin='miter'/%3E%3Crect x='3' y='24' width='26' height='3' fill='%23ff2d7a'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0b0710">
+<meta name="color-scheme" content="dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Faatherton">
+<!-- How the link looks when it lands in a group chat. og:image is relative, so
+     it resolves wherever this is hosted; drop a 1200x630 preview.png beside
+     index.html and the card gets a picture. Without one the card still renders
+     with the title and the line above. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Faatherton">
+<meta property="og:title" content="FAATHERTON — A Rock Crime">
+<meta property="og:description" content="Seven guys, one lineup, since 2000. Recruit the band, build the rig, play the set.">
+<meta property="og:image" content="preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FAATHERTON — A Rock Crime">
+<meta name="twitter:description" content="Seven guys, one lineup, since 2000. Recruit the band, build the rig, play the set.">
+<meta name="twitter:image" content="preview.png">
 <style>
 :root{
   --ink:#0b0710; --deep:#2a1240; --magenta:#ff2d7a; --amber:#ffb43c;
@@ -44,7 +67,17 @@ button[aria-pressed=true]{background:var(--magenta);border-color:var(--magenta);
 #cutwho{font-family:var(--mono);font-size:calc(11px*var(--fs));letter-spacing:.2em;text-transform:uppercase;
   color:var(--amber);margin:0 0 8px}
 #cuttxt{font-size:calc(16px*var(--fs));line-height:1.55;margin:0;min-height:3.2em;color:#e6dff0}
-#cutnext{position:absolute;right:12px;bottom:10px;font-family:var(--mono);font-size:10px;color:var(--dim)}
+#cutnext{position:absolute;right:12px;bottom:10px;font-family:var(--mono);
+  font-size:calc(11px*var(--fs));letter-spacing:.06em;color:var(--cyan);opacity:.9}
+#cutnext.typing{color:var(--dim);opacity:.75}
+@media (prefers-reduced-motion:no-preference){
+  #cutnext:not(.typing){animation:nextpulse 1.6s ease-in-out infinite}
+}
+@keyframes nextpulse{0%,100%{opacity:.55}50%{opacity:1}}
+/* Secondary on purpose. Tap target stays 44px; only the weight comes down. */
+#cutskip{background:transparent;border-color:#2e2142;color:var(--dim);
+  font-size:calc(9.5px*var(--fs));padding:11px 10px;opacity:.75}
+#cutskip:hover:not(:disabled){border-color:var(--dim);color:var(--bone);opacity:1}
 #cutbar{display:flex;gap:8px;margin-top:10px}
 
 /* ---- battle ---- */
@@ -293,6 +326,54 @@ button.lu:disabled span.go{color:var(--dim)}
   text-transform:uppercase;color:var(--slime);margin-bottom:3px}
 @keyframes tin{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.toast{animation:none}}
+
+/* ==========================================================================
+   PHONES. The viewport is set to viewport-fit=cover but nothing ever accounted
+   for the inset, so on an iPhone the bottom row of controls sat under the home
+   indicator. Everything below is additive — it changes nothing on a desktop.
+   ========================================================================== */
+/* A centred flex column clips its own top once the content is taller than the
+   screen, and the clipped part cannot be scrolled to. That hit the tutorial
+   cards, the pedal cards and the skip confirm on a short screen. Browsers that
+   do not know `safe` ignore this line and keep the old behaviour. */
+#modal{justify-content:safe center}
+
+@supports (padding:env(safe-area-inset-bottom)){
+  #cut,#explore,#dialog,#puzzle,#mapbar,#diner,#photobar{
+    padding-bottom:calc(12px + env(safe-area-inset-bottom)) }
+  #bandstrip{ bottom:calc(58px + env(safe-area-inset-bottom)) }
+  #rigDot,#adminDot{ bottom:calc(8px + env(safe-area-inset-bottom)) }
+  #archive{ padding-bottom:calc(40px + env(safe-area-inset-bottom)) }
+}
+
+@media (max-width:480px){
+  /* 8px type is below what anyone reads on a phone at arm's length. */
+  #bandstrip{gap:3px;padding:6px}
+  #bandstrip .who{min-width:52px;padding:4px}
+  #bandstrip .nm{font-size:calc(9.5px*var(--fs));letter-spacing:.03em}
+  #bandstrip .num{font-size:calc(9.5px*var(--fs))}
+  #bandstrip .cash b{font-size:calc(11px*var(--fs))}
+  #bandstrip .cash span{font-size:calc(8.5px*var(--fs))}
+  #bandstrip .cash{padding:5px 6px}
+  /* Four tabs squeezed onto one line turn into unreadable slivers. */
+  #arTabs{display:flex;flex-wrap:wrap;gap:6px}
+  #arTabs button{flex:1 1 44%}
+  #archive{padding:12px 10px 40px}
+  #arBody h3{font-size:calc(22px*var(--fs))}
+  /* The cards: less chrome, more room for the words. */
+  #modal{padding:16px 14px}
+  #modal h2{font-size:clamp(26px,8.5vw,44px)}
+  #modal p{font-size:calc(14px*var(--fs))}
+  #modal .row button{flex:1 1 100%}
+  /* Keep the skip hint clear of the text it sits under. */
+  #cutbox{padding:12px 12px 34px}
+  #cutnext{right:10px;bottom:8px}
+}
+/* Short screens — a phone held sideways. */
+@media (max-height:460px){
+  #modal{justify-content:flex-start;padding-top:14px}
+  #modal h2{font-size:clamp(22px,6vw,34px)}
+}
 #rigDot{position:fixed;left:8px;bottom:8px;z-index:60;width:36px;height:36px;min-height:36px;
   padding:0;border-radius:50%;opacity:.55;font-size:16px;line-height:1}
 #rigDot:hover{opacity:1}
@@ -349,7 +430,7 @@ body.cb .pc.ready .n:before,body.hc .pc.ready .n:before{content:"\25b8 "}
     <div id="cutbox">
       <p id="cutwho"></p>
       <p id="cuttxt"></p>
-      <span id="cutnext">tap to continue</span>
+      <span id="cutnext" aria-live="polite">tap to continue</span>
       <div id="cutbar"><button id="cutskip">Skip scene</button></div>
     </div>
   </div>
@@ -401,7 +482,7 @@ body.cb .pc.ready .n:before,body.hc .pc.ready .n:before{content:"\25b8 "}
     <button id="mArchive">The Archive</button>
     <button id="mBattle">Battle sandbox (full band)</button>
     <button id="mSet">Settings</button>
-    <p class="ver">prototype v1.32 &middot; onboarding · data layer · accessibility · the shot · the archive · cinematics · audio · the finale · duets · overdubs · kfat · the vfw · set streak · cinematic scenes · c-street · the lake · ascension · pedalboard · shop · admin · saves · map · rooms · dialogue · battle</p>
+    <p class="ver">v1.33 &middot; ready to share &middot; onboarding · data layer · accessibility · the shot · the archive · cinematics · audio · the finale · duets · overdubs · kfat · the vfw · set streak · cinematic scenes · c-street · the lake · ascension · pedalboard · shop · admin · saves · map · rooms · dialogue · battle</p>
   </div>
 
   <div id="credits" class="hidden"><div id="crScroll"></div>
@@ -3806,7 +3887,21 @@ function live(id){                       // who this member is RIGHT NOW, post-a
 function pendingAscensions(){            // fired this turn but not yet announced
   return roster().map(live).filter(c=>c&&c.ascended&&!G.flags['seen_'+c.id]);
 }
-function best(stat){return Math.max.apply(null, roster().map(id=>CAST.find(c=>c.id===id).stats[stat]));}
+/* best() used to read stats[stat] raw, so a stat named in the Builder with any
+   other casing ('Presence' vs the PRESENCE the table is keyed by) came back
+   undefined and the player was shown NaN. An empty roster returned -Infinity
+   for the same reason. Both are now answered with a number. */
+function statOf(c,stat){
+  if(!c||!c.stats||!stat)return 0;
+  if(c.stats[stat]!=null)return +c.stats[stat]||0;
+  const want=String(stat).toUpperCase();
+  const k=Object.keys(c.stats).find(k2=>k2.toUpperCase()===want);
+  return k?(+c.stats[k]||0):0;
+}
+function best(stat){
+  const vals=roster().map(id=>statOf(CAST.find(c=>c.id===id),stat));
+  return vals.length?Math.max.apply(null,vals):0;
+}
 function has(f){return !!G.flags[f];}
 function setFlag(f){G.flags[f]=true;}
 function give(id){if(!G.inv.includes(id))G.inv.push(id);}
@@ -4937,6 +5032,20 @@ function startDialog(id){
   DG.voice=DIALOG[id].voice||'npc';
   S.scene='dialog';showOnly(['dialog']);navPush();renderDialog();
 }
+function escText(t){
+  return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+/* One source of truth for a stat check: the check. */
+function optionLabel(o){
+  const words=escText(String(o.label||'').replace(/^\s*\[[^\]]*\]\s*/,''));
+  if(!o.check)return escText(o.label);
+  const st=String(o.check.stat||'').toUpperCase();
+  const dc=+o.check.dc||0, mine=best(st);
+  return '<span class="chk'+(mine>=dc?'':' fail')+'">['+escText(st)+' '+dc+
+         ' \u2014 your best is '+mine+']</span> '+words;
+}
+
 function renderDialog(msg){
   const t=DG.tree,n=t.nodes[DG.node];
   document.getElementById('dgWho').textContent=t.who;
@@ -4952,10 +5061,12 @@ function renderDialog(msg){
   n.opts.forEach((o,oi)=>{
     const b=document.createElement('button');
 
-    b.innerHTML=(o.check
-      ? o.label.replace(/^\[(\w+) (\d+)\]/,(m,st,dc)=>
-          '<span class="chk'+(best(st)>=+dc?'':' fail')+'">['+st+' '+dc+' \u2014 your best is '+best(st)+']</span>')
-      : o.label);
+    /* The badge is built from the check itself, never scraped back out of the
+       label. Parsing the prose meant the stat had to be typed in exact caps or
+       the player saw NaN, and a label saying [PRESENCE 9] could sit over a
+       check set to 8 and quietly tell the player the wrong number. Whatever
+       bracket prefix he typed is dropped and the real one put in its place. */
+    b.innerHTML=optionLabel(o);
     b.onclick=()=>{
       if(o.end){endDialog();return;}
       if(o.check){
@@ -5259,7 +5370,16 @@ function stepScene(){
   document.getElementById('cutwho').textContent=st.who||'';
   document.getElementById('cutwho').style.color=st.color||'var(--dim)';
   document.getElementById('cuttxt').textContent='';
-  document.getElementById('cutnext').style.opacity='0';
+  setCutHint(false);
+}
+/* While the line is still typing, a tap speeds it up; once it is done, a tap
+   moves on. Saying so is what stops people reaching for Skip scene — which
+   used to be the only visible control during the whole typing animation. */
+function setCutHint(done){
+  const el=document.getElementById('cutnext'); if(!el)return;
+  el.textContent=done?'tap to continue':'tap to speed up';
+  el.classList.toggle('typing',!done);
+  el.style.opacity='1';
 }
 function typeTick(dt){
   const T=CUT.type; if(!T||T.done)return;
@@ -5270,14 +5390,13 @@ function typeTick(dt){
   T.blip+=dt*cps;
   if(T.blip>=3){ T.blip=0; const c=T.full[n-1]||'';
     if(c&&c!==' ')sfx(T.voice, 0.94+Math.random()*0.12); }
-  if(n>=T.full.length){ T.done=true;
-    document.getElementById('cutnext').style.opacity='1'; }
+  if(n>=T.full.length){ T.done=true; setCutHint(true); }
 }
 function finishTyping(){
   const T=CUT.type; if(!T||T.done)return false;
   T.shown=T.full.length; T.done=true;
   document.getElementById('cuttxt').textContent=T.full;
-  document.getElementById('cutnext').style.opacity='1';
+  setCutHint(true);
   return true;
 }
 function advScene(){ if(finishTyping())return; CUT.i++;stepScene();}
@@ -5376,10 +5495,32 @@ function gotoBeat(name,beat){
 function endScene(){if(CUT.after)CUT.after();else toMenu();}
 document.getElementById('cut').addEventListener('click',e=>{
   if(e.target.id==='cutskip')return; advScene();});
-document.getElementById('cutskip').onclick=e=>{e.stopPropagation();
+function doSkipScene(){
   while(CUT.script[CUT.i]&&!CUT.script[CUT.i].battle&&!CUT.script[CUT.i].menu
         &&!CUT.script[CUT.i].map&&!CUT.script[CUT.i].room&&!CUT.script[CUT.i].recruit)CUT.i++;
-  stepScene();};
+  stepScene();
+}
+/* Skipping throws away the whole rest of the scene, so it asks first. The
+   answer buttons sit in the middle of the screen, deliberately nowhere near
+   where the thumb just was — a confirm under the finger is no confirm. */
+function askSkipScene(){
+  const m=document.getElementById('modal');
+  if(!m){ doSkipScene(); return; }
+  const wasHidden=m.classList.contains('hidden'), hadClass=m.className;
+  m.className=''; m.classList.remove('hidden');
+  m.innerHTML='<h2>Skip the scene?</h2>'+
+    '<p>This jumps past the rest of this conversation to whatever happens next. '+
+    'You will not be able to read it again from here.</p>'+
+    '<div class="row" style="margin-top:14px">'+
+    '<button id="skNo">Keep watching</button>'+
+    '<button id="skYes">Skip the rest</button></div>';
+  const close=()=>{ m.innerHTML=''; m.className=hadClass;
+    if(wasHidden)m.classList.add('hidden'); };
+  document.getElementById('skNo').onclick=e=>{e.stopPropagation();close();};
+  document.getElementById('skYes').onclick=e=>{e.stopPropagation();close();doSkipScene();};
+  const no=document.getElementById('skNo'); if(no&&no.focus)try{no.focus();}catch(e){}
+}
+document.getElementById('cutskip').onclick=e=>{e.stopPropagation();askSkipScene();};
 
 /* ==========================================================================
    BATTLE
@@ -6383,6 +6524,7 @@ function showOnly(list){
 }
 /* TITLE — an animated opening. Letters slam in one at a time out of the dark
    while the rig sweeps, then the subtitle, then a fade into the cell. */
+const TITLE_HOLD=2.6;                      // seconds the finished card holds
 const TITLE={t:0,run:false,after:null};
 function runTitle(after){
   TITLE.t=0;TITLE.run=true;TITLE.after=after||null;
@@ -6414,7 +6556,7 @@ function drawTitle(t,dt){
   ctx.font='700 '+Math.round(size)+'px '+
     getComputedStyle(document.documentElement).getPropertyValue('--display');
   ctx.textAlign='center';ctx.textBaseline='middle';
-  const step=S.reduce?0.02:0.13, total=word.length*step;
+  const step=S.reduce?0.07:0.13, total=word.length*step;
   let wsum=0; const widths=[];
   for(const ch of word){const w2=ctx.measureText(ch).width*0.92;widths.push(w2);wsum+=w2;}
   let x0=W*0.5-wsum/2;
@@ -6432,9 +6574,9 @@ function drawTitle(t,dt){
     ctx.restore();
     x0+=widths[i];
   }
-  const subAt=T-(0.35+total+0.35);
+  const subAt=T-(0.35+total+0.30);
   if(subAt>0){
-    ctx.globalAlpha=Math.min(1,subAt/0.5);
+    ctx.globalAlpha=Math.min(1,subAt/0.35);
     ctx.font='600 '+Math.round(Math.max(12,H*0.035))+'px '+
       getComputedStyle(document.body).fontFamily;
     ctx.fillStyle=PALETTE.amber;
@@ -6450,7 +6592,11 @@ function drawTitle(t,dt){
     ctx.fillStyle=PALETTE.dim||'#8a7f9c';
     ctx.fillText('tap to skip',W*0.5,H*0.94);ctx.globalAlpha=1;
   }
-  if(T>(0.35+total+1.9)){ endTitle(); }
+  /* 'A ROCK CRIME' used to be fully legible for about one second before the
+     card dismissed itself — and with reduced motion on, the whole thing was
+     over in 2.45s. The hold is now counted from when the subtitle is actually
+     readable, so it reads the same however fast the letters came in. */
+  if(T>(0.35+total+0.30+0.35+TITLE_HOLD)){ endTitle(); }
 }
 /* ==========================================================================
    THE ARCHIVE — jukebox, liner notes, flyer wall.
@@ -6729,6 +6875,46 @@ function updateCredits(dt){
 }
 function toMenu(){S.scene='menu';S.bg='stage';B=null;showOnly(['menu']);
   playMusic(musicFor('menu'));refreshContinue();}
+/* Settings used to reset every reload. They are written through the same Store
+   wrapper the saves use, so a browser that refuses storage (Safari private
+   mode) falls back to memory instead of throwing. Watched from the frame loop
+   rather than wired into a dozen handlers, so nothing can be missed later. */
+const PREF_KEY=SAVE.prefix+'prefs';
+const PREF_FIELDS=['reduce','lights','fs','speed','tutorials','flashCap',
+                   'contrast','cb','story','captions'];
+const PREF_AUDIO=['master','music','sfx','muted'];
+function prefSig(){
+  return PREF_FIELDS.map(k=>S[k]).join('\u0001')+'\u0002'+
+         PREF_AUDIO.map(k=>AUDIO_CFG[k]).join('\u0001');
+}
+let _prefSeen=null,_prefTimer=null;
+function savePrefs(){
+  const o={};
+  PREF_FIELDS.forEach(k=>o[k]=S[k]);
+  PREF_AUDIO.forEach(k=>o['a_'+k]=AUDIO_CFG[k]);
+  try{ Store.set(PREF_KEY,JSON.stringify(o)); }catch(e){}
+}
+function watchPrefs(){
+  const sig=prefSig();
+  if(_prefSeen===null){_prefSeen=sig;return;}
+  if(sig===_prefSeen)return;
+  _prefSeen=sig;
+  if(_prefTimer)clearTimeout(_prefTimer);
+  _prefTimer=setTimeout(savePrefs,400);
+}
+async function loadPrefs(){
+  let raw=null;
+  try{ raw=await Store.get(PREF_KEY); }catch(e){ raw=null; }
+  if(!raw)return false;
+  let o=null; try{ o=JSON.parse(raw); }catch(e){ return false; }
+  if(!o||typeof o!=='object')return false;
+  PREF_FIELDS.forEach(k=>{ if(o[k]!=null)S[k]=o[k]; });
+  PREF_AUDIO.forEach(k=>{ if(o['a_'+k]!=null)AUDIO_CFG[k]=o['a_'+k]; });
+  try{ document.documentElement.style.setProperty('--fs',S.fs); }catch(e){}
+  try{ document.body.classList[S.contrast?'add':'remove']('hc'); }catch(e){}
+  _prefSeen=prefSig();
+  return true;
+}
 const WARN_KEY=SAVE.prefix+'seenWarning';
 async function maybeWarn(){
   let seen=null;
@@ -6860,8 +7046,28 @@ function openSettings(){
 }
 
 let last=performance.now();
+/* A hidden tab kept rendering and kept the music sequencer ticking. On a phone
+   that is pure battery drain across a playthrough that can run three hours. */
+function pauseForHidden(){
+  try{ if(A.ctx&&A.ctx.state==='running'&&A.ctx.suspend)A.ctx.suspend(); }catch(e){}
+  try{ if(A.cur&&A.cur.el&&A.cur.el.pause)A.cur.el.pause(); }catch(e){}
+}
+function resumeFromHidden(){
+  try{ if(A.ctx&&A.ctx.state==='suspended'&&A.ctx.resume)A.ctx.resume(); }catch(e){}
+  try{ if(A.cur&&A.cur.el&&A.cur.el.play){const r=A.cur.el.play();if(r&&r.catch)r.catch(()=>{});} }catch(e){}
+  try{ last=performance.now(); }catch(e){}
+}
+try{
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden){pauseForHidden();savePrefs();} else resumeFromHidden();
+  });
+  addEventListener('pagehide',()=>{pauseForHidden();savePrefs();});
+}catch(e){}
 function frame(now){
+  if(typeof document!=='undefined'&&document.hidden){
+    last=now; requestAnimationFrame(frame); return; }
   const raw=(now-last)/1000; last=now;
+  watchPrefs();
   const dt=Math.min(0.05,raw);
   S.t+=dt;
   const frozen=now<FX.stopUntil;
@@ -6997,20 +7203,53 @@ function applyData(D,label){
 function resetData(){ applyData(JSON.parse(JSON.stringify(DEFAULT_DATA)),'defaults'); }
 
 /* External data/*.json, when the game is served from a folder. */
+/* Loading his data must never be all-or-nothing. One stray comma in one file
+   used to throw inside this loop, return null, and silently drop the player
+   back to the built-in defaults with a whole lore dump apparently gone. Now
+   every file is parsed on its own: whatever is valid is kept, whatever is not
+   is named out loud, and the rest of the game carries on. */
+const DATA_LOAD={failed:[],missing:[],loaded:[],manifest:true};
+async function loadOneDataFile(f,merged){
+  let r;
+  try{ r=await fetch('data/'+f,{cache:'no-store'}); }
+  catch(e){ DATA_LOAD.missing.push(f); return; }
+  if(!r||!r.ok){ DATA_LOAD.missing.push(f); return; }
+  let part=null, txt='';
+  try{ txt=await r.text(); part=JSON.parse(txt); }
+  catch(e){
+    DATA_LOAD.failed.push({file:f,why:(e&&e.message)||'could not be read'});
+    try{ console.error('[faatherton] data/'+f+' is not valid JSON:',e); }catch(e2){}
+    return; }
+  if(!part||typeof part!=='object'||Array.isArray(part)){
+    DATA_LOAD.failed.push({file:f,why:'is not a table of content'}); return; }
+  try{ Object.keys(part).forEach(k=>{ if(k!=='_version')merged[k]=part[k]; });
+       DATA_LOAD.loaded.push(f); }
+  catch(e){ DATA_LOAD.failed.push({file:f,why:'could not be merged'}); }
+}
 async function loadExternalData(){
+  DATA_LOAD.failed=[];DATA_LOAD.missing=[];DATA_LOAD.loaded=[];DATA_LOAD.manifest=true;
+  let m=null;
   try{
     const man=await fetch('data/manifest.json',{cache:'no-store'});
-    if(!man.ok)return null;
-    const m=await man.json();
-    const merged={version:m.version||DATA_VERSION};
-    for(const f of (m.files||Object.keys(DATA_FILES))){
-      const r=await fetch('data/'+f,{cache:'no-store'});
-      if(!r.ok)continue;
-      const part=await r.json();
-      Object.keys(part).forEach(k=>{ if(k!=='_version')merged[k]=part[k]; });
-    }
-    return merged;
-  }catch(e){ return null; }
+    if(man&&man.ok)m=JSON.parse(await man.text());
+  }catch(e){ m=null; }
+  if(!m||typeof m!=='object'){            // no manifest is not fatal: try the known names
+    DATA_LOAD.manifest=false; m={};
+  }
+  const list=(m.files&&m.files.length)?m.files:Object.keys(DATA_FILES);
+  const merged={version:m.version||DATA_VERSION};
+  for(const f of list)await loadOneDataFile(f,merged);
+  if(!DATA_LOAD.loaded.length)return null;     // nothing at all: defaults, as before
+  return merged;
+}
+/* Said plainly, because a silent fallback is how a day of writing disappears. */
+function reportDataLoad(){
+  if(DATA_LOAD.failed.length){
+    const names=DATA_LOAD.failed.map(x=>x.file).join(', ');
+    toast('Data file problem',
+      names+' could not be read, so that part fell back to the built-in copy. '+
+      'The rest of your data loaded. Check the file for a stray comma or bracket.');
+  }
 }
 /* Live preview: the Builder posts data in and we rebuild in place. */
 addEventListener('message',ev=>{
@@ -7072,6 +7311,8 @@ catch(e){}
 async function boot(){
   const ext=await loadExternalData();
   if(ext)applyData(ext,'data/');
+  reportDataLoad();
+  await loadPrefs();
   resize();refreshContinue();applyPalette();maybeWarn();
   playMusic(musicFor('menu'));requestAnimationFrame(frame);
 }
