@@ -1,0 +1,1175 @@
+{
+  "_version": 1,
+  "scenes": {
+    "intro": [
+      {
+        "bg": "cell",
+        "fx": "flicker",
+        "fade": "in",
+        "cast": [
+          "logan"
+        ],
+        "speaker": "logan",
+        "shot": "push",
+        "who": "",
+        "text": "Southwest Missouri. Where10,000 bands have given their final encore to the local scene and even more didn't get the chance. "
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan"
+        ],
+        "speaker": "logan",
+        "shot": "close",
+        "who": "",
+        "text": "You've been here so long that your ironic T-shirts are now vintage, and your gear is old enough to vote in every state (pending felonies). This morning, a local said, \"Hey, you look familiar!\" and asked if you ever heard of a band called Father Tron. Or, was it Furthertan? Either way, she insisted you give her back the correct change for her value meal.",
+        "dy": 0.19
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan"
+        ],
+        "speaker": "logan",
+        "who": "",
+        "color": "",
+        "text": "You used to rock with a gnarly-ass group of \"musicians\" from the Lake of the Ozarks. But after being falsely accused of multiple \"Rock Crimes\" against the state by the Council of Rock, you've all spent 20 years locked away in various small towns with dead scenes, unable to leave. Plus, the Council of Rock is like...magic. Or supernatural or something... I mean, you're no Ghost-burster\" (TM), but you know monsters and magic when you smell it.",
+        "shot": "close",
+        "dy": 0.21
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan"
+        ],
+        "speaker": "logan",
+        "who": "",
+        "color": "",
+        "text": "In 2026, your chance for a jail break finally came in the form of another victim of the Council of Rock...",
+        "shot": "panR"
+      },
+      {
+        "bg": "cell",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "shot": "panR",
+        "who": "???",
+        "color": "#6cff9e",
+        "text": "Inmate 417! Your list of melody-based-charges contains over 40 individual Rock Crimes and other musical misdemeanors including: Rocking too damn loud, unlicensed sincerity, pedal theft, and sneakily increasing your half-stack volume when no one was looking. Oh yeah, and let's not forget appearing in multiple Zines, you filthy degenerate!",
+        "dy": -0.14,
+        "dx": -0.05
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "???",
+        "color": "#6cff9e",
+        "text": "Just kidding! I'm here to help you get the F' outta D'. The Council of Rock are a bunch of navel-gazing dicks who got their magic through daddy's trust fund, and I'm looking to escape and serve up a little revenge. They're the jerks what trapped me in this physical form after I demanded a cut of the door at an open mic night.",
+        "zoom": 0.95
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "shot": "close",
+        "who": "???",
+        "color": "#6cff9e",
+        "text": "The bad news is, you've been denied your Rock-n-Parole. I picked up your hearing on the feedback. The good news is, I know a way out.",
+        "dy": -0.21
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "logan",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "Who that?! Who there?! I'm not afraid to defile myself! ",
+        "shot": "panR",
+        "dy": -0.07,
+        "dx": 0.08
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "shot": "close",
+        "who": "???",
+        "color": "#6cff9e",
+        "text": "My name is too Midwest-Emo to pronounce without embarrassment. Call me Wedgie. I live in the stage monitors that feedback. ",
+        "dy": -0.2
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "Wedgie (The Promoter) ",
+        "color": "#6cff9e",
+        "text": "I've been cursed to book the same shitty-venue every night for the last 20 years. Besides being haunted, the other acts are real monsters. Literally! One of them actually requests an aux-out to record their sets everynight! E.V.E.R.Y. N.I.G.H.T...."
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "logan",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "What's that got to do with me?! I don't rock no more, and the other boys, well, they're likely either dead or dying. So get to your point, or get the hell out of my wedge!",
+        "zoom": 1.52,
+        "dx": 0.19
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "Wedgie (The Promoter) ",
+        "color": "#6cff9e",
+        "text": "The right band can break the set. Break the curse. Break us free. Get your Tele and get your crew. It's time to dance, dance, dance.",
+        "zoom": 1.02
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "logan",
+        "shot": "close",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "There is no me. There is no band... there is no Tele actually. I pawned it for rent years ago. All there is are 7 \"maybe alive\" dudes, and 20 years of..."
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "Wedgie (The Promoter) ",
+        "color": "#6cff9e",
+        "text": "...20 years of pent-up Rock-Carnage raging to find a way out. First, you'll get the band back together. I've already tracked 'em down. A storage unit, a broken down van, and worse... I'll need everybody. All seven, as it was foretold.\n\n",
+        "dy": -0.16,
+        "zoom": 1.69,
+        "dx": -0.3
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "logan",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "Jeeze... what are we, a ska band? Five is enough. Maybe even just four..."
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "Wedgie (The Promoter) ",
+        "color": "#6cff9e",
+        "text": "NO! It must be all 7. It will take more than your normal line-up of mortal humans to defeat bands of this nightmarish nature. Seriously, one of them asked if they could take a photo of the stage in advance of the show and another used their drink vouchers on herbal tea! I can't even..."
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "shot": "close",
+        "who": "Wedgie (The Promoter) ",
+        "color": "#6cff9e",
+        "text": "Here's $300 in human monies for expenses. Spend it on pedals, not mortal sustenance. Luckily, Hoffman's Pawn is open 24 hours for filthy, gross, human-degenerates like yourselves! Haha! Just kidding again! Don't die out there please.  I got human monies riding on you's survivin' with my bookie! ",
+        "dy": -0.28
+      },
+      {
+        "money": 300
+      },
+      {
+        "bg": "stage",
+        "fx": "flash",
+        "fade": "in",
+        "cast": [
+          "logan"
+        ],
+        "speaker": "logan",
+        "shot": "push",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "Well, you didn't say there were human monies involved. Burry the dang lead! I'm obviously in. Where's the first one of these atonal roustabouts? "
+      },
+      {
+        "bg": "stage",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "Wedgie (The Promoter) ",
+        "color": "#6cff9e",
+        "text": "It's Beau. Unit 666 in the Storage Mart. He's still got his git-fiddle, but Logan... something else is in there with him."
+      },
+      {
+        "map": true
+      }
+    ],
+    "lost": [
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "The room emptied. You will note that I did not."
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "shot": "close",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "Re-arrested. Same charge. They took the merch money and left you the guitar, which tells you what they think of both."
+      },
+      {
+        "bg": "cell",
+        "cast": [
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "shot": "close",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "Go again. The bill does not move."
+      },
+      {
+        "map": true
+      }
+    ],
+    "frank_down": [
+      {
+        "bg": "storage",
+        "fx": "flash",
+        "cast": [
+          "logan"
+        ],
+        "speaker": "logan",
+        "who": "",
+        "text": "Frank, left without his Steins and collapses over his own amp, stopping the hum for the first time in 20 years. He grabs his gear and growls as he disappears into the foggy night. You kinda feel bad for him..."
+      },
+      {
+        "bg": "storage",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "Cover bands, am I right? Let's hope 20 years of top 40 didn't drive Beau out of his noggin, because I got money on that too. Logan, go get your Guitarist. "
+      },
+      {
+        "room": "row"
+      }
+    ],
+    "beau_join": [
+      {
+        "bg": "storage",
+        "cast": [
+          "logan",
+          "beau"
+        ],
+        "speaker": "beau",
+        "shot": "push",
+        "who": "BEAU",
+        "color": "#ffb43c",
+        "text": "Logan..?! How long was I in there? Are people still doing the Dougie? "
+      },
+      {
+        "bg": "storage",
+        "cast": [
+          "logan",
+          "beau"
+        ],
+        "speaker": "logan",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "You've been here long enough that Dougie is an old man. We've got a gig. You still solid?"
+      },
+      {
+        "bg": "storage",
+        "cast": [
+          "logan",
+          "beau"
+        ],
+        "speaker": "beau",
+        "shot": "close",
+        "who": "BEAU",
+        "color": "#ffb43c",
+        "text": "As a rock. I'm just shaken from that guy trying to recruit me for the last 20 years. I just kept telling him I was already in a band, but he'd always say, \"Since when?\"."
+      },
+      {
+        "bg": "storage",
+        "cast": [
+          "logan",
+          "beau"
+        ],
+        "speaker": "logan",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "Since the turn of the century. Get your gear. We're getting the band back together."
+      },
+      {
+        "recruit": "beau"
+      },
+      {
+        "bg": "stage",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "beau",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "That's 2 of our 7 recruited, including you. The next one is at the bottom of the lake, which is normal since his sentencing by the Council. Think he'll mind playing drums for a while?"
+      },
+      {
+        "map": true
+      }
+    ],
+    "gill_down": [
+      {
+        "bg": "lake",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "beau"
+        ],
+        "speaker": "logan",
+        "who": "",
+        "text": "The Creature goes under and stays under. The jet skis leave in three different directions, which is the most coordinated thing they have done all evening."
+      },
+      {
+        "bg": "lake",
+        "cast": [
+          "logan",
+          "beau",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "An algae bloom with a stage name. I have booked worse. Get your drummer off that raft."
+      },
+      {
+        "room": "water"
+      }
+    ],
+    "nathaniel_join": [
+      {
+        "bg": "lake",
+        "cast": [
+          "logan",
+          "beau",
+          "nathaniel"
+        ],
+        "speaker": "nathaniel",
+        "shot": "close",
+        "who": "NATHANIEL",
+        "color": "#2ee6ff",
+        "text": "You finally made it. I wanted to stop playing, but when I stopped, it always came back."
+      },
+      {
+        "bg": "lake",
+        "cast": [
+          "logan",
+          "beau",
+          "nathaniel"
+        ],
+        "speaker": "logan",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "How long were you down there? You're all pruned from the water, gross..."
+      },
+      {
+        "bg": "lake",
+        "cast": [
+          "logan",
+          "beau",
+          "nathaniel"
+        ],
+        "speaker": "nathaniel",
+        "shot": "close",
+        "who": "NATHANIEL",
+        "color": "#2ee6ff",
+        "text": "I don't know. What month is it now?"
+      },
+      {
+        "bg": "lake",
+        "cast": [
+          "logan",
+          "beau",
+          "nathaniel"
+        ],
+        "speaker": "beau",
+        "who": "BEAU",
+        "color": "#ffb43c",
+        "text": "Let's just say, people aren't doing the Dougie anymore. But I'm thinking of bringing it back..."
+      },
+      {
+        "recruit": "nathaniel"
+      },
+      {
+        "bg": "stage",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "beau",
+          "nathaniel",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "Wedgie (The Promoter)",
+        "color": "#6cff9e",
+        "text": " And then there were three. The bad news is, you'll have to play drums a little longer, Nathaniel. "
+      },
+      {
+        "map": true
+      }
+    ],
+    "finale_won": [
+      {
+        "bg": "venue",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "beau",
+          "nathaniel",
+          "mat"
+        ],
+        "speaker": "logan",
+        "who": "",
+        "text": "The headliner let's out a deafening squeal as it dissolved into 1000 used earplugs and broken strings. You feel the power of the Counsel lose it's grip over you."
+      },
+      {
+        "bg": "venue",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "shot": "close",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "That's the first time anyone has ever closed this bill. And I've been doing this for 200 years! "
+      },
+      {
+        "bg": "venue",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "logan",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "So we’re free. The rock crimes? The Counsel's sentence? The time we dine and dashed at that Denny's in Dekalb? "
+      },
+      {
+        "bg": "venue",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "Expunged. Forgiven. Erased! All seventeen counts. You are, officially, allowed to turn your half stack up without permission and be sincere unironically again. All of you!"
+      },
+      {
+        "bg": "venue",
+        "cast": [
+          "logan",
+          "mat",
+          "promoter"
+        ],
+        "speaker": "mat",
+        "shot": "close",
+        "who": "MAT",
+        "color": "#6cff9e",
+        "text": "Cool. So what's next? We got an almost working van. And almost enough members to start a Slipknot tribute band."
+      },
+      {
+        "bg": "venue",
+        "cast": [
+          "logan",
+          "mat",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "I... should have mentioned. The headliners you just defeated had a mystical contract to finish their Midwest tour. All haunted venues and cursed house shows. All over 10 hours apart. All inherited by Faatherton when you defeated them publicly. Brutal."
+      },
+      {
+        "bg": "venue",
+        "cast": [
+          "logan",
+          "brice",
+          "mat"
+        ],
+        "speaker": "brice",
+        "shot": "close",
+        "who": "BRICE",
+        "color": "#ff2d7a",
+        "text": "Uh... I guess I'd have to say, Shotgun? "
+      },
+      {
+        "bg": "venue",
+        "cast": [
+          "logan",
+          "brice",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "Atta boyle."
+      },
+      {
+        "bg": "venue",
+        "cast": [
+          "logan",
+          "brice",
+          "promoter",
+          "brian"
+        ],
+        "speaker": "brian",
+        "who": "Brian",
+        "color": "#ff2d7a",
+        "text": "How many dates?"
+      },
+      {
+        "bg": "venue",
+        "cast": [
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "shot": "low",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "It is less a number and more a direction. Load in at six. I will see you in Rolla."
+      },
+      {
+        "bg": "venue",
+        "fx": "flash",
+        "fade": "out",
+        "cast": [
+          "logan",
+          "beau",
+          "nathaniel",
+          "mat"
+        ],
+        "speaker": "logan",
+        "shot": "panR",
+        "who": "",
+        "text": "The van pulls itself up to the loading dock and honks loudly. No one is surprised that it already needs a belt change and has tape a cassette permanently and still stuck in the stereo. Hope y'all like R.E.O."
+      },
+      {
+        "flag": "headlinerDown"
+      },
+      {
+        "credits": true
+      }
+    ],
+    "grill_down": [
+      {
+        "bg": "highway",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "beau",
+          "mat",
+          "kevin"
+        ],
+        "speaker": "logan",
+        "who": "",
+        "text": "The stale roller grill items crumble and flee. Maybe enchanting the dumpster food was a poor golem choice for the wizards. Sad. They almost rocked even."
+      },
+      {
+        "bg": "highway",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "shot": "close",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "Taquit-oh-no-you-didn't! I've had bands play worse. Smell worse too."
+      },
+      {
+        "room": "backlot"
+      }
+    ],
+    "brice_join": [
+      {
+        "bg": "highway",
+        "cast": [
+          "logan",
+          "brice"
+        ],
+        "speaker": "brice",
+        "shot": "close",
+        "who": "BRICE",
+        "color": "#ff2d7a",
+        "text": "This belt is off by just the right amount. We're in business! Also, where'd my taquito go?"
+      },
+      {
+        "bg": "highway",
+        "cast": [
+          "logan",
+          "brice"
+        ],
+        "speaker": "logan",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "Brice. The tour ended in two thousand and nine."
+      },
+      {
+        "bg": "highway",
+        "cast": [
+          "logan",
+          "brice"
+        ],
+        "speaker": "brice",
+        "shot": "close",
+        "who": "BRICE",
+        "color": "#ff2d7a",
+        "text": "Yeah. I know. But the van is so cozy, and someone had to keep the engine running. Seriously, if we stop the engine it may never start again."
+      },
+      {
+        "bg": "highway",
+        "cast": [
+          "logan",
+          "mat",
+          "brice"
+        ],
+        "speaker": "mat",
+        "who": "MAT",
+        "color": "#6cff9e",
+        "text": "So, business as usual then? Shotgun!"
+      },
+      {
+        "recruit": "brice"
+      },
+      {
+        "bg": "highway",
+        "cast": [
+          "mat",
+          "brice"
+        ],
+        "speaker": "mat",
+        "shot": "push",
+        "who": "",
+        "color": "#6cff9e",
+        "text": "Mat unplugs is bass and the amp crackles as Brice takes the jack. Mat pulls out a loop pedal and begins sampling the sounds of the idling van. "
+      },
+      {
+        "bg": "highway",
+        "cast": [
+          "logan",
+          "mat",
+          "brice"
+        ],
+        "speaker": "mat",
+        "who": "MAT",
+        "color": "#6cff9e",
+        "text": "We'll really need this sound in our final mixes. And can someone make a sound like a dying robin?"
+      },
+      {
+        "bg": "stage",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "mat",
+          "brice",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "Damn! The seventh wonder of the hurl over here. Yes, you've done it. Two in the wings and five on stage. The magic number... that I bet on with my earth bookie. The final venue is next. Ready yourselves however you can. Then get in the van. It's time to rock. Let's free ourselves from the grip of the Counsel for good.  "
+      },
+      {
+        "map": true
+      }
+    ],
+    "vamp_down": [
+      {
+        "bg": "radio",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "beau",
+          "nathaniel",
+          "kevin"
+        ],
+        "speaker": "logan",
+        "who": "",
+        "text": "The Nosferatus and their signal go silent. The tri-county area from hear to that farmer's corn field are free. KFUX is is back on air. The vampy crew lugs their gear off, hissing."
+      },
+      {
+        "bg": "radio",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "shot": "close",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "A group of bloodsucking vampires who do some voo doo to overtake community airwaves? Shame. I've signed bands for less."
+      },
+      {
+        "room": "booth"
+      }
+    ],
+    "brian_join": [
+      {
+        "bg": "radio",
+        "cast": [
+          "logan",
+          "brian"
+        ],
+        "speaker": "brian",
+        "shot": "close",
+        "who": "BRIAN",
+        "color": "#2ee6ff",
+        "text": "It's off... finally. I couldn't read the local obits or take a call in listener one more damn time! "
+      },
+      {
+        "bg": "radio",
+        "cast": [
+          "logan",
+          "brian"
+        ],
+        "speaker": "logan",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "How long you been keeping those vamps in check?"
+      },
+      {
+        "bg": "radio",
+        "cast": [
+          "logan",
+          "brian"
+        ],
+        "speaker": "brian",
+        "shot": "close",
+        "who": "BRIAN",
+        "color": "#2ee6ff",
+        "text": "Somebody has to give the legal ID. It’s not optional. I even googled it."
+      },
+      {
+        "bg": "radio",
+        "cast": [
+          "logan",
+          "beau",
+          "brian"
+        ],
+        "speaker": "beau",
+        "who": "BEAU",
+        "color": "#ffb43c",
+        "text": "I've never heard anything more \"Brian\" in my whole life."
+      },
+      {
+        "recruit": "brian"
+      },
+      {
+        "bg": "radio",
+        "cast": [
+          "brian",
+          "kevin"
+        ],
+        "speaker": "kevin",
+        "shot": "push",
+        "who": "",
+        "color": "#ffb43c",
+        "text": "Brian takes the drum throne and counts in so hard his sticks petrify. Just like the old days. Kevin grabs grabs a spare mic, a bag of noisemakers, and a laptop, grinning like someone spelled his name right at Starbucks."
+      },
+      {
+        "bg": "radio",
+        "cast": [
+          "logan",
+          "kevin",
+          "brian"
+        ],
+        "speaker": "kevin",
+        "who": "KEVIN",
+        "color": "#ffb43c",
+        "text": "Finally! I can play our loops and use my marimbas. Oh, and I get a mic?! I'm going to yell soooo loud... "
+      },
+      {
+        "bg": "stage",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "kevin",
+          "brian",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "Six in the mix. And the one remaining is really going to have to \"touch bass\" with one of you. Get what I mean, Mat? I'm hoping you do as I got 30 cents bet on it. I'm assuming 30 cents is a lot in human monies...  "
+      },
+      {
+        "map": true
+      }
+    ],
+    "wolf_down": [
+      {
+        "bg": "vfw",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "beau",
+          "nathaniel",
+          "mat"
+        ],
+        "speaker": "logan",
+        "who": "",
+        "text": "Were Wolfgang goes through two rows of folding chairs and does not get up. The regulars film it vertically. Somebody’s mom claps."
+      },
+      {
+        "bg": "vfw",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "shot": "close",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "A werewolf that came to the same room every week for nineteen years and never once bought a shirt. Say what you want. That is a fan."
+      },
+      {
+        "room": "stagevfw"
+      }
+    ],
+    "kevin_join": [
+      {
+        "bg": "vfw",
+        "cast": [
+          "logan",
+          "kevin"
+        ],
+        "speaker": "kevin",
+        "shot": "close",
+        "who": "KEVIN",
+        "color": "#ffb43c",
+        "text": "I forgot it could be quiet in here. The ringing in my ears is... HUH?! WHAT DID YOU SAY?!"
+      },
+      {
+        "bg": "vfw",
+        "cast": [
+          "logan",
+          "kevin"
+        ],
+        "speaker": "logan",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "Let's go. The kid at the door can run the board now. You did right by this place. Plus, the crowd sucks here."
+      },
+      {
+        "bg": "vfw",
+        "cast": [
+          "logan",
+          "kevin",
+          "nathaniel"
+        ],
+        "speaker": "kevin",
+        "who": "KEVIN",
+        "color": "#ffb43c",
+        "text": "Oh, I'm not protesting. Let's beat feet. Need me on sitar? Uke? Spoons? I'm here for it all!"
+      },
+      {
+        "bg": "vfw",
+        "cast": [
+          "logan",
+          "kevin",
+          "nathaniel"
+        ],
+        "speaker": "nathaniel",
+        "shot": "close",
+        "who": "NATHANIEL",
+        "color": "#2ee6ff",
+        "text": "Drums, please!! I need a break. Playing drums under water really tuckers you out. And I think I got Swimmers Ears, plural!"
+      },
+      {
+        "recruit": "kevin"
+      },
+      {
+        "bg": "vfw",
+        "cast": [
+          "nathaniel",
+          "kevin"
+        ],
+        "speaker": "nathaniel",
+        "shot": "push",
+        "who": "",
+        "color": "#2ee6ff",
+        "text": "Kevin slides into the throne and Nathaniel's body cracks and creaks as if he hasn't stood since the bush administration. He walks to his keys, and rumor has it, no one ever saw him sit again. Places with restrooms complained."
+      },
+      {
+        "bg": "vfw",
+        "cast": [
+          "logan",
+          "nathaniel",
+          "kevin"
+        ],
+        "speaker": "logan",
+        "who": "LOGAN",
+        "color": "#ff2d7a",
+        "text": "The missing sound, the missing piece! There it is. I forgot that we synth real good."
+      },
+      {
+        "bg": "stage",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "nathaniel",
+          "kevin",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "Alive with five! And finally, a keyboardist who can heal and refresh your party. You'll need that to find your last 2 rockers. 5 people is the max allowed on stage due to city ordinances, so sharing the stage and tagging in your buds will become the name of the game if you plan on surviving our final chapters! "
+      },
+      {
+        "map": true
+      }
+    ],
+    "wrapper_down": [
+      {
+        "bg": "cstreet",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "beau",
+          "nathaniel"
+        ],
+        "speaker": "logan",
+        "who": "",
+        "text": "The Wrapper comes apart into about nine hundred feet of cassette tape, which drifts down C-Street and gets caught in the string lights, where it will stay for years."
+      },
+      {
+        "bg": "cstreet",
+        "cast": [
+          "logan",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "shot": "close",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "A mummy made of somebody’s old demo tapes. There's probably a lesson in there somewhere."
+      },
+      {
+        "room": "backroom"
+      }
+    ],
+    "mat_join": [
+      {
+        "bg": "cstreet",
+        "cast": [
+          "logan",
+          "mat",
+          "nathaniel",
+          "beau"
+        ],
+        "speaker": "mat",
+        "shot": "close",
+        "who": "MAT",
+        "color": "#6cff9e",
+        "text": "Firstly: I didn't need your help. Secondly: Thank you so much for the help... I've been in there a minute.",
+        "zoom": 0.99
+      },
+      {
+        "bg": "cstreet",
+        "cast": [
+          "logan",
+          "beau",
+          "mat",
+          "nathaniel"
+        ],
+        "speaker": "beau",
+        "who": "BEAU",
+        "color": "#ffb43c",
+        "text": "It had you wrapped to a chair. You were losing consciousness."
+      },
+      {
+        "bg": "cstreet",
+        "cast": [
+          "logan",
+          "beau",
+          "mat"
+        ],
+        "speaker": "mat",
+        "shot": "close",
+        "who": "MAT",
+        "color": "#6cff9e",
+        "text": "I'd have thought of something... or died. Same diff. Logan, is that my Cashew Chicken? I like it when it's cooled off enough to coagulate..."
+      },
+      {
+        "bg": "cstreet",
+        "cast": [
+          "logan",
+          "beau",
+          "nathaniel",
+          "mat"
+        ],
+        "speaker": "nathaniel",
+        "who": "NATHANIEL",
+        "color": "#2ee6ff",
+        "text": "Yeah. I'd call it a \"mush\" now. "
+      },
+      {
+        "bg": "cstreet",
+        "cast": [
+          "logan",
+          "beau",
+          "nathaniel",
+          "mat"
+        ],
+        "speaker": "mat",
+        "shot": "close",
+        "who": "MAT",
+        "color": "#6cff9e",
+        "text": "Then I’m in! In for getting the band back together and breaking the mystic chains that bind us. What? That's what y'all are here for, right? For the rock crimes..."
+      },
+      {
+        "recruit": "mat"
+      },
+      {
+        "bg": "stage",
+        "fx": "flash",
+        "cast": [
+          "logan",
+          "mat",
+          "promoter"
+        ],
+        "speaker": "promoter",
+        "who": "THE PROMOTER",
+        "color": "#6cff9e",
+        "text": "Four on the floor, dudes! With the low end in place, the whole floor is now a variable in battles. Pretty cool, huh? Two drummers left to recruit, so be prepared to mix up the lineup. We can't all drum."
+      },
+      {
+        "map": true
+      }
+    ]
+  },
+  "credits": {
+    "dedication": [
+      "FOR THE BAND.",
+      "",
+      "And then there were Seven. Faatherton has been a gift for ",
+      "every member and every fan over the years. ",
+      "Over hundreds of shows, practices, songs, and more, ",
+      "Faatherton has been our family and our passion since",
+      "all of us can remember. Faatherton is where we honed ",
+      "our chops, sharpened our skills, and learned what kind",
+      "of musicians we all can rise to be.",
+      "",
+      "Reuniting to record a song in 2025, after a nearly ",
+      "20-year radio silence, was an amazing undertaking, ",
+      "and following it up with an amazing reunion show in",
+      "2026 solidified our friendship and legacy in the Midwest",
+      "scene. ",
+      "",
+      "Thanks for the once-in-a-lifetime opportunities, and I'll ",
+      "(always) see you all at load-in.  "
+    ],
+    "lines": [
+      "FAATHERTON",
+      "A ROCK CRIME",
+      "",
+      "Original Music by Faatherton with chiptune conversion by Better Off Published LLC.",
+      "",
+      "*Special thanks to the Band!*",
+      "",
+      "LOGAN · vocals, guitar, the songs",
+      "BEAU · lead guitar, vocals",
+      "NATHANIEL · drums, then keys, vocals",
+      "MAT · bass, then whatever that was, vocals",
+      "KEVIN · drums, vocals, anything else we need",
+      "BRIAN · drums, aux percussion, and the legal ID",
+      "BRICE · bass, video, our funny bones",
+      "",
+      "WITH",
+      "THE PROMOTER · as himself",
+      "FRANK & THE STEINS",
+      "THE CREATURE FROM THE BLUE-GREEN ALGAE",
+      "THE WRAPPER",
+      "WERE WOLFGANG",
+      "THE NOSFERATUS",
+      "THE ROLLER GRILL",
+      "THE HEADLINER",
+      "",
+      "AND EVERY ROOM THAT EVER  LET US LOAD IN",
+      "",
+      "— to be continued —",
+      "",
+      "©️Better Off Published LLC 2026",
+      "A game by Midwesty and Faatherton.",
+      "",
+      "@faatherton - https://faatherton.bandcamp.com/",
+      "betteroffpublished.com"
+    ]
+  },
+  "photo": {
+    "photo": null,
+    "title": "FAATHERTON",
+    "subtitle": "A ROCK CRIME",
+    "caption": "The Venue — Twenty Years",
+    "credit": "20+ years and counting!"
+  }
+}

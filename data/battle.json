@@ -1,0 +1,1560 @@
+{
+  "_version": 1,
+  "moves": {
+    "opening_line": {
+      "name": "Opening Line",
+      "tempo": 55,
+      "dmg": 16,
+      "crowd": 7,
+      "fx": "wave",
+      "desc": "Open strong. Wakes the room up."
+    },
+    "call_response": {
+      "name": "Call & Response",
+      "tempo": 75,
+      "dmg": 8,
+      "crowd": 20,
+      "fx": "wave",
+      "desc": "The crowd does half the work."
+    },
+    "hold_note": {
+      "name": "Hold The Note",
+      "tempo": 70,
+      "dmg": 0,
+      "crowd": 6,
+      "buff": "rally",
+      "desc": "Whole band hits harder next turn."
+    },
+    "pinch_harmonic": {
+      "name": "Pinch Harmonic",
+      "tempo": 60,
+      "dmg": 30,
+      "crowd": 5,
+      "fx": "slash",
+      "desc": "Enormous damage. No defense."
+    },
+    "feedback_squeal": {
+      "name": "Feedback Squeal",
+      "tempo": 70,
+      "dmg": 14,
+      "crowd": 4,
+      "debuff": "ring",
+      "fx": "ring",
+      "desc": "Ears ringing. Enemy hits softer."
+    },
+    "the_solo": {
+      "name": "The Solo",
+      "tempo": 95,
+      "dmg": 22,
+      "hits": 3,
+      "crowd": 10,
+      "fx": "slash",
+      "desc": "Three hits. Escalates. Costs the room."
+    },
+    "warm_pad": {
+      "name": "Warm Pad",
+      "tempo": 60,
+      "heal": 34,
+      "crowd": 3,
+      "fx": "heal",
+      "desc": "Heal one member."
+    },
+    "sustain": {
+      "name": "Sustain",
+      "tempo": 85,
+      "healAll": 20,
+      "crowd": 5,
+      "revive": true,
+      "fx": "heal",
+      "desc": "Heal the band. Brings back the vibe."
+    },
+    "sour_note": {
+      "name": "Sour Note",
+      "tempo": 50,
+      "dmg": 13,
+      "crowd": 4,
+      "fx": "ring",
+      "desc": "Deliberately wrong. Works anyway."
+    },
+    "low_rumble": {
+      "name": "Low End Rumble",
+      "tempo": 65,
+      "dmgAll": 12,
+      "crowd": 6,
+      "fx": "quake",
+      "desc": "Hits everything on stage."
+    },
+    "slap_back": {
+      "name": "Slap Back",
+      "tempo": 55,
+      "dmg": 20,
+      "crowd": 5,
+      "taunt": true,
+      "fx": "quake",
+      "desc": "Big hit. Pulls attention onto you."
+    },
+    "cheap_shot": {
+      "name": "Cheap Shot",
+      "tempo": 45,
+      "dmg": 11,
+      "crowd": 12,
+      "fx": "note",
+      "desc": "Not even a real technique. Crowd loves it."
+    },
+    "floor_shake": {
+      "name": "Floor Shake",
+      "tempo": 80,
+      "dmgAll": 18,
+      "crowd": 8,
+      "fx": "quake",
+      "desc": "Damages the venue. Worth it."
+    },
+    "double_kick": {
+      "name": "Double Kick",
+      "tempo": 55,
+      "dmg": 11,
+      "hits": 2,
+      "crowd": 5,
+      "fx": "note",
+      "desc": "Two fast hits."
+    },
+    "the_fill": {
+      "name": "The Fill",
+      "tempo": 60,
+      "dmg": 0,
+      "crowd": 9,
+      "buff": "haste",
+      "desc": "Party tempo refills faster."
+    },
+    "odd_meter": {
+      "name": "Odd Meter",
+      "tempo": 75,
+      "dmg": 19,
+      "crowd": 11,
+      "fx": "ring",
+      "desc": "Nobody can clap along. Devastating."
+    },
+    "crash_out": {
+      "name": "Crash Out",
+      "tempo": 70,
+      "dmg": 24,
+      "crowd": 6,
+      "fx": "slash",
+      "desc": "One enormous cymbal decision."
+    },
+    "gang_vocals": {
+      "name": "Gang Vocals",
+      "tempo": 70,
+      "dmg": 10,
+      "crowd": 24,
+      "buff": "rally",
+      "desc": "Everyone shouts the one line they know."
+    },
+    "tambourine": {
+      "name": "Tambourine",
+      "tempo": 45,
+      "dmgAll": 9,
+      "crowd": 10,
+      "fx": "note",
+      "desc": "Cheap, relentless, weirdly effective."
+    },
+    "handclaps": {
+      "name": "Handclaps",
+      "tempo": 55,
+      "dmg": 0,
+      "crowd": 8,
+      "buff": "haste",
+      "desc": "The whole band speeds up."
+    },
+    "loop_that": {
+      "name": "Loop That",
+      "tempo": 60,
+      "dmg": 14,
+      "hits": 2,
+      "crowd": 11,
+      "fx": "note",
+      "desc": "Catches what just happened and plays it back."
+    },
+    "sample_dump": {
+      "name": "Sample Dump",
+      "tempo": 75,
+      "dmgAll": 20,
+      "crowd": 9,
+      "fx": "quake",
+      "desc": "Empties the whole card at the room."
+    },
+    "chop_it": {
+      "name": "Chop It",
+      "tempo": 50,
+      "dmg": 17,
+      "crowd": 14,
+      "fx": "ring",
+      "desc": "Nobody asked for this and it rules."
+    },
+    "dive_bomb": {
+      "name": "Dive Bomb",
+      "tempo": 80,
+      "dmg": 38,
+      "crowd": 8,
+      "fx": "slash",
+      "desc": "Straight down. Retuning is a later problem."
+    },
+    "loop_it": {
+      "name": "Loop It",
+      "tempo": 65,
+      "dmgAll": 16,
+      "hits": 2,
+      "crowd": 9,
+      "fx": "note",
+      "desc": "Everything, twice."
+    },
+    "talk_box": {
+      "name": "Talk Box",
+      "tempo": 60,
+      "dmg": 9,
+      "crowd": 26,
+      "fx": "ring",
+      "desc": "Barely an attack. The room does the rest."
+    },
+    "enc_logan": {
+      "name": "LAST CALL",
+      "encore": true,
+      "dmgAll": 70,
+      "crowd": 0,
+      "fx": "encore",
+      "desc": "Everyone in the room sings it back."
+    },
+    "enc_beau": {
+      "name": "SIX MINUTE OUTRO",
+      "encore": true,
+      "dmg": 150,
+      "crowd": 0,
+      "fx": "encore",
+      "desc": "He is not going to stop."
+    },
+    "enc_nathaniel": {
+      "name": "THE WASH",
+      "encore": true,
+      "healAll": 120,
+      "dmgAll": 30,
+      "revive": true,
+      "crowd": 0,
+      "fx": "encore",
+      "desc": "Everything comes back."
+    },
+    "enc_mat": {
+      "name": "UNAUTHORIZED LOOP",
+      "encore": true,
+      "dmgAll": 55,
+      "hits": 2,
+      "crowd": 0,
+      "fx": "encore",
+      "desc": "It repeats. Nobody asked for this."
+    },
+    "enc_kevin": {
+      "name": "THE WHOLE KIT",
+      "encore": true,
+      "dmg": 135,
+      "dmgAll": 25,
+      "crowd": 0,
+      "fx": "encore",
+      "desc": "Structural."
+    },
+    "enc_brian": {
+      "name": "POLYRHYTHM",
+      "encore": true,
+      "dmg": 60,
+      "hits": 3,
+      "crowd": 0,
+      "fx": "encore",
+      "desc": "Mathematically upsetting."
+    },
+    "enc_brice": {
+      "name": "CONDEMNED",
+      "encore": true,
+      "dmgAll": 80,
+      "crowd": 0,
+      "fx": "encore",
+      "desc": "The floor does not survive this."
+    }
+  },
+  "enemies": {
+    "frank": {
+      "name": "Frank",
+      "tagline": "20 years and it still only plays those four chords.",
+      "art": "stein",
+      "hp": 340,
+      "spd": 0.94,
+      "w": 1.35,
+      "h": 1.3,
+      "col": "#6f8f5a",
+      "bolt": "#c9c2a8",
+      "moves": [
+        {
+          "name": "Lurching Downstroke",
+          "dmg": 28,
+          "fx": "slash"
+        },
+        {
+          "name": "Wet Amp Sound",
+          "dmgAll": 15,
+          "crowd": -9,
+          "fx": "ring"
+        },
+        {
+          "name": "Between-Song Banter",
+          "crowd": -16,
+          "fx": "ring"
+        }
+      ]
+    },
+    "openmicer": {
+      "name": "An Open Mic-er",
+      "art": "crowd",
+      "hp": 96,
+      "spd": 1.05,
+      "w": 0.72,
+      "h": 0.9,
+      "col": "#3a3050",
+      "bolt": "#a598bb",
+      "tagline": "Three originals and a poem.",
+      "moves": [
+        {
+          "name": "Unamed Song #5",
+          "dmg": 13,
+          "fx": "note"
+        },
+        {
+          "name": "Over Explain The Song ",
+          "crowd": -9,
+          "fx": "ring"
+        }
+      ]
+    },
+    "poet": {
+      "name": "A Poet",
+      "art": "crowd",
+      "hp": 74,
+      "spd": 1.3,
+      "w": 0.64,
+      "h": 0.92,
+      "col": "#2e2a44",
+      "bolt": "#c86bff",
+      "tagline": "It is not a song. It is a piece.",
+      "moves": [
+        {
+          "name": "Piece About Toilet",
+          "crowd": -15,
+          "fx": "ring"
+        },
+        {
+          "name": "Pregnant Pause too Often",
+          "dmg": 9,
+          "crowd": -6,
+          "fx": "note"
+        }
+      ]
+    },
+    "coverband": {
+      "name": "A Cover Band",
+      "art": "wolf",
+      "hp": 150,
+      "spd": 1,
+      "w": 0.8,
+      "h": 0.86,
+      "col": "#4e4438",
+      "bolt": "#ffb43c",
+      "tagline": "The same 10 songs every show.",
+      "moves": [
+        {
+          "name": "Overplayed Song Reprise",
+          "dmg": 19,
+          "crowd": -5,
+          "fx": "slash"
+        },
+        {
+          "name": "Go Over Time",
+          "dmgAll": 11,
+          "crowd": -7,
+          "fx": "ring"
+        }
+      ]
+    },
+    "tributeyou": {
+      "name": "A Tribute To You",
+      "art": "crowd",
+      "hp": 170,
+      "spd": 1.14,
+      "w": 0.84,
+      "h": 0.96,
+      "col": "#4a2040",
+      "bolt": "#ff2d7a",
+      "tagline": "They learned your set off a phone recording.",
+      "moves": [
+        {
+          "name": "Your Own Move, Slightly Wrong",
+          "dmg": 22,
+          "fx": "slash"
+        },
+        {
+          "name": "Play It Back At You Incorrectly ",
+          "dmgAll": 13,
+          "crowd": -6,
+          "fx": "ring"
+        }
+      ]
+    },
+    "soundguy": {
+      "name": "The Board (Unattended)",
+      "art": "head",
+      "hp": 210,
+      "spd": 0.9,
+      "w": 0.86,
+      "h": 0.92,
+      "col": "#241338",
+      "bolt": "#2ee6ff",
+      "tagline": "He left. This is his equipment, no one knows how to work it.",
+      "moves": [
+        {
+          "name": "Nobody On The Faders",
+          "dmgAll": 15,
+          "crowd": -8,
+          "fx": "ring"
+        },
+        {
+          "name": "Blow a Fuse",
+          "dmg": 24,
+          "fx": "slash"
+        }
+      ]
+    },
+    "regular": {
+      "name": "A Regular",
+      "art": "crowd",
+      "hp": 88,
+      "spd": 1.26,
+      "w": 0.68,
+      "h": 0.88,
+      "col": "#333048",
+      "bolt": "#6cff9e",
+      "tagline": "Probably a friend of the opening act.",
+      "moves": [
+        {
+          "name": "Talk Through It",
+          "crowd": -11,
+          "fx": "note"
+        },
+        {
+          "name": "Request Something",
+          "dmg": 12,
+          "fx": "note"
+        }
+      ]
+    },
+    "houseband": {
+      "name": "THE HOUSE BAND",
+      "art": "vamp",
+      "hp": 330,
+      "spd": 1.08,
+      "w": 1,
+      "h": 1.2,
+      "col": "#b8b2c8",
+      "bolt": "#6a2440",
+      "tagline": "Plays for tips and beer.",
+      "moves": [
+        {
+          "name": "Forgot to Tune",
+          "dmg": 27,
+          "fx": "slash"
+        },
+        {
+          "name": "We Always Headline",
+          "dmgAll": 17,
+          "crowd": -9,
+          "fx": "ring"
+        },
+        {
+          "name": "Green Room Hog",
+          "crowd": -18,
+          "fx": "ring"
+        }
+      ]
+    },
+    "headcab": {
+      "name": "THE BACKLINE",
+      "art": "head",
+      "hp": 230,
+      "spd": 0.86,
+      "w": 1.05,
+      "h": 1.05,
+      "col": "#241338",
+      "bolt": "#6cff9e",
+      "tagline": "No musician needed. It's sentient and pissed.",
+      "feeds": true,
+      "moves": [
+        {
+          "name": "Play Itself",
+          "dmg": 22,
+          "fx": "slash"
+        },
+        {
+          "name": "Tripple Rectified Ass Son of a Bitch",
+          "dmgAll": 15,
+          "crowd": -10,
+          "fx": "ring"
+        },
+        {
+          "name": "Pick Up Interference from Airport",
+          "crowd": -19,
+          "fx": "ring"
+        }
+      ]
+    },
+    "halfstack": {
+      "name": "A Half-Stack",
+      "art": "head",
+      "hp": 130,
+      "spd": 1.12,
+      "w": 0.66,
+      "h": 0.72,
+      "col": "#2c1a40",
+      "bolt": "#2ee6ff",
+      "tagline": "Who left this plugged in?",
+      "feeds": true,
+      "moves": [
+        {
+          "name": "Standby Switch Left On",
+          "dmg": 15,
+          "fx": "note"
+        },
+        {
+          "name": "Go Past 11",
+          "crowd": -11,
+          "fx": "note"
+        }
+      ]
+    },
+    "hiredgun": {
+      "name": "A Hired Gun",
+      "art": "crowd",
+      "hp": 190,
+      "spd": 1.18,
+      "w": 0.8,
+      "h": 0.94,
+      "col": "#3a2a1e",
+      "bolt": "#ffb43c",
+      "tagline": "A session musician paid in advance. Not loyal to either side.",
+      "guard": true,
+      "moves": [
+        {
+          "name": "Play a Weird Scale",
+          "dmg": 19,
+          "fx": "note"
+        },
+        {
+          "name": "Vamp",
+          "dmgAll": 11,
+          "crowd": -5,
+          "fx": "ring"
+        },
+        {
+          "name": "Take Spotlight",
+          "crowd": -9,
+          "fx": "note"
+        }
+      ]
+    },
+    "headliner": {
+      "name": "THE HEADLINER",
+      "tagline": "Undefeated and unhinged.",
+      "art": "head",
+      "hp": 520,
+      "spd": 1,
+      "w": 1.6,
+      "h": 1.6,
+      "col": "#1d1030",
+      "bolt": "#c86bff",
+      "moves": [
+        {
+          "name": "The Set That Never Ends",
+          "dmg": 34,
+          "fx": "slash"
+        },
+        {
+          "name": "Every Song You Never Finished",
+          "dmgAll": 20,
+          "crowd": -10,
+          "fx": "ring"
+        },
+        {
+          "name": "Reiterate The Drink Minimum",
+          "crowd": -24,
+          "fx": "ring"
+        }
+      ]
+    },
+    "headliner2": {
+      "name": "THE HEADLINER",
+      "tagline": "It stops playing the band and starts taking out your lineup.",
+      "shielded": true,
+      "art": "head",
+      "hp": 640,
+      "spd": 1.16,
+      "w": 1.75,
+      "h": 1.75,
+      "col": "#2a0f3e",
+      "bolt": "#ff2d7a",
+      "moves": [
+        {
+          "name": "Pull Someone Off The Stage",
+          "takeOne": true,
+          "dmg": 40,
+          "fx": "slash"
+        },
+        {
+          "name": "Feedback Older Than The Room",
+          "dmgAll": 21,
+          "crowd": -8,
+          "fx": "quake"
+        },
+        {
+          "name": "Adjust it's Rider to Include Rare Candy",
+          "crowd": -16,
+          "fx": "ring"
+        }
+      ]
+    },
+    "armscrossed": {
+      "name": "Arms Crossed",
+      "tagline": "They didn't come to hear you, and they're showing it.",
+      "art": "crowd",
+      "hp": 120,
+      "spd": 1.1,
+      "w": 0.7,
+      "h": 0.86,
+      "col": "#2a2438",
+      "bolt": "#8a7f9c",
+      "moves": [
+        {
+          "name": "Take a Phone Call",
+          "crowd": -11,
+          "fx": "note"
+        },
+        {
+          "name": "Talk Through The Quiet Part",
+          "dmg": 12,
+          "crowd": -6,
+          "fx": "note"
+        }
+      ]
+    },
+    "backline": {
+      "name": "The Backline",
+      "art": "head",
+      "hp": 150,
+      "spd": 1.22,
+      "w": 0.72,
+      "h": 0.92,
+      "col": "#2c1a40",
+      "bolt": "#6cff9e",
+      "moves": [
+        {
+          "name": "Reverse Polarity",
+          "dmg": 16,
+          "fx": "note"
+        },
+        {
+          "name": "Buzz When No One is Looking",
+          "crowd": -8,
+          "fx": "note"
+        }
+      ]
+    },
+    "grill": {
+      "name": "Roller Grill Items",
+      "tagline": "Fifteen hours on scorch.",
+      "art": "blob",
+      "hp": 400,
+      "spd": 0.8,
+      "w": 1.55,
+      "h": 1.1,
+      "col": "#b8541e",
+      "bolt": "#ffb43c",
+      "moves": [
+        {
+          "name": "Fifteen Hours On Scorch",
+          "dmg": 33,
+          "fx": "slash"
+        },
+        {
+          "name": "Tastes Like Everything and Nothing",
+          "dmgAll": 19,
+          "crowd": -9,
+          "fx": "quake"
+        },
+        {
+          "name": "Rotate Slowly Toward You",
+          "crowd": -21,
+          "fx": "ring"
+        }
+      ]
+    },
+    "taquito": {
+      "name": "A Taquito",
+      "art": "blob",
+      "hp": 88,
+      "spd": 1.4,
+      "w": 0.52,
+      "h": 0.46,
+      "col": "#c9772e",
+      "bolt": "#ffd88a",
+      "moves": [
+        {
+          "name": "Roll Around",
+          "dmg": 15,
+          "fx": "note"
+        },
+        {
+          "name": "Leak Grease on Everything",
+          "crowd": -7,
+          "fx": "note"
+        }
+      ]
+    },
+    "nosferatus": {
+      "name": "The Nosferatus",
+      "tagline": "Still reads the sponsor list. Craves blood.",
+      "art": "vamp",
+      "hp": 360,
+      "spd": 1.06,
+      "w": 1.05,
+      "h": 1.34,
+      "col": "#c9c4d6",
+      "bolt": "#6a2440",
+      "moves": [
+        {
+          "name": "Twelve-Minute Album Cut",
+          "dmg": 31,
+          "fx": "slash"
+        },
+        {
+          "name": "Dedicate This One To Nobody",
+          "dmgAll": 17,
+          "crowd": -8,
+          "fx": "ring"
+        },
+        {
+          "name": "Read The Whole Sponsor List",
+          "crowd": -20,
+          "fx": "ring"
+        }
+      ]
+    },
+    "backing": {
+      "name": "A Mini-Nosferatu",
+      "art": "vamp",
+      "hp": 82,
+      "spd": 1.34,
+      "w": 0.62,
+      "h": 0.86,
+      "col": "#a8a3ba",
+      "bolt": "#4a1c30",
+      "moves": [
+        {
+          "name": "Harmony Nobody Asked For",
+          "dmg": 14,
+          "fx": "note"
+        },
+        {
+          "name": "Instrument Not Plugged In",
+          "crowd": -7,
+          "fx": "note"
+        }
+      ]
+    },
+    "wolfgang": {
+      "name": "Were Wolfgang",
+      "tagline": "Attends every show for 19 years, never bought any merch.",
+      "art": "wolf",
+      "hp": 340,
+      "spd": 1.02,
+      "w": 1.18,
+      "h": 1.24,
+      "col": "#6b5a48",
+      "bolt": "#d8c9a8",
+      "moves": [
+        {
+          "name": "Two-Minute Song, Ninety Seconds Of It Screaming",
+          "dmg": 29,
+          "fx": "slash"
+        },
+        {
+          "name": "Windmill Into The Front Row",
+          "dmgAll": 16,
+          "crowd": -7,
+          "fx": "quake"
+        },
+        {
+          "name": "Ask The Room To Stand Up Again",
+          "crowd": -17,
+          "fx": "ring"
+        }
+      ]
+    },
+    "pupil": {
+      "name": "A Regular",
+      "art": "wolf",
+      "hp": 76,
+      "spd": 1.28,
+      "w": 0.66,
+      "h": 0.72,
+      "col": "#4e4438",
+      "bolt": "#b8a888",
+      "moves": [
+        {
+          "name": "Kick A Chair",
+          "dmg": 13,
+          "fx": "note"
+        },
+        {
+          "name": "Film It Vertically",
+          "crowd": -6,
+          "fx": "note"
+        }
+      ]
+    },
+    "wrapper": {
+      "name": "The Wrapper",
+      "tagline": "Nine hundred feet of somebody's demos.",
+      "art": "wrap",
+      "hp": 300,
+      "spd": 0.9,
+      "w": 1.12,
+      "h": 1.26,
+      "col": "#cbb894",
+      "bolt": "#6b5a3e",
+      "moves": [
+        {
+          "name": "Unspool",
+          "dmg": 26,
+          "fx": "slash"
+        },
+        {
+          "name": "Group Photo With The Whole Room",
+          "dmgAll": 14,
+          "crowd": -9,
+          "fx": "ring"
+        },
+        {
+          "name": "Read The Liner Notes Aloud",
+          "crowd": -18,
+          "fx": "ring"
+        }
+      ]
+    },
+    "looseend": {
+      "name": "A Loose End",
+      "art": "wrap",
+      "hp": 70,
+      "spd": 1.3,
+      "w": 0.62,
+      "h": 0.7,
+      "col": "#8a7a5c",
+      "bolt": "#4a3f2c",
+      "moves": [
+        {
+          "name": "Whip",
+          "dmg": 12,
+          "fx": "note"
+        },
+        {
+          "name": "Snag",
+          "crowd": -6,
+          "fx": "note"
+        }
+      ]
+    },
+    "gill": {
+      "name": "The Creature From The Blue-Green Algae",
+      "tagline": "No swimming. No breathing. Entry with cover charge only.",
+      "art": "gill",
+      "hp": 300,
+      "spd": 0.88,
+      "w": 1.2,
+      "h": 1.22,
+      "col": "#3f8a72",
+      "bolt": "#9ff0c8",
+      "moves": [
+        {
+          "name": "Hurricane-Advisory Level Splash",
+          "dmgAll": 16,
+          "crowd": -8,
+          "fx": "ring"
+        },
+        {
+          "name": "Tangle Feet in Garbage",
+          "dmg": 30,
+          "fx": "slash"
+        },
+        {
+          "name": "Breach Like a Whale",
+          "dmg": 19,
+          "crowd": -6,
+          "fx": "note"
+        }
+      ]
+    },
+    "jetski": {
+      "name": "Jet Ski Guy",
+      "art": "gill",
+      "hp": 80,
+      "spd": 1.35,
+      "w": 0.8,
+      "h": 0.8,
+      "col": "#5aa0c8",
+      "bolt": "#dff3ff",
+      "moves": [
+        {
+          "name": "Splash Onlookers",
+          "dmg": 13,
+          "fx": "note"
+        },
+        {
+          "name": "Break \"No Wake\" Zone",
+          "crowd": -6,
+          "fx": "note"
+        }
+      ]
+    },
+    "stein": {
+      "name": "A Stein",
+      "art": "stein",
+      "hp": 95,
+      "spd": 1.24,
+      "w": 0.92,
+      "h": 0.86,
+      "col": "#5c7a4c",
+      "bolt": "#b8b09a",
+      "moves": [
+        {
+          "name": "Backing Howl Vocals",
+          "dmg": 14,
+          "fx": "note"
+        },
+        {
+          "name": "Get Frustrated at Crowd",
+          "crowd": -7,
+          "fx": "note"
+        }
+      ]
+    }
+  },
+  "encounters": {
+    "unit114": {
+      "name": "FRANK & THE STEINS",
+      "venue": "Self-Storage Unit 666",
+      "enemies": [
+        {
+          "type": "frank",
+          "x": -0.1
+        },
+        {
+          "type": "stein",
+          "x": 0.3
+        }
+      ],
+      "crowdStart": 72,
+      "scaleHp": 1,
+      "join": [
+        "beau"
+      ],
+      "pay": 260,
+      "onWin": {
+        "flag": "frankDown",
+        "scene": "frank_down"
+      }
+    },
+    "om1": {
+      "name": "NIGHT ONE",
+      "venue": "Ozark Open Mic",
+      "rule": "NO COVERS — you cannot play the same move twice in a row",
+      "noRepeat": true,
+      "scaleWithBand": true,
+      "crowdStart": 60,
+      "scaleHp": 1,
+      "pay": 140,
+      "enemies": [
+        {
+          "type": "openmicer",
+          "x": -0.3
+        },
+        {
+          "type": "poet",
+          "x": 0.02
+        },
+        {
+          "type": "openmicer",
+          "x": 0.34
+        }
+      ],
+      "onWin": {
+        "flag": "om1"
+      }
+    },
+    "om2": {
+      "name": "NIGHT TWO",
+      "venue": "Ozark Open Mic",
+      "rule": "THE EARLY SLOT — nobody is here yet. Build the room from nothing",
+      "scaleWithBand": true,
+      "crowdStart": 30,
+      "crowdGain": 2.4,
+      "scaleHp": 0.9,
+      "pay": 190,
+      "enemies": [
+        {
+          "type": "openmicer",
+          "x": -0.32
+        },
+        {
+          "type": "coverband",
+          "x": 0.04
+        },
+        {
+          "type": "openmicer",
+          "x": 0.36
+        }
+      ],
+      "onWin": {
+        "flag": "om2"
+      }
+    },
+    "om3": {
+      "name": "NIGHT THREE",
+      "venue": "Ozark Open Mic",
+      "rule": "LAST CALL — you go on winded, every one of you",
+      "startWinded": true,
+      "scaleWithBand": true,
+      "crowdStart": 76,
+      "crowdGain": 1.3,
+      "scaleHp": 0.85,
+      "pay": 250,
+      "enemies": [
+        {
+          "type": "coverband",
+          "x": -0.32
+        },
+        {
+          "type": "regular",
+          "x": 0.04
+        },
+        {
+          "type": "regular",
+          "x": 0.36
+        }
+      ],
+      "onWin": {
+        "flag": "om3"
+      }
+    },
+    "om4": {
+      "name": "NIGHT FOUR",
+      "venue": "Ozark Open Mic",
+      "rule": "THE SOUND GUY LEFT — no Hype, so no Encores. Just your moves",
+      "noHype": true,
+      "scaleWithBand": true,
+      "crowdStart": 66,
+      "scaleHp": 2.1,
+      "pay": 320,
+      "enemies": [
+        {
+          "type": "openmicer",
+          "x": -0.34
+        },
+        {
+          "type": "soundguy",
+          "x": 0.02
+        },
+        {
+          "type": "openmicer",
+          "x": 0.36
+        }
+      ],
+      "onWin": {
+        "flag": "om4"
+      }
+    },
+    "om5": {
+      "name": "NIGHT FIVE",
+      "venue": "Ozark Open Mic",
+      "rule": "BATTLE OF THE BANDS — somebody learned your set",
+      "scaleWithBand": true,
+      "crowdStart": 58,
+      "scaleHp": 2.2,
+      "pay": 400,
+      "enemies": [
+        {
+          "type": "tributeyou",
+          "x": -0.34
+        },
+        {
+          "type": "tributeyou",
+          "x": 0.02
+        },
+        {
+          "type": "tributeyou",
+          "x": 0.36
+        }
+      ],
+      "onWin": {
+        "flag": "om5"
+      }
+    },
+    "om6": {
+      "name": "NIGHT SIX",
+      "venue": "Ozark Open Mic",
+      "rule": "THE REGULARS — three sets, and the room keeps filling",
+      "scaleWithBand": true,
+      "retrySong": true,
+      "pay": 480,
+      "songs": [
+        {
+          "title": "First Set",
+          "sub": "The regulars arrive",
+          "line": "Four of them at the back, arms folded, here every week.",
+          "clear": "They stay. That is either good or very bad.",
+          "enemies": [
+            {
+              "type": "regular",
+              "x": -0.34
+            },
+            {
+              "type": "regular",
+              "x": 0.02
+            },
+            {
+              "type": "regular",
+              "x": 0.36
+            }
+          ],
+          "crowdStart": 62,
+          "scaleHp": 1.35
+        },
+        {
+          "title": "Second Set",
+          "sub": "Word gets around",
+          "line": "More of them. Somebody called somebody.",
+          "clear": "The room is full. It has not been full in years.",
+          "enemies": [
+            {
+              "type": "regular",
+              "x": -0.42
+            },
+            {
+              "type": "regular",
+              "x": -0.14
+            },
+            {
+              "type": "regular",
+              "x": 0.16
+            },
+            {
+              "type": "coverband",
+              "x": 0.44
+            }
+          ],
+          "crowdStart": 66,
+          "scaleHp": 1.45
+        },
+        {
+          "title": "Third Set",
+          "sub": "The house band wants its slot back",
+          "line": "The band that has played this room every Tuesday since before the room gets up off their stools.",
+          "enemies": [
+            {
+              "type": "regular",
+              "x": -0.36
+            },
+            {
+              "type": "houseband",
+              "x": 0.02
+            },
+            {
+              "type": "regular",
+              "x": 0.36
+            }
+          ],
+          "crowdStart": 70,
+          "scaleHp": 1.35
+        }
+      ],
+      "onWin": {
+        "flag": "om6"
+      }
+    },
+    "finale": {
+      "name": "THE HEADLINER",
+      "venue": "The Venue — twenty years",
+      "retrySong": true,
+      "pay": 0,
+      "songs": [
+        {
+          "title": "Song One",
+          "sub": "Win the room",
+          "line": "Nobody here came for you. Forty people with their arms crossed and one guy filming the ceiling.",
+          "clear": "The front row uncrosses its arms. That is the whole trick and it took you twenty years.",
+          "enemies": [
+            {
+              "type": "armscrossed",
+              "x": -0.34
+            },
+            {
+              "type": "armscrossed",
+              "x": 0.02
+            },
+            {
+              "type": "armscrossed",
+              "x": 0.34
+            }
+          ],
+          "crowdStart": 44,
+          "scaleHp": 2.4
+        },
+        {
+          "title": "Song Two",
+          "sub": "The gear plays itself",
+          "line": "It does not come out. Its GEAR does. Every cabinet on that back wall lights up and starts playing, and the thing that owns them watches from the dark at the back of the room. Knock one over and the rest get louder.",
+          "clear": "The last cabinet goes quiet. From the back of the room, something applauds — slowly, and only twice.",
+          "enemies": [
+            {
+              "type": "halfstack",
+              "x": -0.4
+            },
+            {
+              "type": "headcab",
+              "x": -0.05
+            },
+            {
+              "type": "halfstack",
+              "x": 0.3
+            },
+            {
+              "type": "halfstack",
+              "x": 0.6
+            }
+          ],
+          "crowdStart": 70,
+          "scaleHp": 2.1
+        },
+        {
+          "title": "Song Three",
+          "sub": "The headliner, and its band",
+          "line": "It walks up onto the riser with two session players it paid in advance. You cannot touch it while they are standing. Get through them first — and understand that once they are down, it stops playing the band and starts playing the LINEUP.",
+          "enemies": [
+            {
+              "type": "hiredgun",
+              "x": -0.38
+            },
+            {
+              "type": "headliner2",
+              "x": 0.02
+            },
+            {
+              "type": "hiredgun",
+              "x": 0.38
+            }
+          ],
+          "crowdStart": 76,
+          "scaleHp": 1.05
+        }
+      ],
+      "onWin": {
+        "flag": "headlinerDown",
+        "scene": "finale_won"
+      }
+    },
+    "highway": {
+      "name": "Roller Grill Items (Enchanted)",
+      "venue": "Mile 69",
+      "enemies": [
+        {
+          "type": "taquito",
+          "x": -0.36
+        },
+        {
+          "type": "grill",
+          "x": 0.02
+        },
+        {
+          "type": "taquito",
+          "x": 0.36
+        }
+      ],
+      "crowdStart": 62,
+      "scaleHp": 3.3,
+      "pay": 780,
+      "onWin": {
+        "flag": "grillDown",
+        "scene": "grill_down"
+      }
+    },
+    "kfat": {
+      "name": "THE NOSFERATUS",
+      "venue": "Community Radio KFAT",
+      "enemies": [
+        {
+          "type": "backing",
+          "x": -0.36
+        },
+        {
+          "type": "nosferatus",
+          "x": 0.02
+        },
+        {
+          "type": "backing",
+          "x": 0.36
+        }
+      ],
+      "crowdStart": 64,
+      "scaleHp": 3.1,
+      "pay": 650,
+      "onWin": {
+        "flag": "vampDown",
+        "scene": "vamp_down"
+      }
+    },
+    "vfw": {
+      "name": "WERE WOLFGANG",
+      "venue": "The VFW Hall",
+      "enemies": [
+        {
+          "type": "pupil",
+          "x": -0.36
+        },
+        {
+          "type": "wolfgang",
+          "x": 0.02
+        },
+        {
+          "type": "pupil",
+          "x": 0.36
+        }
+      ],
+      "crowdStart": 66,
+      "scaleHp": 2.5,
+      "pay": 520,
+      "onWin": {
+        "flag": "wolfDown",
+        "scene": "wolf_down"
+      }
+    },
+    "cstreet": {
+      "name": "THE WRAPPER",
+      "venue": "C-Street, Springfield",
+      "enemies": [
+        {
+          "type": "looseend",
+          "x": -0.34
+        },
+        {
+          "type": "wrapper",
+          "x": 0.02
+        },
+        {
+          "type": "looseend",
+          "x": 0.34
+        }
+      ],
+      "crowdStart": 68,
+      "scaleHp": 2.1,
+      "pay": 420,
+      "onWin": {
+        "flag": "wrapperDown",
+        "scene": "wrapper_down"
+      }
+    },
+    "ozarks": {
+      "name": "THE CREATURE",
+      "venue": "Lake of the Ozarks",
+      "enemies": [
+        {
+          "type": "jetski",
+          "x": -0.34
+        },
+        {
+          "type": "gill",
+          "x": 0.04
+        },
+        {
+          "type": "jetski",
+          "x": 0.36
+        }
+      ],
+      "crowdStart": 70,
+      "scaleHp": 1,
+      "pay": 340,
+      "onWin": {
+        "flag": "gillDown",
+        "scene": "gill_down"
+      }
+    },
+    "demo": {
+      "name": "FRANK & THE STEINS",
+      "venue": "Balance sandbox — full band",
+      "enemies": [
+        {
+          "type": "stein",
+          "x": -0.3
+        },
+        {
+          "type": "frank",
+          "x": 0.02
+        },
+        {
+          "type": "stein",
+          "x": 0.34
+        }
+      ],
+      "crowdStart": 52,
+      "scaleHp": 2.1,
+      "pay": 500
+    }
+  },
+  "balance": {
+    "tempoRate": 15,
+    "sweatPerAction": 13,
+    "sweatRecoverBench": 9,
+    "windedAt": 70,
+    "blownAt": 100,
+    "gassedAt": 70,
+    "gassedDmg": 0.72,
+    "gassedSpeed": 0.58,
+    "restRelief": 38,
+    "breatherRelief": 34,
+    "breatherCrowd": -9,
+    "duetSweat": 26,
+    "backUpSweat": 10,
+    "foeDamage": 1,
+    "songSweatRelief": 25,
+    "benchSongRelief": 45,
+    "travelRelief": 14,
+    "winHold": 900,
+    "maxFoeHeight": 0.55,
+    "bandScaleBase": 0.5,
+    "bandScaleStep": 0.15,
+    "duet": {
+      "dmg": 44,
+      "hits": 2,
+      "splash": 16,
+      "hype": 26
+    },
+    "streakTiers": [
+      1,
+      1,
+      1.25,
+      1.5,
+      1.8,
+      2.2
+    ],
+    "crowdStart": 52,
+    "crowdMax": 100,
+    "crowdFromPlay": 0.35,
+    "rallyMult": 1.35,
+    "hasteMult": 1.4,
+    "ringMult": 0.65,
+    "toastMs": 6500
+  },
+  "backing": {
+    "aux": {
+      "label": "Gang vocals behind them",
+      "hype": 1.35,
+      "note": "+35% hype on everything they play"
+    },
+    "sampler": {
+      "label": "Looping them live",
+      "echo": 0.4,
+      "note": "40% of every move plays back a second time"
+    },
+    "bass": {
+      "label": "Doubling the low end",
+      "dmg": 1.25,
+      "note": "+25% damage"
+    },
+    "guitar": {
+      "label": "Second guitar",
+      "dmg": 1.2,
+      "hype": 1.1,
+      "note": "+20% damage, +10% hype"
+    },
+    "drums": {
+      "label": "Second kit",
+      "tempo": 0.8,
+      "note": "moves cost 20% less tempo"
+    },
+    "keys": {
+      "label": "Pads underneath",
+      "regen": 9,
+      "note": "heals them 9 after every action"
+    },
+    "mic": {
+      "label": "Harmony",
+      "hype": 1.25,
+      "dmg": 1.05,
+      "note": "+25% hype, +5% damage"
+    }
+  },
+  "duets": {
+    "bass+drums": {
+      "name": "The Rhythm Section",
+      "dmg": 104,
+      "hits": 1,
+      "splash": 0,
+      "hype": 18,
+      "fx": "quake",
+      "desc": "The floor goes. One enormous hit."
+    },
+    "guitar+keys": {
+      "name": "Wall Of Sound",
+      "dmgAll": 46,
+      "hits": 1,
+      "hype": 22,
+      "fx": "slash",
+      "desc": "Everything on stage, all at once."
+    },
+    "aux+mic": {
+      "name": "Gang Vocals",
+      "dmg": 28,
+      "hits": 1,
+      "splash": 10,
+      "hype": 52,
+      "fx": "wave",
+      "desc": "Barely an attack. The room does the rest."
+    },
+    "sampler+*": {
+      "name": "Loop It Back",
+      "dmg": 44,
+      "hits": 2,
+      "splash": 12,
+      "hype": 26,
+      "fx": "note",
+      "desc": "He catches whatever they just played and runs it again."
+    },
+    "guitar+mic": {
+      "name": "Two Front Men",
+      "dmg": 74,
+      "hits": 1,
+      "splash": 16,
+      "hype": 30,
+      "fx": "slash",
+      "desc": "Both of them at the front of the stage, which is one too many."
+    },
+    "default": {
+      "name": "Trade Off",
+      "dmg": 52,
+      "hits": 2,
+      "splash": 14,
+      "hype": 20,
+      "fx": "slash",
+      "desc": "They swap phrases until somebody wins."
+    }
+  }
+}

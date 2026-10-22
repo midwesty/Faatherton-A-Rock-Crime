@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "files": [
+    "cast.json",
+    "dialogue.json",
+    "scenes.json",
+    "world.json",
+    "battle.json",
+    "gear.json",
+    "audio.json",
+    "presentation.json"
+  ],
+  "generated": "2026-08-13"
+}

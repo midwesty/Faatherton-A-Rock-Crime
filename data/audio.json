@@ -1,0 +1,925 @@
+{
+  "_version": 1,
+  "music": {
+    "menu": {
+      "name": "Load-In",
+      "where": "Main menu",
+      "file": "audio/Achilles Edit Chip 1.mp3",
+      "bpm": 126.05,
+      "root": 45,
+      "scale": "minor",
+      "wave": "triangle",
+      "vol": 0.55,
+      "kick": "x...x...x...x...",
+      "snare": "....x.......x...",
+      "hat": "..x...x...x...x.",
+      "bass": [
+        0,
+        null,
+        0,
+        null,
+        3,
+        null,
+        5,
+        null
+      ],
+      "chords": [
+        0,
+        5,
+        3,
+        4
+      ],
+      "lead": false
+    },
+    "cell": {
+      "name": "Holding Pattern",
+      "where": "The holding cell",
+      "file": "audio/Darkroom Chip 1.mp3",
+      "bpm": 139.67,
+      "root": 40,
+      "scale": "minor",
+      "wave": "sine",
+      "vol": 0.42,
+      "kick": "x.......x.......",
+      "snare": "",
+      "hat": "",
+      "bass": [
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        -2,
+        null
+      ],
+      "chords": [
+        0,
+        0,
+        6,
+        6
+      ],
+      "lead": false
+    },
+    "map": {
+      "name": "Between Towns",
+      "where": "World map",
+      "file": "audio/7 Months chip 1.mp3",
+      "bpm": 99.38,
+      "root": 47,
+      "scale": "dorian",
+      "wave": "triangle",
+      "vol": 0.46,
+      "kick": "x...x...x...x...",
+      "snare": "....x.......x...",
+      "hat": "x.x.x.x.x.x.x.x.",
+      "bass": [
+        0,
+        0,
+        null,
+        5,
+        null,
+        3,
+        null,
+        null
+      ],
+      "chords": [
+        0,
+        3,
+        5,
+        4
+      ],
+      "lead": true
+    },
+    "storage": {
+      "name": "Unit 114",
+      "where": "Self-Storage",
+      "file": "audio/Fandango DandBonly chip 1.mp3",
+      "bpm": 156.61,
+      "root": 41,
+      "scale": "minor",
+      "wave": "square",
+      "vol": 0.44,
+      "kick": "x..x..x...x.....",
+      "snare": "....x.......x...",
+      "hat": "..x...x...x...x.",
+      "bass": [
+        0,
+        null,
+        0,
+        3,
+        null,
+        null,
+        -2,
+        null
+      ],
+      "chords": [
+        0,
+        6,
+        3,
+        3
+      ],
+      "lead": false
+    },
+    "pawn": {
+      "name": "Open All Night",
+      "where": "Hoffman’s Pawn",
+      "file": "audio/Fandango DandBonly chip 1.mp3",
+      "bpm": 156.61,
+      "root": 44,
+      "scale": "dorian",
+      "wave": "triangle",
+      "vol": 0.4,
+      "kick": "x.......x.......",
+      "snare": "",
+      "hat": "..x...x...x...x.",
+      "bass": [
+        0,
+        null,
+        null,
+        5,
+        null,
+        null,
+        3,
+        null
+      ],
+      "chords": [
+        0,
+        4,
+        5,
+        4
+      ],
+      "lead": false
+    },
+    "lake": {
+      "name": "No Wake Zone",
+      "where": "Lake of the Ozarks",
+      "file": "audio/ImpressionistChip1.wav",
+      "bpm": 87.59,
+      "root": 38,
+      "scale": "minor",
+      "wave": "sine",
+      "vol": 0.44,
+      "kick": "x.......x.......",
+      "snare": "........x.......",
+      "hat": "x...x...x...x...",
+      "bass": [
+        0,
+        null,
+        null,
+        null,
+        -2,
+        null,
+        null,
+        null
+      ],
+      "chords": [
+        0,
+        6,
+        4,
+        5
+      ],
+      "lead": true
+    },
+    "cstreet": {
+      "name": "Four Blocks",
+      "where": "C-Street",
+      "file": "audio/OxygenMaskChip1.mp3",
+      "bpm": 105.47,
+      "root": 45,
+      "scale": "dorian",
+      "wave": "sawtooth",
+      "vol": 0.44,
+      "kick": "x...x..xx...x...",
+      "snare": "....x.......x...",
+      "hat": "x.x.x.x.x.x.x.x.",
+      "bass": [
+        0,
+        0,
+        3,
+        null,
+        5,
+        null,
+        3,
+        0
+      ],
+      "chords": [
+        0,
+        3,
+        4,
+        3
+      ],
+      "lead": true
+    },
+    "vfw": {
+      "name": "Five Dollars, All Ages",
+      "where": "The VFW Hall",
+      "file": "audio/Achilles Edit Chip 1.mp3",
+      "bpm": 126.05,
+      "root": 47,
+      "scale": "minor",
+      "wave": "square",
+      "vol": 0.46,
+      "kick": "x..x..x.x..x..x.",
+      "snare": "....x.......x...",
+      "hat": "x.x.x.x.x.x.x.x.",
+      "bass": [
+        0,
+        0,
+        0,
+        0,
+        5,
+        5,
+        3,
+        3
+      ],
+      "chords": [
+        0,
+        5,
+        3,
+        4
+      ],
+      "lead": true
+    },
+    "radio": {
+      "name": "Dead Air",
+      "where": "Community Radio KFAT",
+      "file": "audio/Darkroom Chip 1.mp3",
+      "bpm": 139.67,
+      "root": 43,
+      "scale": "minor",
+      "wave": "triangle",
+      "vol": 0.42,
+      "kick": "x...x...x...x...",
+      "snare": "....x.......x...",
+      "hat": "..x...x...x...x.",
+      "bass": [
+        0,
+        null,
+        -2,
+        null,
+        3,
+        null,
+        5,
+        null
+      ],
+      "chords": [
+        0,
+        6,
+        5,
+        5
+      ],
+      "lead": true
+    },
+    "highway": {
+      "name": "Mile 82",
+      "where": "The Highway",
+      "file": "audio/ImpressionistChip1.wav",
+      "bpm": 87.59,
+      "root": 40,
+      "scale": "dorian",
+      "wave": "sawtooth",
+      "vol": 0.46,
+      "kick": "x...x...x...x...",
+      "snare": "....x.......x...",
+      "hat": "x.x.x.x.x.x.x.x.",
+      "bass": [
+        0,
+        0,
+        null,
+        0,
+        5,
+        null,
+        3,
+        null
+      ],
+      "chords": [
+        0,
+        4,
+        3,
+        5
+      ],
+      "lead": true
+    },
+    "venue": {
+      "name": "Twenty Years",
+      "where": "The Venue",
+      "file": "audio/OxygenMaskChip1.mp3",
+      "bpm": 105.47,
+      "root": 45,
+      "scale": "minor",
+      "wave": "sawtooth",
+      "vol": 0.5,
+      "kick": "x..x..x.x..x..x.",
+      "snare": "....x.......x...",
+      "hat": "x.x.x.x.x.x.x.x.",
+      "bass": [
+        0,
+        0,
+        5,
+        5,
+        3,
+        3,
+        4,
+        4
+      ],
+      "chords": [
+        0,
+        5,
+        3,
+        4
+      ],
+      "lead": true
+    },
+    "fight": {
+      "name": "The Set",
+      "where": "Most fights",
+      "file": "audio/Lights Out Chip1.mp3",
+      "bpm": 97.51,
+      "root": 45,
+      "scale": "minor",
+      "wave": "square",
+      "vol": 0.48,
+      "kick": "x..x..x.x..x..x.",
+      "snare": "....x.......x...",
+      "hat": "x.x.x.x.x.x.x.x.",
+      "bass": [
+        0,
+        0,
+        3,
+        0,
+        5,
+        0,
+        3,
+        -2
+      ],
+      "chords": [
+        0,
+        3,
+        5,
+        4
+      ],
+      "lead": true
+    },
+    "boss": {
+      "name": "Bad Bill",
+      "where": "Boss fights",
+      "file": "audio/Achilles Edit Chip 1.mp3",
+      "bpm": 126.05,
+      "root": 38,
+      "scale": "phrygian",
+      "wave": "sawtooth",
+      "vol": 0.52,
+      "kick": "x.x.x.x.x.x.x.x.",
+      "snare": "....x.......x...",
+      "hat": "xxxxxxxxxxxxxxxx",
+      "bass": [
+        0,
+        0,
+        1,
+        0,
+        5,
+        0,
+        1,
+        0
+      ],
+      "chords": [
+        0,
+        1,
+        5,
+        1
+      ],
+      "lead": true
+    },
+    "finale": {
+      "name": "Closing Time",
+      "where": "The finale",
+      "file": "audio/Lights Out Chip1.mp3",
+      "bpm": 97.51,
+      "root": 45,
+      "scale": "minor",
+      "wave": "sawtooth",
+      "vol": 0.56,
+      "kick": "x.x.x.x.x.x.x.x.",
+      "snare": "....x.......x...",
+      "hat": "xxxxxxxxxxxxxxxx",
+      "bass": [
+        0,
+        0,
+        5,
+        5,
+        3,
+        3,
+        4,
+        4
+      ],
+      "chords": [
+        0,
+        5,
+        3,
+        4
+      ],
+      "lead": true
+    },
+    "diner": {
+      "name": "Nite Owl",
+      "where": "The Nite Owl",
+      "file": "audio/Darkroom Chip 1.mp3",
+      "bpm": 139.67,
+      "root": 45,
+      "scale": "major",
+      "wave": "sine",
+      "vol": 0.4,
+      "kick": "x.......x.......",
+      "snare": "",
+      "hat": "..x...x...x...x.",
+      "bass": [
+        0,
+        null,
+        null,
+        4,
+        null,
+        null,
+        5,
+        null
+      ],
+      "chords": [
+        0,
+        5,
+        3,
+        4
+      ],
+      "lead": true
+    },
+    "barroom": {
+      "name": "Sign-Up Sheet",
+      "where": "Ozark Open Mic",
+      "file": "audio/Achilles Edit Chip 1.mp3",
+      "bpm": 126.05,
+      "root": 41,
+      "scale": "dorian",
+      "wave": "triangle",
+      "vol": 0.44,
+      "kick": "x...x...x...x...",
+      "snare": "....x.......x...",
+      "hat": "..x...x...x...x.",
+      "bass": [
+        0,
+        null,
+        3,
+        null,
+        5,
+        null,
+        3,
+        null
+      ],
+      "chords": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "lead": true
+    },
+    "credits": {
+      "name": "Load-Out",
+      "where": "Credits",
+      "file": "audio/Achilles Edit Chip 1.mp3",
+      "bpm": 126.05,
+      "root": 45,
+      "scale": "major",
+      "wave": "triangle",
+      "vol": 0.5,
+      "kick": "x...x...x...x...",
+      "snare": "....x.......x...",
+      "hat": "..x...x...x...x.",
+      "bass": [
+        0,
+        null,
+        4,
+        null,
+        5,
+        null,
+        3,
+        null
+      ],
+      "chords": [
+        0,
+        4,
+        5,
+        3
+      ],
+      "lead": true
+    }
+  },
+  "sfx": {
+    "ui.tap": {
+      "file": null,
+      "gen": "blip",
+      "freq": 660,
+      "dur": 0.045,
+      "vol": 0.22,
+      "vary": 0.03
+    },
+    "ui.back": {
+      "file": null,
+      "gen": "blip",
+      "freq": 330,
+      "dur": 0.06,
+      "vol": 0.2
+    },
+    "ui.confirm": {
+      "file": null,
+      "gen": "blip",
+      "freq": 880,
+      "dur": 0.09,
+      "vol": 0.26
+    },
+    "ui.deny": {
+      "file": null,
+      "gen": "blip",
+      "freq": 150,
+      "dur": 0.14,
+      "vol": 0.26,
+      "type": "square"
+    },
+    "ui.toast": {
+      "file": null,
+      "gen": "coin",
+      "freq": 1046,
+      "dur": 0.22,
+      "vol": 0.28
+    },
+    "ui.save": {
+      "file": null,
+      "gen": "coin",
+      "freq": 784,
+      "dur": 0.3,
+      "vol": 0.26
+    },
+    "world.room": {
+      "file": null,
+      "gen": "sweep",
+      "freq": 300,
+      "dur": 0.42,
+      "vol": 0.22
+    },
+    "world.travel": {
+      "file": null,
+      "gen": "sweep",
+      "freq": 200,
+      "dur": 0.6,
+      "vol": 0.26
+    },
+    "world.pickup": {
+      "file": null,
+      "gen": "coin",
+      "freq": 988,
+      "dur": 0.26,
+      "vol": 0.32
+    },
+    "world.money": {
+      "file": null,
+      "gen": "coin",
+      "freq": 1318,
+      "dur": 0.34,
+      "vol": 0.3
+    },
+    "world.pedal": {
+      "file": null,
+      "gen": "zap",
+      "freq": 420,
+      "dur": 0.28,
+      "vol": 0.3
+    },
+    "world.unlock": {
+      "file": null,
+      "gen": "thud",
+      "freq": 90,
+      "dur": 0.45,
+      "vol": 0.42
+    },
+    "puzzle.right": {
+      "file": null,
+      "gen": "coin",
+      "freq": 1174,
+      "dur": 0.55,
+      "vol": 0.34
+    },
+    "puzzle.wrong": {
+      "file": null,
+      "gen": "zap",
+      "freq": 120,
+      "dur": 0.34,
+      "vol": 0.3,
+      "type": "square"
+    },
+    "talk.logan": {
+      "file": null,
+      "gen": "blip",
+      "freq": 392,
+      "dur": 0.035,
+      "vol": 0.14
+    },
+    "talk.beau": {
+      "file": null,
+      "gen": "blip",
+      "freq": 466,
+      "dur": 0.035,
+      "vol": 0.14
+    },
+    "talk.nathaniel": {
+      "file": null,
+      "gen": "blip",
+      "freq": 523,
+      "dur": 0.035,
+      "vol": 0.14
+    },
+    "talk.mat": {
+      "file": null,
+      "gen": "blip",
+      "freq": 349,
+      "dur": 0.035,
+      "vol": 0.14
+    },
+    "talk.kevin": {
+      "file": null,
+      "gen": "blip",
+      "freq": 294,
+      "dur": 0.035,
+      "vol": 0.14
+    },
+    "talk.brian": {
+      "file": null,
+      "gen": "blip",
+      "freq": 587,
+      "dur": 0.035,
+      "vol": 0.14
+    },
+    "talk.brice": {
+      "file": null,
+      "gen": "blip",
+      "freq": 262,
+      "dur": 0.035,
+      "vol": 0.14
+    },
+    "talk.promoter": {
+      "file": null,
+      "gen": "zap",
+      "freq": 180,
+      "dur": 0.06,
+      "vol": 0.16
+    },
+    "talk.npc": {
+      "file": null,
+      "gen": "blip",
+      "freq": 440,
+      "dur": 0.035,
+      "vol": 0.12
+    },
+    "bat.ready": {
+      "file": null,
+      "gen": "blip",
+      "freq": 1046,
+      "dur": 0.07,
+      "vol": 0.2
+    },
+    "bat.select": {
+      "file": null,
+      "gen": "blip",
+      "freq": 740,
+      "dur": 0.05,
+      "vol": 0.2
+    },
+    "bat.hit": {
+      "file": null,
+      "gen": "snare",
+      "freq": 220,
+      "dur": 0.16,
+      "vol": 0.34
+    },
+    "bat.crit": {
+      "file": null,
+      "gen": "crash",
+      "freq": 520,
+      "dur": 0.55,
+      "vol": 0.4
+    },
+    "bat.hurt": {
+      "file": null,
+      "gen": "thud",
+      "freq": 110,
+      "dur": 0.2,
+      "vol": 0.34
+    },
+    "bat.heal": {
+      "file": null,
+      "gen": "pad",
+      "freq": 523,
+      "dur": 0.7,
+      "vol": 0.26
+    },
+    "bat.revive": {
+      "file": null,
+      "gen": "pad",
+      "freq": 659,
+      "dur": 1.1,
+      "vol": 0.3
+    },
+    "bat.down": {
+      "file": null,
+      "gen": "sweep",
+      "freq": 180,
+      "dur": 0.7,
+      "vol": 0.32,
+      "down": true
+    },
+    "bat.gassed": {
+      "file": null,
+      "gen": "zap",
+      "freq": 100,
+      "dur": 0.3,
+      "vol": 0.22
+    },
+    "bat.streak": {
+      "file": null,
+      "gen": "coin",
+      "freq": 1568,
+      "dur": 0.28,
+      "vol": 0.3
+    },
+    "bat.swap": {
+      "file": null,
+      "gen": "hat",
+      "freq": 900,
+      "dur": 0.12,
+      "vol": 0.24
+    },
+    "atk.mic": {
+      "file": null,
+      "gen": "voice",
+      "freq": 330,
+      "dur": 0.55,
+      "vol": 0.4,
+      "vary": 0.05
+    },
+    "atk.guitar": {
+      "file": null,
+      "gen": "pluck",
+      "freq": 330,
+      "dur": 0.5,
+      "vol": 0.42,
+      "type": "sawtooth",
+      "cut": 2800,
+      "vary": 0.06
+    },
+    "atk.bass": {
+      "file": null,
+      "gen": "pluck",
+      "freq": 82,
+      "dur": 0.6,
+      "vol": 0.52,
+      "type": "square",
+      "cut": 700,
+      "vary": 0.03
+    },
+    "atk.drums": {
+      "file": null,
+      "gen": "kick",
+      "freq": 120,
+      "dur": 0.34,
+      "vol": 0.5,
+      "vary": 0.02
+    },
+    "atk.keys": {
+      "file": null,
+      "gen": "pad",
+      "freq": 440,
+      "dur": 0.8,
+      "vol": 0.32,
+      "vary": 0.02
+    },
+    "atk.aux": {
+      "file": null,
+      "gen": "hat",
+      "freq": 1200,
+      "dur": 0.22,
+      "vol": 0.34,
+      "vary": 0.08
+    },
+    "atk.sampler": {
+      "file": null,
+      "gen": "zap",
+      "freq": 520,
+      "dur": 0.3,
+      "vol": 0.36,
+      "vary": 0.14
+    },
+    "atk.none": {
+      "file": null,
+      "gen": "blip",
+      "freq": 440,
+      "dur": 0.1,
+      "vol": 0.2
+    },
+    "big.songcard": {
+      "file": null,
+      "gen": "crash",
+      "freq": 660,
+      "dur": 0.9,
+      "vol": 0.4
+    },
+    "big.clear": {
+      "file": null,
+      "gen": "coin",
+      "freq": 1568,
+      "dur": 0.7,
+      "vol": 0.38
+    },
+    "big.encore": {
+      "file": null,
+      "gen": "crash",
+      "freq": 880,
+      "dur": 1.6,
+      "vol": 0.52
+    },
+    "big.duet": {
+      "file": null,
+      "gen": "crash",
+      "freq": 740,
+      "dur": 1.1,
+      "vol": 0.46
+    },
+    "big.boss": {
+      "file": null,
+      "gen": "thud",
+      "freq": 60,
+      "dur": 1.2,
+      "vol": 0.5
+    },
+    "big.win": {
+      "file": null,
+      "gen": "coin",
+      "freq": 1046,
+      "dur": 1,
+      "vol": 0.42
+    },
+    "big.lose": {
+      "file": null,
+      "gen": "sweep",
+      "freq": 220,
+      "dur": 1.2,
+      "vol": 0.36,
+      "down": true
+    }
+  },
+  "musicMap": {
+    "menu": "menu",
+    "credits": "credits",
+    "node": {
+      "diner": "diner",
+      "openmic": "barroom",
+      "unit114": "storage",
+      "hoffmans": "pawn",
+      "ozarks": "lake",
+      "cstreet": "cstreet",
+      "vfw": "vfw",
+      "kfat": "radio",
+      "highway": "highway",
+      "venue": "venue"
+    },
+    "map": "map",
+    "scene": {
+      "intro": "cell",
+      "lost": "cell",
+      "finale_won": "credits"
+    },
+    "battle": {
+      "om1": "barroom",
+      "om2": "barroom",
+      "om3": "barroom",
+      "om4": "barroom",
+      "om5": "fight",
+      "om6": "boss",
+      "unit114": "fight",
+      "ozarks": "fight",
+      "cstreet": "fight",
+      "vfw": "fight",
+      "kfat": "boss",
+      "highway": "boss",
+      "demo": "fight"
+    },
+    "song": {
+      "finale": [
+        "venue",
+        "boss",
+        "finale"
+      ],
+      "om6": [
+        "barroom",
+        "fight",
+        "boss"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1496 @@
+{
+  "_version": 1,
+  "dialog": {
+    "gary": {
+      "start": "a",
+      "who": "GARY, NIGHT ATTENDANT",
+      "color": "#ffb43c",
+      "nodes": {
+        "a": {
+          "text": "We ain't open! Been closed ever since what the locals call the \"Olestra\" summer. Units is all stained up. You want a unit, you come back next week.",
+          "opts": [
+            {
+              "label": "Unit 666? Looking for a guitarist. Goes by the name of Beau. ",
+              "to": "b"
+            },
+            {
+              "label": "[PRESENCE 9] Eyeball this dude into submission with your vacant stare.",
+              "check": {
+                "stat": "PRESENCE",
+                "dc": 9
+              },
+              "pass": "c",
+              "fail": "b"
+            },
+            {
+              "label": "Back away slowly...",
+              "end": true
+            }
+          ]
+        },
+        "b": {
+          "text": "666?! You mean the unit with the door that shakes itself, got blood drippin' out the keyhole, and sick-noodles cranked at full volume all night?! Ooooh, I'd evict that sommabitch if'n he didn't over pay every month and didn't have that nasty creature in there with'm.",
+          "opts": [
+            {
+              "label": "I've dealt with creatures before. What kind of goo-gah are we talking? Black lagoon or more of the \"in my pocket\" variety? ",
+              "to": "d"
+            },
+            {
+              "label": "[CHOPS 9] \"That electrified-hum sounds familiar. Like I've heard it play an extended 6 minute outro before...\"",
+              "check": {
+                "stat": "CHOPS",
+                "dc": 9
+              },
+              "pass": "e",
+              "fail": "d"
+            },
+            {
+              "label": "Thanks, but I don't need your whole life story, pal.",
+              "end": true
+            }
+          ]
+        },
+        "c": {
+          "text": "Shesh! Okay, okay... I don't know what it is, but it's Green, large, and it keeps playing the same four chords for the last 20 years! It's mind numbing.",
+          "opts": [
+            {
+              "label": "\"Why haven't you stopped this?\"",
+              "to": "d"
+            },
+            {
+              "label": "[TASTE 9] \"That's not just mind numbing, it's a cover band. Every song on the radio can be played using the same 4 chords if you have a capo.\"",
+              "check": {
+                "stat": "TASTE",
+                "dc": 9
+              },
+              "pass": "f",
+              "fail": "d"
+            }
+          ]
+        },
+        "d": {
+          "text": "I don't know, Slick! Look, you figure out how to get past the locked door, and YOU talk to the 8 foot monster with the bolted on neck and his captive-man politely about their noise levels!",
+          "opts": [
+            {
+              "label": "\"Locked door? Sounds like some sort of puzzle...\"",
+              "to": "g"
+            }
+          ]
+        },
+        "e": {
+          "text": "Yeah, good ear! That whatsit in the unit's got himself a friend, or maybe a prisoner. Not sure, but the captive man sure can play the lead to anything. 20 years playing over those same 4 chords hasn't broken him yet, judging by the fact he's still shredding in there. ",
+          "opts": [
+            {
+              "label": "\"Someone needs to put an end to this. How do I get in there?\"",
+              "to": "d"
+            }
+          ]
+        },
+        "f": {
+          "text": "I wouldn't know. I only listen to whale sounds and spoken word poetry. Did make a guitar Pedal once though. Rarely shocks ya even!",
+          "grant": {
+            "item": "tape"
+          },
+          "opts": [
+            {
+              "label": "\"Rarely is good. Can I try it?\" (pedal on workbench)",
+              "to": "gift2"
+            }
+          ]
+        },
+        "g": {
+          "text": "Some of them fancy guitar pedals done been rigged up to keep everyone out. I reckon, you put them in the right order and the door will either open up, or you'll get yourself electrocuted. Or both.",
+          "flag": "knowPuzzle",
+          "opts": [
+            {
+              "label": "\"I see.\"",
+              "end": true
+            },
+            {
+              "label": "\"What's that thing?\" (Pedal on workbench)",
+              "to": "gift"
+            }
+          ]
+        },
+        "h": {
+          "text": "I found this old think in the parking lot last week. I got no need for it, but maybe use ear protection and let a buddy know where you are when using it. Looks loud.",
+          "opts": [
+            {
+              "label": "\"I got it.\"",
+              "to": "g"
+            }
+          ]
+        },
+        "gift": {
+          "text": "That was formerly a TV remote control, a Commodor 64 unit, and about 6 rolls of duck tape. Now it's a guitar pedal. Last one I'll ever build.",
+          "opts": [
+            {
+              "label": "\"Can I jam through it real quick?\"",
+              "to": "gift2"
+            },
+            {
+              "label": "\"Weird.... I have no follow up questions about this.\"",
+              "end": true
+            }
+          ]
+        },
+        "gift2": {
+          "text": "You can HAVE it. I can't play no more due to the chemical reaction from the de-scenter and my fingers. ",
+          "flag": "garyPedal",
+          "pedal": "nightshift",
+          "opts": [
+            {
+              "label": "\"...thanks, Higgins.\"",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "stickers": {
+      "start": "a",
+      "who": "THE DOOR FRAME",
+      "color": "#8a7f9c",
+      "nodes": {
+        "a": {
+          "text": "Twenty years of stickers, layered like sediment. Bands that lasted a weekend. Bands that lasted two. A layered history of bands who rocked. You see all they band's you've ever played with and every band you've met along this journey.",
+          "opts": [
+            {
+              "label": "Leave it.",
+              "end": true
+            },
+            {
+              "label": "Find a place to add a fresh Faatherton sticker to the plastered wall.",
+              "to": "b"
+            }
+          ]
+        },
+        "b": {
+          "text": "You're careful to cover no bands sticker. You put yours next to it. That was always the arrangement.",
+          "flag": "sticker",
+          "opts": [
+            {
+              "label": "Go in.",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "gr_frank": {
+      "start": "a",
+      "who": "FRANK",
+      "color": "#6f8f5a",
+      "nodes": {
+        "a": {
+          "text": "Oh... it's you from the storage unit. Y'all rocked my face off. The end. Of course, it is only loosely sewed on.",
+          "opts": [
+            {
+              "label": "\"You patched it up, uh... adequately.\"",
+              "to": "b"
+            },
+            {
+              "label": "\"You had a good tone. Working on it for a while, huh?\"",
+              "to": "c"
+            }
+          ]
+        },
+        "b": {
+          "text": "I took home economics.",
+          "opts": [
+            {
+              "label": "\"Are you on the bill tonight?\"",
+              "to": "d"
+            }
+          ]
+        },
+        "c": {
+          "text": "Thanks, I guess. Turns out you need more than a rad tone and great looks to make it in this town...",
+          "opts": [
+            {
+              "label": "\"Are you on the bill tonight?\"",
+              "to": "d"
+            }
+          ]
+        },
+        "d": {
+          "text": "Everybody's on the bill tonight. That's what the bill IS. You just don't want to be on when the Headliners take the stage. No one's ever finished their set...",
+          "flag": "grFrank",
+          "opts": [
+            {
+              "label": "\"...what happens?\"",
+              "to": "e"
+            }
+          ]
+        },
+        "e": {
+          "text": "They died! I thought that was clear. ",
+          "opts": [
+            {
+              "label": "Nod.",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "gr_vamp": {
+      "start": "a",
+      "who": "THE NOSFERATUS",
+      "color": "#c9c4d6",
+      "nodes": {
+        "a": {
+          "text": "— and our thanks to our sponsors Ozark Tire Salvage and Fire-Pile, Hinkley Feed and Seed, and to the Camdenton Rotisserie Club who always...— oh. It's you. You took my frequency.",
+          "opts": [
+            {
+              "label": "\"It was never yours to begin with. And the content was only so-so.\"",
+              "to": "b"
+            },
+            {
+              "label": "\"There haven’t been sponsors since 2004.\"",
+              "to": "b"
+            }
+          ]
+        },
+        "b": {
+          "text": "I am aware. I read the list anyway because somebody cared enough to sponsor us once, and that means a lot. At least to me.",
+          "flag": "grVamp",
+          "opts": [
+            {
+              "label": "\"That's pretty admirable, dude.\"",
+              "to": "c"
+            }
+          ]
+        },
+        "c": {
+          "text": "Eh, don't romanticize it. It is eleven minutes of local advertising. Now go blow the lid of this room.",
+          "opts": [
+            {
+              "label": "\"Planning on it.\"",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "gr_wolf": {
+      "start": "a",
+      "who": "WERE WOLFGANG",
+      "color": "#6b5a48",
+      "nodes": {
+        "a": {
+          "text": "Hey. Hey! Great set at the VFW.. Sorry for wrecking the place.",
+          "opts": [
+            {
+              "label": "\"You went through 4 rows of folding chairs and broke the dehumidifier.\"",
+              "to": "b"
+            },
+            {
+              "label": "\"I heard you showed up every week.\"",
+              "to": "c"
+            }
+          ]
+        },
+        "b": {
+          "text": "I get excited to rock! It's been a long time since somebody played that stage like they wanted to be there.",
+          "opts": [
+            {
+              "label": "\"We had no choice. Why did you keep coming?\"",
+              "to": "c"
+            }
+          ]
+        },
+        "c": {
+          "text": "Somebody's gotta be there, else it's just band practice. I was there for almost 20 years.",
+          "flag": "grWolf",
+          "opts": [
+            {
+              "label": "\"Then bring that energy to the pit tonight.\"",
+              "to": "d"
+            }
+          ]
+        },
+        "d": {
+          "text": "Yeah... you know what? I may even buy a shirt!",
+          "opts": [
+            {
+              "label": "\"Finally.\"",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "trucker": {
+      "start": "a",
+      "who": "THE TRUCKER AT PUMP NINE",
+      "color": "#ffb43c",
+      "nodes": {
+        "a": {
+          "text": "You finally here to move that damn van?! It parks here every night with smoke pouring from the engine and cabin. Makes it hard to pump my gas with the loud bass coming from it every night. Why can't that guy fix the engine and move on?! ",
+          "opts": [
+            {
+              "label": "\"It was our van. Technically still is.\"",
+              "to": "b"
+            },
+            {
+              "label": "[GRIT 10] \"Just how long?\"",
+              "check": {
+                "stat": "GRIT",
+                "dc": 10
+              },
+              "pass": "c",
+              "fail": "b"
+            },
+            {
+              "label": "Leave him to his pump.",
+              "end": true
+            }
+          ]
+        },
+        "b": {
+          "text": "Then maybe you should help! He's somewhere in, on, or around the hunk of junk.",
+          "flag": "knowVan",
+          "opts": [
+            {
+              "label": "\"What’s wrong with it?\"",
+              "to": "d"
+            },
+            {
+              "label": "\"Thanks.\"",
+              "end": true
+            }
+          ]
+        },
+        "c": {
+          "text": "Says he's been \"on tour\" since TiVo was a thing, and no one argues with him about it. He's got a wild look in his eye like he hardly sleeps. Something about gremlins or wizards or something.",
+          "flag": "knowVan",
+          "opts": [
+            {
+              "label": "\"I still use my TiVo... but that's pretty old.\"",
+              "to": "d"
+            }
+          ]
+        },
+        "d": {
+          "text": "It's the belt. It's never not the belt. It's finding one that fits is the issue.",
+          "flag": "knowBrice",
+          "opts": [
+            {
+              "label": "\"Back lot, eh?\"",
+              "to": "e"
+            },
+            {
+              "label": "\"Alls belt that ends belt.\"",
+              "to": "e"
+            }
+          ]
+        },
+        "e": {
+          "text": "Back lot then. And hey, don't rev the engine full throttle. Those gremlin wizards get real miffed over noise pollution. Kinds weird for a loud band like that, jamming all the time...",
+          "opts": [
+            {
+              "label": "\"Noted.\"",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "waitress": {
+      "start": "a",
+      "who": "THE WAITRESS",
+      "color": "#6cff9e",
+      "nodes": {
+        "a": {
+          "text": "Have a seat. Or don't. And remember no instruments allowed. So sick of that bassy, van-chump.",
+          "opts": [
+            {
+              "label": "\"The sad guy with the bass in the corner?\"",
+              "to": "b"
+            },
+            {
+              "label": "[PRESENCE 10] \"We’re here to reclaim him. We're his band.\"",
+              "check": {
+                "stat": "PRESENCE",
+                "dc": 10
+              },
+              "pass": "c",
+              "fail": "b"
+            }
+          ]
+        },
+        "b": {
+          "text": "Say's he's waiting to continue the tour. Never buys nothin'.",
+          "opts": [
+            {
+              "label": "\"We had an off night.\"",
+              "to": "d"
+            },
+            {
+              "label": "\"How's he surviving?\"",
+              "to": "d"
+            }
+          ]
+        },
+        "c": {
+          "text": "Well I'll be damned. Never once believed him.",
+          "flag": "potOffered",
+          "opts": [
+            {
+              "label": "\"We’re taking him with us.\"",
+              "to": "e"
+            }
+          ]
+        },
+        "d": {
+          "text": "Says he packed enough provisions to tour forever. Thing is that van is broken. Oh, and haunted. That too. Ya'll want some chicken skin imma have to throw out otherwise?",
+          "flag": "potOffered",
+          "opts": [
+            {
+              "label": "\"Leave it to us. Two things we handle: hauntings and tunings.\"",
+              "to": "e"
+            }
+          ]
+        },
+        "e": {
+          "text": "You'll need this then. This pot of coffee has brewed longer than I've worked here. It will give you strength. Plus, then I wont have to clean it.",
+          "opts": [
+            {
+              "label": "\"Thank you. And gross.\"",
+              "end": true
+            },
+            {
+              "label": "\"Got any black market pedals back there? Uh, asking for a friend...\"",
+              "check": {
+                "stat": "GRIT",
+                "dc": 9
+              },
+              "pass": "gift2",
+              "fail": "Gift Refuse"
+            }
+          ]
+        },
+        "gift": {
+          "text": "That's his. He works out the chords on the back of guest checks and leaves them. I keep the good ones. This one's been up there four years and I've never had the heart.",
+          "opts": [
+            {
+              "label": "\"Can I take it?\"",
+              "to": "gift2"
+            },
+            {
+              "label": "\"Leave it up.\"",
+              "to": "d"
+            }
+          ]
+        },
+        "gift2": {
+          "text": "For a tall glass of gasoline like yourself, I may have a little somethin' for you! But you didn't get it here. You didn't get food poisoning here either if that damn health inspector asks! Also, ouch, my leg!",
+          "flag": "waitPedal",
+          "pedal": "shortstack",
+          "opts": [
+            {
+              "label": "\"We were never here.\"",
+              "end": true
+            }
+          ]
+        },
+        "Gift Refuse": {
+          "text": "*Nervously\" - No. HAHA! Who told you that. I gotta go do some waitress stuff. If you'll excuse me. Oooh, my fibula! ",
+          "opts": [
+            {
+              "label": "Damn...",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "volunteer": {
+      "start": "a",
+      "who": "THE VOLUNTEER",
+      "color": "#2ee6ff",
+      "nodes": {
+        "a": {
+          "text": "My shift doesn't start til 6pm. I've had this slot since '07, because \"Mr. Rhythm\" wont give up the primo slot. Or can't... whatever.",
+          "opts": [
+            {
+              "label": "\"I don't think the old tower is broadcasting anymore. Do people still have radios?\"",
+              "to": "b"
+            },
+            {
+              "label": "[TASTE 10] \"What stomp-clap indy band are you playing tonight?\"",
+              "check": {
+                "stat": "TASTE",
+                "dc": 10
+              },
+              "pass": "c",
+              "fail": "b"
+            },
+            {
+              "label": "Leave him alone.",
+              "end": true
+            }
+          ]
+        },
+        "b": {
+          "text": "You can hear, she's still castin'. Some dark signal overtakes the airwaves if we don't keep sending out the broadcast. Sounds like a record spinning backwards. You can hear if if you park in Mr. Dunblow's corn field!",
+          "opts": [
+            {
+              "label": "\"Oh, that's a monster, man.\"",
+              "to": "d"
+            },
+            {
+              "label": "[CHOPS 10] \"Textbook Phase 3 Ectosupernatural transcommunal frequency bypass. What?! Everyone was thinking it...\"",
+              "check": {
+                "stat": "CHOPS",
+                "dc": 10
+              },
+              "pass": "e",
+              "fail": "d"
+            }
+          ]
+        },
+        "c": {
+          "text": "They're called Crawford and Co., and the singer plays a theremin with his... Well, you'll just have to hear it.. But you know. You've worked the board before, right? You've got a face for radio.",
+          "flag": "volTrust",
+          "opts": [
+            {
+              "label": "\"I’ve done a shift.\"",
+              "to": "b"
+            }
+          ]
+        },
+        "d": {
+          "text": "Yeah. Total mystic voice that completely \"vomits on air\" as we say. Reads a cursed sponsor list, plays enchanted ad-breaks, and even hits the station ID on the tops. He ain't bad. I've seen better. Glad Mr. Rhythm is in there warding off the signal. ",
+          "flag": "knowVamp",
+          "opts": [
+            {
+              "label": "\"Who's Mr. Rythm?\"",
+              "to": "f"
+            },
+            {
+              "label": "\"Sounds like a proffessional.\"",
+              "to": "f"
+            }
+          ]
+        },
+        "e": {
+          "text": "Yeah, that's what the exterminator said too. If only Mr. Rhythm could just run our sign off. That would kill the signal.",
+          "flag": "knowVamp",
+          "opts": [
+            {
+              "label": "\"Mr. Rhythm?\"",
+              "to": "f"
+            }
+          ]
+        },
+        "f": {
+          "text": "Mr. Rhythm? That's your Feather Tone's boy, right? Drummer-guy, tight shirts and dirty pants? He filled in for a call-out and hasn't left the booth since \"Adobe Audition\" was called \"Cool Edit Pro\". ",
+          "flag": "knowBrian",
+          "opts": [
+            {
+              "label": "\"Sounds right. Where do we find him?\"",
+              "to": "g"
+            }
+          ]
+        },
+        "g": {
+          "text": "Well, you'd have to take back the airwaves, tune in to our frequency, and run our sign-off ID. Then the booth will open up to where your guy is. ",
+          "opts": [
+            {
+              "label": "\"Then thanks for listening. It's time to rock.\"",
+              "end": true
+            },
+            {
+              "label": "[Presence 9] What's in the box? (pedal)",
+              "check": {
+                "stat": "PRESENCE",
+                "dc": 8
+              },
+              "pass": "gift",
+              "fail": "Gift Refuse"
+            }
+          ]
+        },
+        "gift": {
+          "text": "Something Brain made. Not sure why a drummer is making guitar pedals... Hurts a little when you use it.",
+          "opts": [
+            {
+              "label": "[GRIT 9]\"Can I \"borrow\" it?\"",
+              "check": {
+                "stat": "GRIT",
+                "dc": 9
+              },
+              "pass": "gift2",
+              "fail": "Gift Refuse"
+            },
+            {
+              "label": "\"I have no interest in such a thing.\"",
+              "end": true
+            }
+          ]
+        },
+        "gift2": {
+          "text": "*Sighs* - I guess. Touring bands are the worst.",
+          "flag": "volPedal",
+          "pedal": "deadair",
+          "opts": [
+            {
+              "label": "\"Yup. Thank you!\"",
+              "end": true
+            }
+          ]
+        },
+        "Gift Refuse": {
+          "text": "What a weird thing to ask. I don't even know or like you.",
+          "opts": [
+            {
+              "label": "\"That's fair.\"",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "logbook": {
+      "start": "a",
+      "who": "KFUX LOGBOOK",
+      "color": "#c86bff",
+      "nodes": {
+        "a": {
+          "text": "Decades of scribbled handwriting. DJ's and volunteers logging their shifts and drawings some lude things in the margins.  Looks like the last entry is different though...",
+          "opts": [
+            {
+              "label": "Read the last entry.",
+              "to": "b"
+            },
+            {
+              "label": "Flip back through the shifts.",
+              "to": "c"
+            }
+          ]
+        },
+        "b": {
+          "text": "Keep us on the air! We just need to run the Sign-Off! \"89.7 and holding, don't let it win. ",
+          "flag": "readLog",
+          "opts": [
+            {
+              "label": "Mentally noted.",
+              "end": true
+            }
+          ]
+        },
+        "c": {
+          "text": "Look's like someone has written \"Happy Birthday, Brian!\" year after year in the same handwriting since 2005. It's always signed \"Mr. Rhythm\".",
+          "opts": [
+            {
+              "label": "\"That's sad.\"",
+              "to": "b"
+            }
+          ]
+        }
+      }
+    },
+    "doorkid": {
+      "start": "a",
+      "who": "THE KID AT THE DOOR",
+      "color": "#2ee6ff",
+      "nodes": {
+        "a": {
+          "text": "No re-entry means I wanna charge you twice for coming out to smoke. Also, this is a drug free zone... No offense.",
+          "opts": [
+            {
+              "label": "\"We're used to it. Who's running the board tonight?\"",
+              "to": "b"
+            },
+            {
+              "label": "[PRESENCE 10] \"We played here all the time back in the day. Ever get the wonky acoustics figured out?\"",
+              "check": {
+                "stat": "PRESENCE",
+                "dc": 10
+              },
+              "pass": "c",
+              "fail": "b"
+            },
+            {
+              "label": "Just pay and go in.",
+              "end": true
+            }
+          ]
+        },
+        "b": {
+          "text": "Kevin runs the board... Kevin does all of it. He runs the door when I'm not here, he books, mops, handles the donations, and once he drove a band to their next gig all the way to Rolla.",
+          "opts": [
+            {
+              "label": "\"The feedback always sound this bad?\"",
+              "to": "d"
+            },
+            {
+              "label": "\"Sounds like Kevin.\"",
+              "to": "e"
+            }
+          ]
+        },
+        "c": {
+          "text": "Kevin... You're those Farthington boys, right? . Kevin's mentioned things about... all this... ",
+          "flag": "kidKnows",
+          "opts": [
+            {
+              "label": "\"What kind of things?\"",
+              "to": "e"
+            }
+          ]
+        },
+        "d": {
+          "text": "Oh, most definitely. My grandad says they used the feedback during the depression to ward off hunger for the whole town! Kevin thinks it's his fault, but this room is cursed.",
+          "opts": [
+            {
+              "label": "\"I think we can help. Or hurt. Either way.\"",
+              "to": "e"
+            }
+          ]
+        },
+        "e": {
+          "text": "Kevin has battled this squeal for longer than I've been online. Both the squeal and that one weirdo that always comes around. Rumor is the squeal wards off both hunger and baddies, so Kevin keeps the squeal going on purpose!",
+          "flag": "knowKevin",
+          "opts": [
+            {
+              "label": "\"What a coincidence. We just so happen to specialize in handling baddies.\"",
+              "to": "f"
+            }
+          ]
+        },
+        "f": {
+          "text": "You'll see them both in there now. The big lunky fella is the weirdo in question. And kevin is... well he'll be at the booth. Probably distracted by roping in that dang squeal.",
+          "opts": [
+            {
+              "label": "\"We got it.\"",
+              "end": true
+            },
+            {
+              "label": "\"You do pedals, bro?\" (you got a hunch)",
+              "to": "gift"
+            }
+          ]
+        },
+        "gift": {
+          "text": "The only signed band that ever played here left this beauty behind. Kevin says anyone can take it. Guess no one wanted it. I've been using it to prop the door open when i smoke.",
+          "opts": [
+            {
+              "label": "\"Can I take it? You could prop the door with like a brick or something.\"",
+              "to": "gift2"
+            },
+            {
+              "label": "\"That's probably the best use for it.\"",
+              "end": true
+            }
+          ]
+        },
+        "gift2": {
+          "text": "Yeah, that's fine. It's full of water now anyway and always dribbles on me.",
+          "flag": "kidPedal",
+          "pedal": "doorcharge",
+          "opts": [
+            {
+              "label": "\"Tubular!\" (you get wet right on the front of your jeans)",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "kevindoor": {
+      "start": "a",
+      "who": "KEVIN",
+      "color": "#ffb43c",
+      "nodes": {
+        "a": {
+          "text": "Hey, you! No touchie the board! It's really hard to make this squeal at just the right frequency to keep that thing in check! Plus it literally eats people and collects their bones, so I'm not making that mistake again!",
+          "opts": [
+            {
+              "label": "\"Kevin. It's time to end this. We're getting the band back together.\"",
+              "to": "b"
+            },
+            {
+              "label": "[GRIT 10] \"Almost 20 years doing this all alone...\"",
+              "check": {
+                "stat": "GRIT",
+                "dc": 10
+              },
+              "pass": "c",
+              "fail": "b"
+            }
+          ]
+        },
+        "b": {
+          "text": "Too risky! This guy ain't messing around. He haunts my dreams! That's one of his powers... Plus, there isn't another all-ages room in the tri-county area. These kids gotta rock!",
+          "opts": [
+            {
+              "label": "\"Then let’s fix the room and end the freak.\"",
+              "to": "d"
+            },
+            {
+              "label": "[CHOPS 10] \"Let Logie have a crack at it. I know how to crank a stack.\"",
+              "check": {
+                "stat": "CHOPS",
+                "dc": 10
+              },
+              "pass": "e",
+              "fail": "d"
+            }
+          ]
+        },
+        "c": {
+          "text": "(*SIGH) Glad you're here. Let's end it. 19 years is a long time, but Logan, you'd have done the same thing.",
+          "opts": [
+            {
+              "label": "\"Nah, I’d have gotten tired first. Ready to rock?\"",
+              "to": "b"
+            }
+          ]
+        },
+        "d": {
+          "text": "Give it a whirl. You wouldn't be the first to try! The graffiti on the wall logs all the previously failed attempts.",
+          "flag": "boardOK",
+          "opts": [
+            {
+              "label": "\"Great, now I have to read?!\"",
+              "end": true
+            }
+          ]
+        },
+        "e": {
+          "text": "You think you're ready for this thing?",
+          "flag": "boardOK",
+          "opts": [
+            {
+              "label": "\"Let me at it.\"",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "signup": {
+      "start": "a",
+      "who": "THE CLIPBOARD",
+      "color": "#a598bb",
+      "nodes": {
+        "a": {
+          "text": "Six nights are listed. Each night provides unique challenges, but also pays out in human monies. You could use that.",
+          "opts": [
+            {
+              "label": "Read the rules.",
+              "to": "b"
+            },
+            {
+              "label": "Read what people wrote underneath.",
+              "to": "c"
+            },
+            {
+              "label": "Put it down.",
+              "end": true
+            }
+          ]
+        },
+        "b": {
+          "text": "ONE: no covers, and no repeating yourself either. TWO: early slot, nobody is here, that is your problem. THREE: last call, you go on tired. FOUR: sound guy is gone, no board, no help. FIVE: the other band has learned your exact set. SIX: the regulars, and then the house band wants their Tuesday back.",
+          "flag": "knowNights",
+          "opts": [
+            {
+              "label": "\"Six nights.\"",
+              "to": "c"
+            }
+          ]
+        },
+        "c": {
+          "text": "The best way to use your 2 drink vouchers is on long island ice teas. Best bang for your buck.  : ) ",
+          "opts": [
+            {
+              "label": "Sign it.",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "openmic": {
+      "start": "a",
+      "who": "THE GUY WHO RUNS THE OPEN MIC",
+      "color": "#ffb43c",
+      "nodes": {
+        "a": {
+          "text": "Acts sign up at 7 for the show at 8. No we don't have a D.I., no we don't have bathrooms, and no there is no drink specials for the acts. What are you, a juggling group or something?",
+          "opts": [
+            {
+              "label": "\"We're looking for someone. Bass player, hair too long, tells \"jokes\". Heard he's around here.\"",
+              "to": "b"
+            },
+            {
+              "label": "[PRESENCE 9] \"We're an all bassist group, but we need one more to round it out. A certain, \"funny\" bassist, if you catch my drift..\"",
+              "check": {
+                "stat": "PRESENCE",
+                "dc": 9
+              },
+              "pass": "c",
+              "fail": "b"
+            },
+            {
+              "label": "Leave him to it.",
+              "end": true
+            }
+          ]
+        },
+        "b": {
+          "text": "Isn't everybody a bassist technically? You'll have to be more specific.",
+          "opts": [
+            {
+              "label": "\"He'd be bothering the regulars and drinking off stolen drink vouchers.\"",
+              "to": "d"
+            },
+            {
+              "label": "[TASTE 10] \"He's probably the bassist in like 10 bands you book and you probably scraped him off the ground a few times.\"",
+              "check": {
+                "stat": "TASTE",
+                "dc": 10
+              },
+              "pass": "d",
+              "fail": "e"
+            }
+          ]
+        },
+        "c": {
+          "text": "That's...a lot of bass and my D.I. is broken. Look, I know a guy, but just don't sign up for my open mic, especially if you're hanging with him. He's bad for business.",
+          "opts": [
+            {
+              "label": "\"Deal, and where?\"",
+              "to": "d"
+            }
+          ]
+        },
+        "d": {
+          "text": "The doorway with all the empty bottles piled up around it. He don't come out for no on no more. He's usually in some sort of trouble or another. Usually with some sort of monster type. He's looking to get a few things before he'll come out.",
+          "flag": "knowBack",
+          "opts": [
+            {
+              "label": "\"What does he want?\"",
+              "to": "f"
+            },
+            {
+              "label": "\"Thanks.\"",
+              "end": true
+            }
+          ]
+        },
+        "e": {
+          "text": "Not ringing a bell. ",
+          "opts": [
+            {
+              "label": "\"...\"",
+              "end": true
+            }
+          ]
+        },
+        "f": {
+          "text": "What all Springfieldians want. 1) a cable that actually works. 2) a record nobody has so he looks \"in the know\". 3) a cashew chicken. He's adamant that the chicken is the most important part.",
+          "flag": "knowTrade",
+          "opts": [
+            {
+              "label": "\"That's a lot.\"",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "vinyl": {
+      "start": "a",
+      "who": "SECOND SPIN",
+      "color": "#c86bff",
+      "nodes": {
+        "a": {
+          "text": "UGG! It's not that hard to understand... Artist name, considering year using the Gregorian calendar, reverse alphabet subbed with roman numerals... It's a simple system, people! ",
+          "opts": [
+            {
+              "label": "\"I need a record nobody has. I'm hoping you have that.\"",
+              "to": "b"
+            },
+            {
+              "label": "[TASTE 10] \"I think tally-marks on notebook paper is an excellent and accurate way to track daily sales!\"",
+              "check": {
+                "stat": "TASTE",
+                "dc": 10
+              },
+              "pass": "c",
+              "fail": "b"
+            }
+          ]
+        },
+        "b": {
+          "text": "I sell everything worth anything online now. I just found the rest of this junk in my dead uncle's basement apartment. You'll have to be more specific if you want something playable...",
+          "opts": [
+            {
+              "label": "\"Playable for sure. This guy has questionable taste in music, so it doesn't have to be \"good\"...\"",
+              "to": "d"
+            },
+            {
+              "label": "[CHOPS 10] \"Something that kinda hurts your ears and you'd wish it would stop. I think he'd like that.\"",
+              "check": {
+                "stat": "CHOPS",
+                "dc": 10
+              },
+              "pass": "c",
+              "fail": "d"
+            }
+          ]
+        },
+        "c": {
+          "text": " Hey... I like your style, Pal. I do actually have a small crate stashed behind the counter that I was going to trade for drugs later, but I'd let you grab something special out of there. Seeing as how we see eye to eye on so much of this record business stuff.",
+          "flag": "crateOpen",
+          "opts": [
+            {
+              "label": "\"I'm overjoyed.\"",
+              "end": true
+            }
+          ]
+        },
+        "d": {
+          "text": "If you don't know what kind of crap you wanna buy, then I can't sell you no crap. Now if you'll excuse me.",
+          "opts": [
+            {
+              "label": "\"Makes sense...\"",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "cashew": {
+      "start": "a",
+      "who": "THE WOMAN AT THE REGISTER",
+      "color": "#6cff9e",
+      "nodes": {
+        "a": {
+          "text": "We only got one order left, Sweet Cheeks, and it's spoken for. Can I interest you in my DJ mixtape for $5? OUCH! It hurts to talk...",
+          "opts": [
+            {
+              "label": "\"Spoken for by who?\"",
+              "to": "b"
+            },
+            {
+              "label": "[GRIT 9] Give her \"The Look\". You've stared down worse...\"",
+              "check": {
+                "stat": "GRIT",
+                "dc": 9
+              },
+              "pass": "c",
+              "fail": "b"
+            }
+          ]
+        },
+        "b": {
+          "text": "You know that peculiar fella lives in the alley out back? Well he don't leave the house no more. Says too many people are after him for his Rock Crimes. Needs this delivered every day now, but I done broke my fibula! ",
+          "opts": [
+            {
+              "label": "\"I can take it to him. I owe him a visit, actually.\"",
+              "to": "d"
+            },
+            {
+              "label": "[PRESENCE 10] \"Let me buy it. I'm here and I'm paying cash.\"",
+              "check": {
+                "stat": "PRESENCE",
+                "dc": 10
+              },
+              "pass": "c",
+              "fail": "d"
+            }
+          ]
+        },
+        "c": {
+          "text": "Thank you! Hey, Cletus? You hear this rock-man is gonna take the delivery for us. CASHEW believe it?! ",
+          "grant": {
+            "item": "cashew"
+          },
+          "flag": "gotCashew",
+          "opts": [
+            {
+              "label": "\"I'll make sure this gets to him without running a-fowl...\"",
+              "end": true
+            }
+          ]
+        },
+        "d": {
+          "text": "I don't believe you, but I don't care. Just take it and tell him his tab has come due. OUCH! My fibula! ",
+          "grant": {
+            "item": "cashew"
+          },
+          "flag": "gotCashew",
+          "opts": [
+            {
+              "label": "\"I'll likely not do that, but thanks.\"",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "dock": {
+      "start": "a",
+      "who": "DOCKHAND",
+      "color": "#2ee6ff",
+      "nodes": {
+        "a": {
+          "text": "We're only open to members this time of the season. If you're here about the sea monsters, I ain't interested. If you're here about our recent permit kerfuffle, I'll remind you that I'm just an hourly employee. sirs.",
+          "opts": [
+            {
+              "label": "\"What's with the drums?\"",
+              "to": "b"
+            },
+            {
+              "label": "[CHOPS 9] \"Those are muffled drums tuned way down, not normal boat noise.\"",
+              "check": {
+                "stat": "CHOPS",
+                "dc": 9
+              },
+              "pass": "c",
+              "fail": "b"
+            },
+            {
+              "label": "Leave.",
+              "end": true
+            }
+          ]
+        },
+        "b": {
+          "text": "Them drums never speed up, never slow down. Started playing after all those deaths and disappearances last season and hasn't stopped since. All those brutal murders stopped though! Funny... ",
+          "opts": [
+            {
+              "label": "\"Give me the keys to your pontoon.\"",
+              "to": "d"
+            },
+            {
+              "label": "[TASTE 9] \"Sounds like the drumming is keeping whatever's out there under control. That's why they can't stop.\"",
+              "check": {
+                "stat": "TASTE",
+                "dc": 9
+              },
+              "pass": "e",
+              "fail": "d"
+            }
+          ]
+        },
+        "c": {
+          "text": "Yeah, flat sounding like that band with the clown drummers sound when they bang shit. That's exactly what I said! That or the dam humming.",
+          "opts": [
+            {
+              "label": "\"That's no dam hum.\"",
+              "to": "b"
+            }
+          ]
+        },
+        "e": {
+          "text": "Keeping what under control? One of 'em water-squatches or somethin' like that?",
+          "flag": "dockSpooked",
+          "opts": [
+            {
+              "label": "\"Yeah, something like that...\"",
+              "to": "f"
+            }
+          ]
+        },
+        "d": {
+          "text": "Now that's my personal pontoon, borrowed from my mama. Water patrol says ain't to be no swimming, boating, or other water type fraternization so long as that somethin' somethin' is out there. So that's a hard no from me.",
+          "opts": [
+            {
+              "label": "\"I implore you to reconsider.\"",
+              "to": "g"
+            },
+            {
+              "label": "[PRESENCE 10] \"Our bandmate is out there with some kind of creature! Give me the keys now or I'll leave a negative review of this marina online.\"",
+              "check": {
+                "stat": "PRESENCE",
+                "dc": 10
+              },
+              "pass": "f",
+              "fail": "g"
+            }
+          ]
+        },
+        "f": {
+          "text": "(*SIGHS) Just take the dang ole' pontoon keys. You all ain't back by dawn, I ain't never saw you, and no one's comin' lookin' neither. And I also ain't got no permits for the boat.",
+          "flag": "boatKeys",
+          "opts": [
+            {
+              "label": "\"Deal.\"",
+              "end": true
+            }
+          ]
+        },
+        "g": {
+          "text": "That's what they all say...  Fine. Life jackets is mandatory out there, no exceptions! Except I ain't got none so avoid getting me another ticket on that pontoon! Missouri's got a 10 strikes and your out rule.",
+          "flag": "boatKeys",
+          "opts": [
+            {
+              "label": "\"No one will catch us.\"",
+              "end": true
+            }
+          ]
+        }
+      }
+    },
+    "beau_door": {
+      "start": "a",
+      "who": "A VOICE THROUGH THE DOOR",
+      "color": "#ffb43c",
+      "nodes": {
+        "a": {
+          "text": "... if that's Higgins, beat it! I'd rather stay trapped with this monster than hear about your stain-cleaning strategies for another minute!",
+          "opts": [
+            {
+              "label": "\"Beau. It's Logan.\"",
+              "to": "b"
+            },
+            {
+              "label": "Say nothing.",
+              "to": "b"
+            }
+          ]
+        },
+        "b": {
+          "text": "...Logan. You gotta help me, man! This... this... thing is in here, and it keeps insisting there's an opening in their cover band, but it's all top 40, Logan. All of it.",
+          "flag": "beauFound",
+          "opts": [
+            {
+              "label": "\"Gird your loins, I'm coming in.\"",
+              "end": true
+            }
+          ]
+        }
+      }
+    }
+  },
+  "dinerTalk": {
+    "logan": [
+      {
+        "when": {},
+        "text": [
+          "\"I never thought we'd have a chance to escape. Hope we can find all 7 members. \"",
+          "[placeholder — early Logan, alone, still counting how many of you are missing.]"
+        ]
+      },
+      {
+        "when": {
+          "band": 4
+        },
+        "text": [
+          "\"We're starting to sound like Faatherton again. Sounds good. Feels good.\""
+        ]
+      },
+      {
+        "when": {
+          "flag": "wolfDown"
+        },
+        "text": [
+          "\"The other bands are literal monsters. That sounds about right.\""
+        ]
+      },
+      {
+        "when": {
+          "band": 7
+        },
+        "text": [
+          "\"All seven. In one place. Eating. Preparing to rock at least one more time.\""
+        ]
+      }
+    ],
+    "beau": [
+      {
+        "when": {},
+        "text": [
+          "\"All those years in the storage unit... Feels good to be playing the Faatherton songs again.\""
+        ]
+      },
+      {
+        "when": {
+          "band": 5
+        },
+        "text": [
+          "\"I heard the crowds feedback about the last set, and I disagree. Keep rockin'.\""
+        ]
+      }
+    ],
+    "nathaniel": [
+      {
+        "when": {},
+        "text": [
+          "\"I am not asleep. Your asleep. Got a ear-swab? I've been underwater too long.\""
+        ]
+      },
+      {
+        "when": {
+          "has": "kevin"
+        },
+        "text": [
+          "\"Keys. I forgot how much easier it is to hear everybody from behind keys.\""
+        ]
+      }
+    ],
+    "mat": [
+      {
+        "when": {},
+        "text": [
+          "\"I found a way to play the jukebox for free and set it to play 3 hours of our own record.\""
+        ]
+      },
+      {
+        "when": {
+          "has": "brice"
+        },
+        "text": [
+          "\"Brice got that bass under control. I'm just gonna play with this looper unsupervised.\""
+        ]
+      }
+    ],
+    "kevin": [
+      {
+        "when": {},
+        "text": [
+          "\"I serviced all the guitars. They're not supposed to have mold on the pickups.\""
+        ]
+      },
+      {
+        "when": {
+          "has": "brian"
+        },
+        "text": [
+          "\"I get to play any instrument I can find now. Think we could find a used, cheap washboard?\""
+        ]
+      }
+    ],
+    "brian": [
+      {
+        "when": {},
+        "text": [
+          "\"This placemat has a maze on it and a factual error about the state bird.\""
+        ]
+      },
+      {
+        "when": {
+          "band": 7
+        },
+        "text": [
+          "\"Somebody has to give the legal ID. It is still not optional. Hope the other volunteer knows that.\""
+        ]
+      }
+    ],
+    "brice": [
+      {
+        "when": {},
+        "text": [
+          "\"Think ordering this diner-halibut is a mistake? One way to find out, I guess.\""
+        ]
+      },
+      {
+        "when": {
+          "flag": "headlinerDown"
+        },
+        "text": [
+          "\"Shotgun for life. That's the perk of being the van-fixer guy.\""
+        ]
+      }
+    ]
+  },
+  "text": {
+    "battle.start": "The set begins. {act} takes the other half of the room.",
+    "battle.join": "{guests} kicks the door open and plugs in. The set begins.",
+    "battle.rule": "RULE — {rule}",
+    "battle.song": "Song {n}.",
+    "battle.move": "{name} — {move}",
+    "battle.foeMove": "{name} — {move}",
+    "battle.duet": "{name} + {partner} — {move}",
+    "battle.backUp": "{partner} picks up behind {name}. {note}",
+    "battle.rest": "{name} steps back from the mic and breathes.",
+    "battle.swap": "{out} steps off. {in} picks it up.",
+    "battle.interSwap": "{out} steps off for {in}.",
+    "battle.breather": "Nobody can play. The band takes a breath and the room notices.",
+    "battle.louder": "The rest of the backline gets louder.",
+    "battle.exposed": "The hired guns are down. It is exposed.",
+    "battle.takeOne": "{name} is pulled off the bill.",
+    "battle.lostSong": "The room walks. — but the night is not over.",
+    "battle.dataChanged": "Data changed — restart the fight to pick up move and enemy edits.",
+    "float.protected": "PROTECTED",
+    "float.exposed": "EXPOSED",
+    "float.louder": "LOUDER",
+    "float.blocked": "BLOCKED",
+    "float.echo": "ECHO",
+    "float.streak": "SET STREAK ×{mult}",
+    "float.backedBy": "BACKED BY {name}",
+    "float.pulled": "PULLED OFF THE BILL",
+    "float.duet": "DUET",
+    "float.restSweat": "-{n} SWEAT",
+    "toast.pedal.title": "New pedal",
+    "toast.pedal.body": "{name} — open the pedalboard to fit it.",
+    "toast.money.title": "Merch money",
+    "toast.money.body": "+¤{n}",
+    "toast.door.body": "+¤{n} from the door.",
+    "toast.item.title": "Picked up",
+    "toast.rest.title": "Rested",
+    "toast.rest.body": "Everybody back to full, sweat cleared. −¤{n}",
+    "toast.rule.title": "Tonight’s rule",
+    "diner.cantAfford": "A night costs ¤{cost} for {n} of you and you have ¤{money}. Play a night at the open mic.",
+    "diner.rested": "You take the whole back row of booths. Somebody puts quarters in the jukebox. It is the first time in a while that nobody has anywhere to be. (Night {night}.)",
+    "diner.ordered": "Ordered. The band is at {pct}%.",
+    "diner.quiet": "He nods at you and goes back to it.",
+    "world.locked": "{name} — not built yet. Coming in a later chunk.",
+    "world.mapTip": "World map — tap a location  ·  {money}",
+    "world.needPedals": "No spare pedals. Buy some at Hoffman’s.",
+    "rig.lockedInSet": "You can check the rig mid-set, but you cannot rewire it while the room is watching.",
+    "shop.bought": "{keeper} slides {name} across the glass without comment.",
+    "shop.sold": "{keeper} takes it back for half. He always does."
+  },
+  "tutorials": [
+    {
+      "id": "map1",
+      "when": "map",
+      "title": "THE MAP",
+      "body": "\"That is every room that will still have you. Tap one and go.\n\nThe strip along the bottom is your band health and how spent everyone is. Both of those follow you from room to room. Nobody heals just because a set ended.\""
+    },
+    {
+      "id": "map2",
+      "when": "map",
+      "title": "THE PAWN SHOP",
+      "body": "\"Hoffman sells pedals 24/7. Pedals are the difference between a set and a good set, and you are going to want upgrade and buy them as you go. You could probably find some out in the world too...\n\nThe money in the corner is yours. Spend it.\""
+    },
+    {
+      "id": "map3",
+      "when": "map",
+      "title": "THE NITE OWL",
+      "body": "\"The diner is the only place that puts everybody back together. Eat, sleep, heal. Costs more for the night the more band members you have. \n\nGo there when you need a rest, or just to chill out.\""
+    },
+    {
+      "id": "battle1",
+      "when": "battle",
+      "title": "THE THREE BARS",
+      "body": "Under each bandmenber: HEALTH, then TEMPO (how close they are to being able to play) then SWEAT. Sweat only goes up while they are on stage.\n\nAt 70 they are WINDED. At 100 they are BLOWN and cannot play at all. Swap out players mid-set once you have enough members."
+    },
+    {
+      "id": "battle2",
+      "when": "battle",
+      "title": "THE ROOM",
+      "body": "CROWD at the top is the room. It drains on its own and the other act drains it faster. At zero, you have lost them and the night is over.\n\nHYPE is what playing well earns you. Fill it and somebody can play an ENCORE."
+    },
+    {
+      "id": "battle3",
+      "when": "battle",
+      "title": "DO NOT REPEAT YOURSELF",
+      "body": "Playing a different INSTRUMENT than the last attack builds a SET STREAK, and the streak multiplies everything.\n\nSame instrument twice in a row and it resets."
+    },
+    {
+      "id": "shop1",
+      "when": "shop",
+      "title": "THE PEDALBOARD",
+      "body": "\"Slots one and two are wired together. Whatever is in one feeds the other. Slot three stands alone.\n\nA SUPPORT pedal does nothing by itself. Put it beside a pedal in slot 1 or 2 and it does plenty.\""
+    }
+  ]
+}

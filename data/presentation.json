@@ -1,0 +1,294 @@
+{
+  "_version": 1,
+  "palette": {
+    "outline": "#150a20",
+    "magenta": "#ff2d7a",
+    "amber": "#ffb43c",
+    "slime": "#6cff9e",
+    "cyan": "#2ee6ff",
+    "bone": "#f2ece0"
+  },
+  "accentCB": {
+    "logan": "#cc79a7",
+    "beau": "#e69f00",
+    "nathaniel": "#56b4e9",
+    "mat": "#f0e442",
+    "kevin": "#d55e00",
+    "brian": "#009e73",
+    "brice": "#0072b2"
+  },
+  "stage": {
+    "bgTop": "#1a0b2e",
+    "bgBot": "#07040c",
+    "floor": "#120a1d",
+    "floorLine": "#2a1a3f",
+    "bpm": 148,
+    "crowdRows": [
+      {
+        "y": 0.965,
+        "scale": 0.55,
+        "color": "#080510",
+        "count": 22,
+        "bob": 1
+      }
+    ],
+    "lights": [
+      {
+        "col": "#ff2d7a",
+        "speed": 0.31,
+        "phase": 0,
+        "spread": 0.16
+      },
+      {
+        "col": "#2ee6ff",
+        "speed": -0.24,
+        "phase": 2.1,
+        "spread": 0.2
+      },
+      {
+        "col": "#ffb43c",
+        "speed": 0.19,
+        "phase": 4.2,
+        "spread": 0.13
+      }
+    ]
+  },
+  "shots": {
+    "wide": {
+      "zoom": 1,
+      "y": 0,
+      "x": 0,
+      "drift": 0,
+      "bars": 0.1
+    },
+    "close": {
+      "zoom": 1.34,
+      "y": 0.1,
+      "x": 0,
+      "drift": 0,
+      "bars": 0.16
+    },
+    "push": {
+      "zoom": 1,
+      "y": 0.02,
+      "x": 0,
+      "drift": 0,
+      "bars": 0.14,
+      "pushTo": 1.3
+    },
+    "low": {
+      "zoom": 1.16,
+      "y": -0.06,
+      "x": 0,
+      "drift": 0,
+      "bars": 0.14
+    },
+    "panL": {
+      "zoom": 1.18,
+      "y": 0.04,
+      "x": 0.1,
+      "drift": -0.05,
+      "bars": 0.14
+    },
+    "panR": {
+      "zoom": 1.18,
+      "y": 0.04,
+      "x": -0.1,
+      "drift": 0.05,
+      "bars": 0.14
+    }
+  },
+  "entrances": {
+    "walk": {
+      "speed": 1,
+      "hop": 0,
+      "tilt": 0
+    },
+    "kick": {
+      "speed": 2.2,
+      "hop": 0.1,
+      "tilt": 0.16
+    },
+    "saunter": {
+      "speed": 0.62,
+      "hop": 0.04,
+      "tilt": -0.07
+    },
+    "stagger": {
+      "speed": 0.78,
+      "hop": 0.03,
+      "tilt": 0.12
+    },
+    "drop": {
+      "speed": 1.6,
+      "hop": 0.22,
+      "tilt": 0
+    },
+    "hum": {
+      "speed": 0.5,
+      "hop": 0.02,
+      "tilt": 0
+    },
+    "steady": {
+      "speed": 0.85,
+      "hop": 0,
+      "tilt": 0
+    }
+  },
+  "flicker": {
+    "cellTube": 2.2,
+    "storageLamp": 1.8,
+    "pawnTube": 2.4,
+    "vfwTroffer": 1.9,
+    "barSign": 1.4,
+    "dinerTube": 1.6,
+    "pieCase": 0.9
+  },
+  "layout": {
+    "charScale": 1,
+    "cutBaseY": 0.88,
+    "cutCloseY": 0.94,
+    "speakerScale": 1.06,
+    "otherScale": 0.92,
+    "otherAlpha": 0.55,
+    "maxOnScreen": 4,
+    "perChar": {
+      "logan": {},
+      "beau": {},
+      "nathaniel": {},
+      "mat": {},
+      "kevin": {},
+      "brian": {},
+      "brice": {}
+    },
+    "perBeat": {}
+  },
+  "mapStyle": {
+    "land": "#1a1430",
+    "landEdge": "#2e2450",
+    "water": "#0d1030",
+    "road": "#4a3a68",
+    "kinds": {
+      "dungeon": {
+        "col": "#ff2d7a",
+        "shape": "circle",
+        "r": 11,
+        "label": ""
+      },
+      "arena": {
+        "col": "#6cff9e",
+        "shape": "square",
+        "r": 12,
+        "label": "SIX NIGHTS"
+      },
+      "rest": {
+        "col": "#2ee6ff",
+        "shape": "plus",
+        "r": 12,
+        "label": "REST + EAT"
+      },
+      "shop": {
+        "col": "#ffb43c",
+        "shape": "diamond",
+        "r": 12,
+        "label": "OPEN ALL NIGHT"
+      },
+      "finale": {
+        "col": "#c86bff",
+        "shape": "star",
+        "r": 17,
+        "label": "THE SHOW"
+      }
+    },
+    "roads": [
+      [
+        "unit114",
+        "openmic"
+      ],
+      [
+        "cstreet",
+        "diner"
+      ],
+      [
+        "diner",
+        "ozarks"
+      ],
+      [
+        "diner",
+        "vfw"
+      ],
+      [
+        "openmic",
+        "hoffmans"
+      ],
+      [
+        "unit114",
+        "hoffmans"
+      ],
+      [
+        "unit114",
+        "cstreet"
+      ],
+      [
+        "hoffmans",
+        "cstreet"
+      ],
+      [
+        "cstreet",
+        "ozarks"
+      ],
+      [
+        "cstreet",
+        "vfw"
+      ],
+      [
+        "ozarks",
+        "kfat"
+      ],
+      [
+        "kfat",
+        "highway"
+      ],
+      [
+        "cstreet",
+        "venue"
+      ],
+      [
+        "ozarks",
+        "venue"
+      ]
+    ]
+  },
+  "moveKinds": {
+    "attack": {
+      "label": "ATTACK",
+      "col": "#ff2d7a",
+      "tint": "#2a0f1e"
+    },
+    "sweep": {
+      "label": "ALL",
+      "col": "#ff8a3c",
+      "tint": "#2a170c"
+    },
+    "heal": {
+      "label": "RECOVER",
+      "col": "#6cff9e",
+      "tint": "#0f2a1c"
+    },
+    "hype": {
+      "label": "HYPE",
+      "col": "#2ee6ff",
+      "tint": "#0c2430"
+    },
+    "support": {
+      "label": "SUPPORT",
+      "col": "#c86bff",
+      "tint": "#1e0f2a"
+    },
+    "encore": {
+      "label": "ENCORE",
+      "col": "#ffb43c",
+      "tint": "#2a1f0c"
+    }
+  }
+}

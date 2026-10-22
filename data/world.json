@@ -1,0 +1,816 @@
+{
+  "_version": 1,
+  "nodes": {
+    "unit114": {
+      "kind": "dungeon",
+      "name": "Self-Storage Unit 666",
+      "sub": "Buffalo, Missouri",
+      "x": 0.3,
+      "y": 0.46,
+      "start": "lot",
+      "rooms": {
+        "lot": {
+          "name": "Storage Unit Office",
+          "bg": "storage",
+          "desc": "Identical roll-up-doors line the poorly lit hallways. Dented, stained, and smelly, some of these have been lived and certainly died in. Down one of the corridors, you hear a song you definitely recognize and the hum of a familiar amplifier. ",
+          "acts": [
+            {
+              "label": "Speak with Higgins, the night clerk",
+              "dialog": "gary"
+            },
+            {
+              "label": "Dig through dumpster. (people throw away great shit at a storage unit)",
+              "unless": "gotFuzz",
+              "pedal": "bigfuzz",
+              "flag": "gotFuzz",
+              "say": "Half buried in the gravel: a fuzz pedal with a wine cork for a knob. It still works. It should not still work."
+            },
+            {
+              "label": "Fight your repulsion and walk towards the musical sounds",
+              "to": "row"
+            }
+          ]
+        },
+        "row": {
+          "name": "Row C",
+          "bg": "storage",
+          "desc": "The four chords are louder here. And sure enough, four instrument pedals are zip-tied to the outside the locked door. You feel a chill and taste the despair in the air... ",
+          "acts": [
+            {
+              "label": "Shout through the door",
+              "dialog": "beau_door"
+            },
+            {
+              "label": "Activate the pedal board",
+              "unless": "door114",
+              "puzzle": "signal_chain"
+            },
+            {
+              "label": "Open the door",
+              "if": "door114",
+              "unless": "frankDown",
+              "battle": "unit114"
+            },
+            {
+              "label": "Enter",
+              "if": "frankDown",
+              "scene": "beau_join"
+            },
+            {
+              "label": "Back to the lot",
+              "to": "lot"
+            }
+          ]
+        }
+      }
+    },
+    "hoffmans": {
+      "kind": "shop",
+      "name": "Hoffman’s Pawn",
+      "sub": "Open all night",
+      "x": 0.12,
+      "y": 0.2,
+      "start": "counter",
+      "rooms": {
+        "counter": {
+          "name": "The Counter",
+          "bg": "pawn",
+          "desc": "Hoffman has the best selection of pedals in town. He definitely hates you after all the haggling you've attempted over the years, but he's open 24/7 and let's you work on your rig in his shop.",
+          "acts": [
+            {
+              "label": "Browse the wall",
+              "shop": "hoffmans"
+            },
+            {
+              "label": "Work on the rig",
+              "rig": true
+            }
+          ]
+        }
+      }
+    },
+    "diner": {
+      "kind": "rest",
+      "name": "The Nite Owl",
+      "sub": "Open late, thank god.",
+      "x": 0.62,
+      "y": 0.44,
+      "start": "counter",
+      "rooms": {
+        "counter": {
+          "name": "The Nite Owl",
+          "bg": "diner",
+          "desc": "Sticky tables and a jukebox rigged to play for free. This place has always been the band's safe place. Every band member you've saved is here and you can chat with them. Rest for the night to heal the full party stats, or buy individual dishes to help single members. ",
+          "acts": [
+            {
+              "label": "Rest for the night",
+              "rest": true
+            },
+            {
+              "label": "Talk to the band",
+              "dinerTalk": true
+            },
+            {
+              "label": "Order something",
+              "dinerMenu": true
+            },
+            {
+              "label": "Play the jukebox",
+              "archive": "jukebox"
+            },
+            {
+              "label": "Work on the rig",
+              "rig": true
+            }
+          ]
+        }
+      }
+    },
+    "openmic": {
+      "kind": "arena",
+      "name": "Ozark Open Mic",
+      "sub": "Sign-up at seven",
+      "x": 0.3,
+      "y": 0.12,
+      "needs": "beau",
+      "start": "room",
+      "locked": "A moldy event room. You'll need to rescue Beau before going here.",
+      "rooms": {
+        "room": {
+          "name": "The Room",
+          "bg": "barroom",
+          "desc": "The same crowd every time and 6 different \"theme\" nights on the calendar. The battles are unique and the money is real. Maybe you could earn that pedal-money after all. Pays more than streaming revenue!",
+          "acts": [
+            {
+              "label": "NIGHT ONE — No Covers",
+              "unless": "om1",
+              "battle": "om1"
+            },
+            {
+              "label": "NIGHT TWO — The Early Slot",
+              "if": "om1",
+              "unless": "om2",
+              "battle": "om2"
+            },
+            {
+              "label": "NIGHT THREE — Last Call",
+              "if": "om2",
+              "unless": "om3",
+              "battle": "om3"
+            },
+            {
+              "label": "NIGHT FOUR — The Sound Guy Left",
+              "if": "om3",
+              "unless": "om4",
+              "battle": "om4"
+            },
+            {
+              "label": "NIGHT FIVE — Battle Of The Bands",
+              "if": "om4",
+              "unless": "om5",
+              "battle": "om5"
+            },
+            {
+              "label": "NIGHT SIX — The Regulars",
+              "if": "om5",
+              "unless": "om6",
+              "battle": "om6"
+            },
+            {
+              "label": "Read the sign-up sheet",
+              "dialog": "signup"
+            },
+            {
+              "label": "Work on the rig",
+              "rig": true
+            }
+          ]
+        }
+      }
+    },
+    "ozarks": {
+      "kind": "dungeon",
+      "name": "Lake of the Ozarks",
+      "sub": "Camdenton",
+      "x": 0.76,
+      "y": 0.2,
+      "needs": "beau",
+      "start": "marina",
+      "locked": "Nathaniel is submerged in here somewhere, but you'll need Beau's help to fish him out.",
+      "rooms": {
+        "marina": {
+          "name": "Marina B, Off-Season",
+          "bg": "lake",
+          "desc": "Ahhh... L.O.T.O. in the off-season. The smell of fish and water you can't see 4 inches into. Somewhere beyond the eerily vacant and numerous boat slips, drumming can be heard from under the water's frothy crests, keeping perfect time.",
+          "acts": [
+            {
+              "label": "Speak with the deckhand",
+              "dialog": "dock"
+            },
+            {
+              "label": "Rummage through the bait cooler (Worsts case scenario, free bait!) ",
+              "unless": "gotOar",
+              "pedal": "springtank",
+              "flag": "gotOar",
+              "say": "Under two bags of ice and a decade of regret: a reverb pedal, still dry inside its bag."
+            },
+            {
+              "label": "Take the pontoon out",
+              "if": "boatKeys",
+              "to": "water"
+            },
+            {
+              "label": "Look at the pontoon",
+              "unless": "boatKeys",
+              "say": "No keys. The dockhand has them, and the dockhand has opinions."
+            }
+          ]
+        },
+        "water": {
+          "name": "Out Past The Buoys",
+          "bg": "lake",
+          "desc": "The drumming is much louder out here, along with the waves. The lake is quiet except for a few jet skis circling ominously around where the drums seem to be coming from beneath the dark water.",
+          "acts": [
+            {
+              "label": "Follow the sound of the drumming",
+              "unless": "gillDown",
+              "battle": "ozarks"
+            },
+            {
+              "label": "Pull Nathaniel aboard",
+              "if": "gillDown",
+              "scene": "nathaniel_join"
+            },
+            {
+              "label": "Back to the marina",
+              "to": "marina"
+            }
+          ]
+        }
+      }
+    },
+    "cstreet": {
+      "kind": "dungeon",
+      "name": "C-Street",
+      "sub": "Commercial Street, Springfield MO",
+      "x": 0.48,
+      "y": 0.66,
+      "needs": "nathaniel",
+      "start": "blocks",
+      "locked": "Four blocks, 200 years of grime, and a bassist in hiding. Get Nathaniel before braving the North Side. ",
+      "rooms": {
+        "blocks": {
+          "name": "Brick Back Alleys",
+          "bg": "cstreet",
+          "desc": "With brick store fronts, ancient railroad tracks to trip over, and spotty string lights, this scene hasn't changed in 200 years. In one of these former warehouses turned overpriced loft is Mat. Just where you left him. But he's not making himself known...",
+          "acts": [
+            {
+              "label": "Talk to the Open Mic host",
+              "dialog": "openmic"
+            },
+            {
+              "label": "Rummage through abandoned Street Craps game (You've dug through worse)",
+              "unless": "gotCable",
+              "get": "cable",
+              "flag": "gotCable",
+              "say": "Nine cables. Eight are dead. You test them all, because you have been in a band."
+            },
+            {
+              "label": "Enter Record Store",
+              "to": "record"
+            },
+            {
+              "label": "Walk to the Cashew Chicken counter",
+              "to": "counter"
+            },
+            {
+              "label": "Go around back",
+              "if": "knowBack",
+              "to": "backroom"
+            }
+          ]
+        },
+        "record": {
+          "name": "Not Real Record Store",
+          "bg": "cstreet",
+          "desc": "The owner has a system for organizing his vinyl that you'd need an abacus and sundial to understand. He will NOT let you listen to a record before buying it. You've asked before...",
+          "acts": [
+            {
+              "label": "Talk to the owner",
+              "dialog": "vinyl"
+            },
+            {
+              "label": "Grab a record from the owner's secret stash",
+              "if": "crateOpen",
+              "unless": "got45",
+              "get": "fortyfive",
+              "flag": "got45",
+              "say": "Third from the back. No sleeve, no label, worn smooth on the A-side. He was right about the B-side."
+            },
+            {
+              "label": "Buy a pedal ",
+              "shop": "hoffmans"
+            },
+            {
+              "label": "Back to the street",
+              "to": "blocks"
+            }
+          ]
+        },
+        "counter": {
+          "name": "The Cashew Chicken Counter",
+          "bg": "cstreet",
+          "desc": "The classic aroma of Springield's OG Cashew Chicken fills your face-holes, and it stings. Hope you like your bathroom! Looks like there's only one serving left and the employee is limping around in pain.",
+          "acts": [
+            {
+              "label": "Talk to the injured employee",
+              "dialog": "cashew"
+            },
+            {
+              "label": "Back to the street",
+              "to": "blocks"
+            }
+          ]
+        },
+        "backroom": {
+          "name": "Mat's Hiding Spot",
+          "bg": "cstreet",
+          "desc": "A door with no entrance, but someone's been leaving their recycling out every week. From beyond the door, you hear the whir of an aging cassette tape being constantly rewound over and over again. Has this been going on for years? A small slot has been fitted on the front of the door.",
+          "acts": [
+            {
+              "label": "Slide food through slot",
+              "unless": "matTraded",
+              "needItems": [
+                "fortyfive",
+                "cable",
+                "cashew"
+              ],
+              "flag": "matTraded",
+              "say": "You slide all three under the door. A long pause. Then: \"...okay. Okay. But we do this my way.\""
+            },
+            {
+              "label": "Open the door",
+              "if": "matTraded",
+              "unless": "wrapperDown",
+              "battle": "cstreet"
+            },
+            {
+              "label": "Get him out of there",
+              "if": "wrapperDown",
+              "scene": "mat_join"
+            },
+            {
+              "label": "Back to the street",
+              "to": "blocks"
+            }
+          ]
+        }
+      }
+    },
+    "vfw": {
+      "kind": "dungeon",
+      "name": "The VFW Hall",
+      "sub": "All ages, no re-entry",
+      "x": 0.16,
+      "y": 0.84,
+      "needs": "mat",
+      "start": "lotvfw",
+      "locked": "Kevin has been volunteering to run sound here for ever. You'll need to bust Mat out first.",
+      "rooms": {
+        "lotvfw": {
+          "name": "The Parking Lot",
+          "bg": "vfw",
+          "desc": "Cash only, no alcohol, and 8 people waiting to get in. You've seen worse in towns like these. You can still smell last Friday's Fish Fry lingering.",
+          "acts": [
+            {
+              "label": "Talk to the kid working the door",
+              "dialog": "doorkid"
+            },
+            {
+              "label": "Dig through the donation box. (no one is looking)",
+              "unless": "gotComp",
+              "pedal": "comp",
+              "flag": "gotComp",
+              "say": "Taped under the cash box, where somebody hid it from somebody: a compressor. Still has the tape."
+            },
+            {
+              "label": "Pay the cover and enter",
+              "to": "hallvfw"
+            }
+          ]
+        },
+        "hallvfw": {
+          "name": "The Hall",
+          "bg": "vfw",
+          "desc": "Moldy drop ceiling and forty bend-up folding chairs crowd the dance floor around the 9 attendees. No one is speaking to each other. The squeal from the PA is mind numbing and you suddenly forgot what your pets look like. You gotta stop that feedback. A familiar face sits behind the board.",
+          "acts": [
+            {
+              "label": "Talk to the man behind the board",
+              "dialog": "kevindoor"
+            },
+            {
+              "label": "Work the board",
+              "unless": "paFixed",
+              "puzzle": "kill_the_squeal"
+            },
+            {
+              "label": "Take the Stage",
+              "if": "paFixed",
+              "to": "stagevfw"
+            },
+            {
+              "label": "Back outside",
+              "to": "lotvfw"
+            }
+          ]
+        },
+        "stagevfw": {
+          "name": "The Stage",
+          "bg": "vfw",
+          "desc": "A one foot riser and single, crackling wedge monitor. In the back of the crowd is something really big, even before it stands up. Is it a full moon tonight?",
+          "acts": [
+            {
+              "label": "Face it",
+              "unless": "wolfDown",
+              "battle": "vfw"
+            },
+            {
+              "label": "Get Kevin off the board",
+              "if": "wolfDown",
+              "scene": "kevin_join"
+            },
+            {
+              "label": "Back to the hall",
+              "to": "hallvfw"
+            }
+          ]
+        }
+      }
+    },
+    "kfat": {
+      "kind": "dungeon",
+      "name": "Community Radio KFUX",
+      "sub": "Online only since 2004",
+      "x": 0.84,
+      "y": 0.5,
+      "needs": "kevin",
+      "start": "gate",
+      "locked": "Brian is in there somewhere, possibly under the DJ name \"Mr. Rhythm\".",
+      "rooms": {
+        "gate": {
+          "name": "Radio Station Tower",
+          "bg": "radio",
+          "desc": "The remains of a chain link fence surround a condemnable cinderblock building.  The tower above used to have blinking lights, but local plain traffic learned to avoid the area. A faded out sign says \"Listener Supported\". A second sign says, \"Please?!\".",
+          "acts": [
+            {
+              "label": "Talk to the volunteer on the steps",
+              "dialog": "volunteer"
+            },
+            {
+              "label": "Check the lost-and-found bin  (pedal)",
+              "unless": "gotOctave",
+              "pedal": "octave",
+              "flag": "gotOctave",
+              "say": "A milk crate of things nobody claimed since the Bush administration. Under a hat: an Octave Down."
+            },
+            {
+              "label": "Go inside",
+              "to": "stacks"
+            }
+          ]
+        },
+        "stacks": {
+          "name": "The Record Library",
+          "bg": "radio",
+          "desc": "Rotting cassette tapes line the shelves near a pile of headphones and caffeine pills. Nearby, a logbook is already opened on the radio transmitter console. ",
+          "acts": [
+            {
+              "label": "Read the logbook",
+              "dialog": "logbook"
+            },
+            {
+              "label": "Work the transmitter dials",
+              "unless": "tuned",
+              "puzzle": "find_the_signal"
+            },
+            {
+              "label": "Run the sign-off carts",
+              "if": "tuned",
+              "unless": "signedOff",
+              "puzzle": "sign_off"
+            },
+            {
+              "label": "Into the booth",
+              "if": "signedOff",
+              "to": "booth"
+            },
+            {
+              "label": "Back out to the gate",
+              "to": "gate"
+            }
+          ]
+        },
+        "booth": {
+          "name": "Studio A",
+          "bg": "radio",
+          "desc": "8 tracks, CD's, and a coffee pot who's contents has gained sentience. Below the fading On-Air sign, glowing in red, is Brian. He's looked better. ",
+          "acts": [
+            {
+              "label": "Take the air back",
+              "unless": "vampDown",
+              "battle": "kfat"
+            },
+            {
+              "label": "Get Brian out of the chair",
+              "if": "vampDown",
+              "scene": "brian_join"
+            },
+            {
+              "label": "Back to the library",
+              "to": "stacks"
+            }
+          ]
+        }
+      }
+    },
+    "highway": {
+      "kind": "dungeon",
+      "name": "The Highway",
+      "sub": "Truck stop, mile 69 (of course)",
+      "x": 0.72,
+      "y": 0.86,
+      "needs": "brian",
+      "start": "pumps",
+      "locked": "Brice has been here for too long. You'll need to rescue Brian first!",
+      "rooms": {
+        "pumps": {
+          "name": "The Gas n' Guzzle",
+          "bg": "highway",
+          "desc": "Sixteen pumps. Now with some actually working! A suss-as-hell black van sits in the back, smoke billows from it's rocking engine. You recognize the \"Faatherton\" spray painted on the side, because you wrote it. The diner food smells edible-ish.",
+          "acts": [
+            {
+              "label": "Talk to the trucker at pump nine",
+              "dialog": "trucker"
+            },
+            {
+              "label": "Dig through the parts shelf  ",
+              "unless": "gotBelt",
+              "get": "belt",
+              "flag": "gotBelt",
+              "say": "Fourteen serpentine belts, none the right size. You take the one that is wrong by the least."
+            },
+            {
+              "label": "Look in the van  ",
+              "if": "knowVan",
+              "unless": "gotLooper",
+              "pedal": "looper",
+              "flag": "gotLooper",
+              "say": "On the bench seat under a folded map: a looper pedal, still plugged into nothing, still switched on."
+            },
+            {
+              "label": "Inside to the diner",
+              "to": "diner"
+            },
+            {
+              "label": "Around to the back lot",
+              "if": "knowBrice",
+              "to": "backlot"
+            }
+          ]
+        },
+        "diner": {
+          "name": "Diner Counter (sticky)",
+          "bg": "highway",
+          "desc": "Looks like the few seated patrons live here, and it smells like someone burned fish 7 seconds ago. Evidence of someone playing for tips is discernable from the greasy but empty tip jar in the corner. ",
+          "acts": [
+            {
+              "label": "Talk to the waitress",
+              "dialog": "waitress"
+            },
+            {
+              "label": "Take the pot  (item)",
+              "if": "potOffered",
+              "unless": "gotCoffee",
+              "get": "coffee",
+              "flag": "gotCoffee",
+              "say": "She does not hand you a cup. She hands you the pot, and a look that says bring it back."
+            },
+            {
+              "label": "Back out to the pumps",
+              "to": "pumps"
+            }
+          ]
+        },
+        "backlot": {
+          "name": "The Back Lot",
+          "bg": "highway",
+          "desc": "Ah, the memories. Every puke stain and pizza box brings you back. Underneath your long lost stead, Brice fidgets with the engine, still trying to get back on the road.",
+          "acts": [
+            {
+              "label": "Get the van running",
+              "unless": "vanFixed",
+              "needItems": [
+                "belt",
+                "coffee"
+              ],
+              "flag": "vanFixed",
+              "say": "The belt is wrong by a little, which Brice says is the correct amount of wrong. The van turns over on the third try. Something enormous behind the building notices."
+            },
+            {
+              "label": "Deal with the haunted chasis",
+              "if": "vanFixed",
+              "unless": "grillDown",
+              "battle": "highway"
+            },
+            {
+              "label": "Get in the van",
+              "if": "grillDown",
+              "scene": "brice_join"
+            },
+            {
+              "label": "Back to the pumps",
+              "to": "pumps"
+            }
+          ]
+        }
+      }
+    },
+    "venue": {
+      "kind": "finale",
+      "name": "THE VENUE",
+      "sub": "Twenty years later...",
+      "x": 0.46,
+      "y": 0.05,
+      "needs": "brice",
+      "start": "loadin",
+      "locked": "All 7 Faathertons or bust. You made a deal.",
+      "rooms": {
+        "loadin": {
+          "name": "Load-In",
+          "bg": "venue",
+          "desc": "The door to the green room is propped open with an empty beer bottle. Stickers canvas what used to be a painted wall. One of them is yours. Put there by you. It's only partially scratched off.",
+          "acts": [
+            {
+              "label": "Look at the stickers",
+              "dialog": "stickers"
+            },
+            {
+              "label": "Into the green room",
+              "to": "green"
+            },
+            {
+              "label": "Straight to the stage",
+              "if": "greeted",
+              "to": "stage"
+            }
+          ]
+        },
+        "green": {
+          "name": "The Green Room",
+          "bg": "venue",
+          "desc": "A couch that has seen some things and absorbed worse. An expired case of bottled water and a full ashtray greet you within, and there is no bathroom. All the other bands are here. Like, really all of them.",
+          "acts": [
+            {
+              "label": "Talk to Frank",
+              "dialog": "gr_frank"
+            },
+            {
+              "label": "Talk to the Nosferatus",
+              "dialog": "gr_vamp"
+            },
+            {
+              "label": "Talk to Were Wolfgang",
+              "dialog": "gr_wolf"
+            },
+            {
+              "label": "Last call at the merch table",
+              "shop": "hoffmans"
+            },
+            {
+              "label": "Work on the rig",
+              "rig": true
+            },
+            {
+              "label": "Go on",
+              "flag": "greeted",
+              "to": "stage"
+            }
+          ]
+        },
+        "stage": {
+          "name": "The Stage",
+          "bg": "venue",
+          "desc": "Two hundred people. The house lights drop. Somewhere in the squeal of the feedback, something dark begins to emerge. The ringing in your ears signifies that the grand finale is about to begin.",
+          "acts": [
+            {
+              "label": "Play the set",
+              "unless": "headlinerDown",
+              "battle": "finale"
+            },
+            {
+              "label": "Play it again",
+              "if": "headlinerDown",
+              "battle": "finale"
+            },
+            {
+              "label": "Back to the green room",
+              "to": "green"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "items": {
+    "tape": {
+      "name": "A Warped Cassette",
+      "desc": "No label. Side A is forty minutes of a room tone."
+    },
+    "fuzzbox": {
+      "name": "Orphaned Fuzz Pedal",
+      "desc": "Someone loved this once. The knob is a wine cork."
+    },
+    "fortyfive": {
+      "name": "A 45 Nobody Has",
+      "desc": "No sleeve, no label, one side worn smooth. The B-side is the good one."
+    },
+    "cable": {
+      "name": "A Cable That Works",
+      "desc": "Tested. Twice. Nobody believes it."
+    },
+    "cashew": {
+      "name": "The Last Cashew Chicken",
+      "desc": "Springfield-style. Still hot. This is a serious object."
+    },
+    "belt": {
+      "name": "A Serpentine Belt",
+      "desc": "Wrong size by a little. Every belt on this shelf is wrong by a little."
+    },
+    "coffee": {
+      "name": "A Whole Pot Of Coffee",
+      "desc": "Not a cup. The pot. The waitress said take the pot."
+    },
+    "keycard": {
+      "name": "Gate Fob",
+      "desc": "Opens the gate. Gary says it also opens his ex-wife's building."
+    }
+  },
+  "flyers": [
+    {
+      "enemy": "frank",
+      "venue": "Self-Storage Unit 114",
+      "flag": "frankDown",
+      "col": "#6f8f5a",
+      "bill": "w/ THE STEINS"
+    },
+    {
+      "enemy": "gill",
+      "venue": "Lake of the Ozarks",
+      "flag": "gillDown",
+      "col": "#3f8a72",
+      "bill": "w/ THREE GUYS ON JET SKIS"
+    },
+    {
+      "enemy": "wrapper",
+      "venue": "C-Street, Springfield",
+      "flag": "wrapperDown",
+      "col": "#cbb894",
+      "bill": "w/ TWO LOOSE ENDS"
+    },
+    {
+      "enemy": "wolfgang",
+      "venue": "The VFW Hall",
+      "flag": "wolfDown",
+      "col": "#6b5a48",
+      "bill": "ALL AGES · $5 · NO RE-ENTRY"
+    },
+    {
+      "enemy": "nosferatus",
+      "venue": "Community Radio KFAT",
+      "flag": "vampDown",
+      "col": "#c9c4d6",
+      "bill": "BROADCAST LIVE, ALLEGEDLY"
+    },
+    {
+      "enemy": "grill",
+      "venue": "Truck Stop, Mile 82",
+      "flag": "grillDown",
+      "col": "#b8541e",
+      "bill": "w/ THE TAQUITOS"
+    },
+    {
+      "enemy": "headliner",
+      "venue": "The Venue — 20 Years",
+      "flag": "headlinerDown",
+      "col": "#c86bff",
+      "bill": "FAATHERTON CLOSES"
+    },
+    {
+      "enemy": "houseband",
+      "venue": "Ozark Open Mic",
+      "flag": "om6",
+      "col": "#b8b2c8",
+      "bill": "SIX NIGHTS · ALL OF THEM"
+    }
+  ]
+}

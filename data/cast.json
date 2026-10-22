@@ -1,0 +1,618 @@
+{
+  "_version": 1,
+  "cast": [
+    {
+      "id": "logan",
+      "entrance": "steady",
+      "name": "Logan",
+      "order": 1,
+      "inst": "mic",
+      "role": "Vocals",
+      "hp": 130,
+      "spd": 1,
+      "height": 1.17,
+      "build": 0.97,
+      "skin": "#e9bb92",
+      "hairCol": "#20161c",
+      "hair": "partDark",
+      "beard": "none",
+      "glasses": true,
+      "shirt": "#241c3d",
+      "shirtAlt": "#3a2e5e",
+      "pants": "#14101f",
+      "shoe": "#1a1420",
+      "accent": "#ff2d7a",
+      "moves": [
+        "opening_line",
+        "call_response",
+        "hold_note"
+      ],
+      "encore": "enc_logan",
+      "stats": {
+        "CHOPS": 7,
+        "PRESENCE": 10,
+        "GRIT": 8,
+        "TASTE": 8
+      }
+    },
+    {
+      "id": "beau",
+      "entrance": "kick",
+      "name": "Beau",
+      "order": 2,
+      "inst": "guitar",
+      "role": "Lead Guitar",
+      "hp": 96,
+      "spd": 1.12,
+      "height": 1.03,
+      "build": 0.92,
+      "skin": "#dfa877",
+      "hairCol": "#b3924f",
+      "hair": "shag",
+      "beard": "stubble",
+      "glasses": false,
+      "shirt": "#5a1230",
+      "shirtAlt": "#7d1d43",
+      "pants": "#1b1524",
+      "shoe": "#241a2c",
+      "accent": "#ffb43c",
+      "moves": [
+        "pinch_harmonic",
+        "feedback_squeal",
+        "the_solo"
+      ],
+      "encore": "enc_beau",
+      "stats": {
+        "CHOPS": 10,
+        "PRESENCE": 7,
+        "GRIT": 5,
+        "TASTE": 9
+      }
+    },
+    {
+      "id": "nathaniel",
+      "entrance": "steady",
+      "name": "Nathaniel",
+      "order": 3,
+      "inst": "drums",
+      "role": "Drums",
+      "hp": 112,
+      "spd": 0.94,
+      "ascend": {
+        "when": "kevin",
+        "inst": "keys",
+        "role": "Keys",
+        "cls": "White Mage",
+        "moves": [
+          "warm_pad",
+          "sustain",
+          "sour_note"
+        ],
+        "note": "Kevin takes the kit. Nathaniel moves to keys — the band finally has a healer."
+      },
+      "height": 1.11,
+      "build": 0.83,
+      "skin": "#f0cba4",
+      "hairCol": "#d8b25e",
+      "hair": "blondeMed",
+      "beard": "none",
+      "glasses": false,
+      "shirt": "#12405a",
+      "shirtAlt": "#1a5b7d",
+      "pants": "#171a26",
+      "shoe": "#1d2130",
+      "accent": "#2ee6ff",
+      "moves": [
+        "double_kick",
+        "the_fill",
+        "crash_out"
+      ],
+      "encore": "enc_nathaniel",
+      "stats": {
+        "CHOPS": 8,
+        "PRESENCE": 6,
+        "GRIT": 9,
+        "TASTE": 7
+      }
+    },
+    {
+      "id": "mat",
+      "entrance": "saunter",
+      "name": "Mat",
+      "order": 4,
+      "inst": "bass",
+      "role": "Bass",
+      "hp": 126,
+      "spd": 0.96,
+      "ascend": {
+        "when": "brice",
+        "inst": "sampler",
+        "role": "Sampler",
+        "cls": "Trickster",
+        "moves": [
+          "loop_that",
+          "sample_dump",
+          "chop_it"
+        ],
+        "note": "Brice takes the low end. Mat picks up a loop pedal and things stop making sense."
+      },
+      "height": 1,
+      "build": 1.02,
+      "skin": "#e3b184",
+      "hairCol": "#241a16",
+      "hair": "longDark",
+      "beard": "full",
+      "glasses": false,
+      "shirt": "#1e3320",
+      "shirtAlt": "#2c4a2e",
+      "pants": "#151222",
+      "shoe": "#1c1626",
+      "accent": "#6cff9e",
+      "moves": [
+        "low_rumble",
+        "slap_back",
+        "cheap_shot"
+      ],
+      "encore": "enc_mat",
+      "stats": {
+        "CHOPS": 7,
+        "PRESENCE": 8,
+        "GRIT": 7,
+        "TASTE": 10
+      }
+    },
+    {
+      "id": "kevin",
+      "entrance": "walk",
+      "name": "Kevin",
+      "order": 5,
+      "inst": "drums",
+      "role": "Drums",
+      "hp": 142,
+      "spd": 1.04,
+      "ascend": {
+        "when": "brian",
+        "inst": "aux",
+        "role": "Aux + Gang Vocals",
+        "cls": "Rallier",
+        "moves": [
+          "gang_vocals",
+          "tambourine",
+          "handclaps"
+        ],
+        "note": "Brian takes the kit. Kevin picks up aux percussion and starts moving the whole room at once."
+      },
+      "height": 1.01,
+      "build": 1.06,
+      "skin": "#d9a173",
+      "hairCol": "#1d1613",
+      "hairHi": "#d6b163",
+      "hair": "spiky",
+      "beard": "full",
+      "glasses": false,
+      "shirt": "#4a2410",
+      "shirtAlt": "#6b3617",
+      "pants": "#191320",
+      "shoe": "#221a29",
+      "accent": "#ffb43c",
+      "moves": [
+        "double_kick",
+        "the_fill",
+        "crash_out"
+      ],
+      "encore": "enc_kevin",
+      "stats": {
+        "CHOPS": 8,
+        "PRESENCE": 7,
+        "GRIT": 10,
+        "TASTE": 6
+      }
+    },
+    {
+      "id": "brian",
+      "entrance": "walk",
+      "name": "Brian",
+      "order": 6,
+      "inst": "drums",
+      "role": "Drums",
+      "hp": 120,
+      "spd": 1.16,
+      "height": 0.95,
+      "build": 0.99,
+      "skin": "#e0ac7e",
+      "hairCol": "#1f1712",
+      "hair": "longDark",
+      "beard": "full",
+      "glasses": true,
+      "shirt": "#2b2456",
+      "shirtAlt": "#3d3478",
+      "pants": "#161320",
+      "shoe": "#1e1826",
+      "accent": "#2ee6ff",
+      "moves": [
+        "double_kick",
+        "odd_meter",
+        "crash_out"
+      ],
+      "encore": "enc_brian",
+      "stats": {
+        "CHOPS": 9,
+        "PRESENCE": 5,
+        "GRIT": 8,
+        "TASTE": 8
+      }
+    },
+    {
+      "id": "brice",
+      "entrance": "stagger",
+      "name": "Brice",
+      "order": 7,
+      "inst": "bass",
+      "role": "Bass",
+      "hp": 150,
+      "spd": 0.9,
+      "height": 0.98,
+      "build": 1.3,
+      "skin": "#dda978",
+      "hairCol": "#141014",
+      "hair": "shortBlack",
+      "beard": "full",
+      "glasses": false,
+      "shirt": "#3d1230",
+      "shirtAlt": "#571a44",
+      "pants": "#171225",
+      "shoe": "#201828",
+      "accent": "#ff2d7a",
+      "moves": [
+        "low_rumble",
+        "floor_shake",
+        "cheap_shot"
+      ],
+      "encore": "enc_brice",
+      "stats": {
+        "CHOPS": 7,
+        "PRESENCE": 9,
+        "GRIT": 9,
+        "TASTE": 9
+      }
+    }
+  ],
+  "actors": {
+    "promoter": {
+      "id": "promoter",
+      "entrance": "hum",
+      "name": "The Promoter",
+      "special": "wedge",
+      "accent": "#6cff9e",
+      "order": 9
+    },
+    "gary": {
+      "id": "gary",
+      "name": "Gary",
+      "order": 11,
+      "inst": "none",
+      "height": 0.94,
+      "build": 1.12,
+      "skin": "#d8a97f",
+      "hairCol": "#8d8d94",
+      "hair": "partDark",
+      "beard": "stubble",
+      "glasses": true,
+      "shirt": "#3a4a3a",
+      "shirtAlt": "#4c5f4c",
+      "pants": "#2a2a30",
+      "shoe": "#1e1e24",
+      "accent": "#ffb43c"
+    },
+    "dockhand": {
+      "id": "dockhand",
+      "name": "Dockhand",
+      "order": 12,
+      "inst": "none",
+      "height": 1,
+      "build": 1.05,
+      "skin": "#c98f62",
+      "hairCol": "#4a3a2a",
+      "hair": "shortBlack",
+      "beard": "full",
+      "glasses": false,
+      "shirt": "#2a4a5e",
+      "shirtAlt": "#37627d",
+      "pants": "#1e2430",
+      "shoe": "#232a34",
+      "accent": "#2ee6ff"
+    },
+    "openmic": {
+      "id": "openmic",
+      "name": "Open Mic Guy",
+      "order": 13,
+      "inst": "none",
+      "height": 0.99,
+      "build": 0.9,
+      "skin": "#e0b48a",
+      "hairCol": "#2a2018",
+      "hair": "shag",
+      "beard": "stubble",
+      "glasses": true,
+      "shirt": "#4a3a1c",
+      "shirtAlt": "#63502a",
+      "pants": "#201a26",
+      "shoe": "#241c2a",
+      "accent": "#ffb43c"
+    },
+    "secondspin": {
+      "id": "secondspin",
+      "name": "Second Spin",
+      "order": 14,
+      "inst": "none",
+      "height": 1.02,
+      "build": 0.96,
+      "skin": "#d9a877",
+      "hairCol": "#1c1620",
+      "hair": "longDark",
+      "beard": "full",
+      "glasses": true,
+      "shirt": "#3d2058",
+      "shirtAlt": "#523072",
+      "pants": "#1a1424",
+      "shoe": "#221a2c",
+      "accent": "#c86bff"
+    },
+    "trucker": {
+      "id": "trucker",
+      "name": "Trucker",
+      "order": 17,
+      "inst": "none",
+      "height": 1.04,
+      "build": 1.24,
+      "skin": "#c98a5e",
+      "hairCol": "#6a5a4a",
+      "hair": "shortBlack",
+      "beard": "full",
+      "glasses": false,
+      "shirt": "#3a2a1e",
+      "shirtAlt": "#4e3a2a",
+      "pants": "#243040",
+      "shoe": "#1e1a18",
+      "accent": "#ffb43c"
+    },
+    "waitress": {
+      "id": "waitress",
+      "name": "Waitress",
+      "order": 18,
+      "inst": "none",
+      "height": 0.95,
+      "build": 0.98,
+      "skin": "#e3b48c",
+      "hairCol": "#6a3a20",
+      "hair": "blondeMed",
+      "beard": "none",
+      "glasses": false,
+      "shirt": "#2e5a52",
+      "shirtAlt": "#3e7a6e",
+      "pants": "#20242c",
+      "shoe": "#1c1e24",
+      "accent": "#6cff9e"
+    },
+    "volunteer": {
+      "id": "volunteer",
+      "name": "The Volunteer",
+      "order": 16,
+      "inst": "none",
+      "height": 0.96,
+      "build": 0.88,
+      "skin": "#dcb188",
+      "hairCol": "#b9b4a6",
+      "hair": "blondeMed",
+      "beard": "stubble",
+      "glasses": true,
+      "shirt": "#2a3a4a",
+      "shirtAlt": "#3a5064",
+      "pants": "#232630",
+      "shoe": "#1c1f28",
+      "accent": "#2ee6ff"
+    },
+    "register": {
+      "id": "register",
+      "name": "The Register",
+      "order": 15,
+      "inst": "none",
+      "height": 0.93,
+      "build": 1.02,
+      "skin": "#e6bb92",
+      "hairCol": "#2c2228",
+      "hair": "blondeMed",
+      "beard": "none",
+      "glasses": false,
+      "shirt": "#1e4030",
+      "shirtAlt": "#2a5a44",
+      "pants": "#1a1c24",
+      "shoe": "#20222a",
+      "accent": "#6cff9e"
+    }
+  },
+  "liner": {
+    "logan": {
+      "photo": null,
+      "fields": [
+        {
+          "label": "Plays",
+          "value": "Vocals, guitar, main songwriter"
+        },
+        {
+          "label": "In the band since",
+          "value": "The dawn of time."
+        },
+        {
+          "label": "In this game",
+          "value": "Bard / Leader. Highest PRESENCE in the band, and the only character whose Encore can turn a whole room over on its own."
+        },
+        {
+          "label": "First show",
+          "value": "No one can remember."
+        },
+        {
+          "label": "Story",
+          "value": "Logan founded Faatherton around the year 2000 and has lead the band and been the lead singer, guitarist, and main songwriter ever since. Logan is the beating heart and soul of the Faather-team. There'd literally never have been a Faatherton without Logan. His songwriting skills are the reason we all showed up for 20 years.",
+          "long": true
+        }
+      ]
+    },
+    "beau": {
+      "photo": null,
+      "fields": [
+        {
+          "label": "Plays",
+          "value": "Lead guitar, backing vocals"
+        },
+        {
+          "label": "In the band since",
+          "value": "Since that porch show a hundred years ago we think. We consider that about the beginning... "
+        },
+        {
+          "label": "In this game",
+          "value": "Black Mage. Highest CHOPS, lowest defense. The Solo escalates the longer he stays on it."
+        },
+        {
+          "label": "First show",
+          "value": "See above. A porch is likely involved."
+        },
+        {
+          "label": "Story",
+          "value": "Beau is an amazing guitarist and songwriter. He's been elevating (saving) Faatherton songs for decades and improves every project he's part of. Also providing additional vocals and songwriting for Faatherton, Beau is an inspiration to his fellow bandmates.",
+          "long": true
+        }
+      ]
+    },
+    "nathaniel": {
+      "photo": null,
+      "fields": [
+        {
+          "label": "Plays",
+          "value": "Drums, then keys"
+        },
+        {
+          "label": "In the band since",
+          "value": "The beginning or earlier."
+        },
+        {
+          "label": "In this game",
+          "value": "Joins on drums and ascends to keys. Nathaniel heals his bandmates during sets."
+        },
+        {
+          "label": "First show",
+          "value": "We'd have to check defuncts Zines to be sure."
+        },
+        {
+          "label": "Story",
+          "value": "Nathaniel began as the original drummer for Faatherton and became the keyboardist after the turn of the century sometime. Nathaniel rounds out the rock with his harmonies, synth, and a dozen other instruments. Nathaniel has always been an integral member of the group, making the Faath seem like legitimate musicians in public.",
+          "long": true
+        }
+      ]
+    },
+    "mat": {
+      "photo": null,
+      "fields": [
+        {
+          "label": "Plays",
+          "value": "Keys, then bass, "
+        },
+        {
+          "label": "In the band since",
+          "value": "2004? No one can be sure until carbon dating is completed."
+        },
+        {
+          "label": "In this game",
+          "value": "Barbarian, then Trickster. Highest TASTE, which is what opens the weird dialogue options."
+        },
+        {
+          "label": "First show",
+          "value": "Somewhere deep in Springfield 20 or so years ago"
+        },
+        {
+          "label": "Story",
+          "value": "After filling in on keys for a bit, Mat picked up the bass as soon as the position was available. Everyone was happy to have him off the keyboards, especially him. Mat provides backing vocals when the venue has enough mics, and he keeps booze in his bass case. Sometimes he even shares. Good for a laugh. Plays bass with a pick, but we forgive him.",
+          "long": true
+        }
+      ]
+    },
+    "kevin": {
+      "photo": null,
+      "fields": [
+        {
+          "label": "Plays",
+          "value": "Drums, then aux and gang vocals"
+        },
+        {
+          "label": "In the band since",
+          "value": "Since it mattered"
+        },
+        {
+          "label": "In this game",
+          "value": "Highest GRIT on the roster. Ran an all-ages room by himself for nineteen years and would not leave until somebody took the door."
+        },
+        {
+          "label": "First show",
+          "value": "Kevin has always been one of us."
+        },
+        {
+          "label": "Story",
+          "value": "Kevin is the technical powerhouse of the band. He's played drums on and off since forever, is an asset in the studio, and is the musician the rest of the band learns from and leans on the most. He can play anything that makes sound, and Faatherton would never have been more than a garage band without him.",
+          "long": true
+        }
+      ]
+    },
+    "brian": {
+      "photo": null,
+      "fields": [
+        {
+          "label": "Plays",
+          "value": "Drums"
+        },
+        {
+          "label": "In the band since",
+          "value": "AOL was still a thing"
+        },
+        {
+          "label": "In this game",
+          "value": "Sets the party Tempo refill rate, which quietly makes him the most important character in any fight he is in."
+        },
+        {
+          "label": "First show",
+          "value": "No band member was sober enough to remember."
+        },
+        {
+          "label": "Story",
+          "value": "A friend of the band before he became the drummer, Brian has been the tempo and spinal column of Faatherton for decades. He's the foundation of the group and the unofficial \"manager\" of the band. Brian takes care of as much off stage as he does onstage, and onstage he's a beast. Brian is classically trained and an asset in the writing process.",
+          "long": true
+        }
+      ]
+    },
+    "brice": {
+      "photo": null,
+      "fields": [
+        {
+          "label": "Plays",
+          "value": "Bass / Videographer"
+        },
+        {
+          "label": "In the band since",
+          "value": "Vines were still a thing"
+        },
+        {
+          "label": "In this game",
+          "value": "Bass attacks damage terrain. Brice is the reason for that."
+        },
+        {
+          "label": "First show",
+          "value": "Probably attended every show, even before joining on bass."
+        },
+        {
+          "label": "Story",
+          "value": "If you've seen footage of Faatherton, it's likely that Brice captured it. Brice's sense of humor is as valuable as his bass skills, and Faatherton would be hollow without both. Crack a joke, write a killer bass-fill, repeat. Brice is everyone's best friend on and off the stage, and has been for 20+ years.",
+          "long": true
+        }
+      ]
+    }
+  }
+}

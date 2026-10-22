@@ -1,0 +1,419 @@
+{
+  "_version": 1,
+  "pedals": {
+    "screamer": {
+      "name": "The Screamer",
+      "cost": 220,
+      "sell": 110,
+      "tag": "overdrive",
+      "desc": "Green, ubiquitous, slightly sizzling. Damage +18%.",
+      "mods": {
+        "dmg": 1.18
+      }
+    },
+    "bigfuzz": {
+      "name": "BIG FUZZ",
+      "cost": 380,
+      "sell": 190,
+      "tag": "fuzz",
+      "desc": "Knob is a wine cork. Damage +35%, but you sweat 25% faster.",
+      "mods": {
+        "dmg": 1.35,
+        "sweat": 1.25
+      }
+    },
+    "springtank": {
+      "name": "Spring Tank",
+      "cost": 260,
+      "sell": 130,
+      "tag": "reverb",
+      "desc": "Kick it and the room shakes. Hype +30%.",
+      "mods": {
+        "crowd": 1.3
+      }
+    },
+    "noisegate": {
+      "name": "Noise Gate",
+      "cost": 280,
+      "sell": 140,
+      "tag": "utility",
+      "desc": "Tightens everything up. Moves cost 20% less Tempo.",
+      "mods": {
+        "tempo": 0.8
+      }
+    },
+    "chorus": {
+      "name": "Chorus Pedal",
+      "cost": 240,
+      "sell": 120,
+      "tag": "modulation",
+      "only": [
+        "keys",
+        "mic"
+      ],
+      "desc": "Everything sounds like 1987. Healing +40%.",
+      "mods": {
+        "heal": 1.4
+      }
+    },
+    "whammy": {
+      "name": "The Whammy",
+      "cost": 600,
+      "sell": 300,
+      "tag": "pitch",
+      "only": [
+        "guitar"
+      ],
+      "desc": "Grants DIVE BOMB. Enormous, irresponsible.",
+      "grant": "dive_bomb"
+    },
+    "looper": {
+      "name": "Looper",
+      "cost": 560,
+      "sell": 280,
+      "tag": "utility",
+      "desc": "Grants LOOP IT. Hits everything twice and asks nobody.",
+      "grant": "loop_it"
+    },
+    "talkbox": {
+      "name": "Talk Box",
+      "cost": 480,
+      "sell": 240,
+      "tag": "novelty",
+      "desc": "Grants TALK BOX. Almost no damage. The room loses its mind.",
+      "grant": "talk_box"
+    },
+    "tapeecho": {
+      "name": "Tape Echo",
+      "cost": 420,
+      "sell": 210,
+      "tag": "delay",
+      "support": "repeat",
+      "desc": "LINK: the linked pedal’s move repeats for 45% damage."
+    },
+    "booster": {
+      "name": "Clean Boost",
+      "cost": 340,
+      "sell": 170,
+      "tag": "boost",
+      "support": "amplify",
+      "desc": "LINK: +45% damage on everything that character plays."
+    },
+    "octave": {
+      "name": "Octave Down",
+      "cost": 520,
+      "sell": 260,
+      "tag": "pitch",
+      "support": "spread",
+      "desc": "LINK: single-target moves also splash every enemy for 55%."
+    },
+    "comp": {
+      "name": "Compressor",
+      "cost": 300,
+      "sell": 150,
+      "tag": "dynamics",
+      "support": "clean",
+      "desc": "LINK: that character sweats 40% slower."
+    },
+    "fourtrack": {
+      "name": "Four-Track Bounce",
+      "cost": 520,
+      "sell": 260,
+      "tag": "sampler",
+      "desc": "Bounced so many times it hisses. Every action leaves a ghost of the last one.",
+      "only": [
+        "sampler",
+        "keys"
+      ],
+      "mods": {
+        "dmg": 1.1
+      },
+      "repeat": 0.3
+    },
+    "ringmod": {
+      "name": "Ring Modulator",
+      "cost": 460,
+      "sell": 230,
+      "tag": "weird",
+      "desc": "Nobody knows what it is doing, including it. Wilder, and it takes the room with it.",
+      "mods": {
+        "dmg": 1.26,
+        "crowd": 1.18,
+        "sweat": 1.2
+      }
+    },
+    "sustainer": {
+      "name": "Infinite Sustain",
+      "cost": 600,
+      "sell": 300,
+      "tag": "utility",
+      "desc": "The note does not stop. It just keeps going while you do something else, which is how you get to play twice.",
+      "mods": {
+        "tempo": 0.78,
+        "crowd": 1.1
+      }
+    },
+    "nightshift": {
+      "name": "Night Shift Fuzz",
+      "cost": 0,
+      "sell": 0,
+      "tag": "fuzz",
+      "desc": "Higgins built it on a slow night out of a doorbell and a bad idea. It works.",
+      "mods": {
+        "dmg": 1.22,
+        "sweat": 1.08
+      }
+    },
+    "doorcharge": {
+      "name": "Door Charge",
+      "cost": 0,
+      "sell": 0,
+      "tag": "utility",
+      "desc": "Five dollars, all ages. The kid stamped your hand and gave you this instead of change.",
+      "mods": {
+        "crowd": 1.3
+      }
+    },
+    "shortstack": {
+      "name": "Short Stack",
+      "cost": 0,
+      "sell": 0,
+      "tag": "support",
+      "desc": "She wrote a chord chart on the back of a ticket. It is somehow correct.",
+      "support": "amplify"
+    },
+    "deadair": {
+      "name": "Dead Air",
+      "cost": 0,
+      "sell": 0,
+      "tag": "weird",
+      "desc": "Eleven minutes of nothing, captured. Play it at somebody and they lose their place.",
+      "mods": {
+        "dmg": 1.14,
+        "tempo": 0.88
+      }
+    }
+  },
+  "shops": {
+    "hoffmans": {
+      "name": "Hoffman’s Pawn",
+      "keeper": "HOFFMAN",
+      "greet": "Open all night, for some reason, and containing all the pedals you can't afford. Smells like loan-interest.",
+      "stock": [
+        "screamer",
+        "bigfuzz",
+        "springtank",
+        "noisegate",
+        "chorus",
+        "tapeecho",
+        "booster",
+        "comp",
+        "talkbox",
+        "octave",
+        "looper",
+        "whammy"
+      ],
+      "sellRate": 0.5
+    },
+    "secondspin": {
+      "name": "Second Spin Records",
+      "keeper": "THE OWNER",
+      "greet": "We don't really sell gear. These came in a box with a dead man’s records, and nobody has asked about them since. They ain't normal. That is the appeal.",
+      "stock": [
+        "tapeecho",
+        "talkbox",
+        "whammy",
+        "looper",
+        "fourtrack",
+        "ringmod",
+        "sustainer"
+      ],
+      "sellRate": 0.55
+    }
+  },
+  "puzzles": {
+    "find_the_signal": {
+      "kind": "dials",
+      "title": "Take Back The Signal",
+      "intro": "Something has taken over the airwaves and is someone has been keeping it at bay. Transmit the Sign-Off at the right frequency to put an end to this. There's a logbook and it looks like you aren't the first to try.",
+      "dials": [
+        {
+          "id": "band",
+          "name": "Band (MHz, tens)",
+          "min": 8,
+          "max": 10
+        },
+        {
+          "id": "ones",
+          "name": "Ones",
+          "min": 0,
+          "max": 9
+        },
+        {
+          "id": "tenth",
+          "name": "Tenth",
+          "min": 0,
+          "max": 9
+        }
+      ],
+      "answer": {
+        "band": 8,
+        "ones": 9,
+        "tenth": 7
+      },
+      "hintLabel": "Check the logbook",
+      "hintFrom": "THE LOGBOOK, last entry, 2004",
+      "hint": "\"89.7 and holding. If you are reading this the shift did not end, it just stopped being staffed. Eight nine point seven. Do not let it drift.\"",
+      "wrong": "Static, then a voice reading a phone number, then static again. Not it.",
+      "onSolve": {
+        "flag": "tuned",
+        "say": "89.7 locks in. You've found the pirate-signal. Sounds like that Puppet-Count from that kids show."
+      }
+    },
+    "sign_off": {
+      "kind": "order",
+      "title": "The Sign-Off",
+      "intro": "Four dusty carts are splayed across the desk, labeled in a long dead volunteer's handwriting. Play the correct Sign-Off sequence, and the signal is yours. ",
+      "items": [
+        {
+          "id": "psa",
+          "name": "PSA"
+        },
+        {
+          "id": "id",
+          "name": "Legal ID"
+        },
+        {
+          "id": "anthem",
+          "name": "The Anthem"
+        },
+        {
+          "id": "dead",
+          "name": "Dead Air"
+        }
+      ],
+      "answer": [
+        "psa",
+        "id",
+        "anthem",
+        "dead"
+      ],
+      "hintLabel": "Ask Brian through the glass",
+      "hintFrom": "BRIAN",
+      "hint": "\"First is always PSA, since it's a legal obligation, then the ID is always top of the hour. Boss gets mad when you miss that one. Then the station anthem and an awkward silence. The dead air is definitely part of it.\"",
+      "wrong": "You hear a voice in the evil broadcast laugh and grow louder. If only you knew the Sign-Off order.",
+      "onSolve": {
+        "flag": "signedOff",
+        "say": "You nail the Sign-Off order ending in the dead air. In the silence, the booth door unlocks."
+      }
+    },
+    "kill_the_squeal": {
+      "kind": "dials",
+      "title": "Kill The Squeal",
+      "intro": "The house PA has been feeding back since before some of the kids here were born. Three knobs on the board. People have written on the wall above it over the years.",
+      "dials": [
+        {
+          "id": "gain",
+          "name": "Gain",
+          "min": 0,
+          "max": 10
+        },
+        {
+          "id": "mid",
+          "name": "Mid",
+          "min": 0,
+          "max": 10
+        },
+        {
+          "id": "master",
+          "name": "Master",
+          "min": 0,
+          "max": 10
+        }
+      ],
+      "answer": {
+        "gain": 4,
+        "mid": 2,
+        "master": 7
+      },
+      "hintLabel": "Read the wall",
+      "hintFrom": "THE WRITING ON THE WALL",
+      "hint": "\"GAIN LOW ENOUGH TO BEHAVE (4). SCOOP THE HONK, DO NOT KILL IT (2). MASTER CARRIES THE ROOM (7).\" Underneath, in different handwriting: \"it is always the mids.\"",
+      "wrong": "The squeal drops for about a second and a half, then comes back louder and slightly personal.",
+      "onSolve": {
+        "flag": "paFixed",
+        "say": "The squeal dies. The room, which has been shouting over it for nineteen years, gets suddenly and uncomfortably quiet."
+      }
+    },
+    "signal_chain": {
+      "kind": "order",
+      "title": "The Signal Chain",
+      "intro": "Beau (or someone) has rigged their pedals up to operate the door's lock, and that makes sense to you. Set them up in the order a guitarist likely would to unlock the door probably.",
+      "items": [
+        {
+          "id": "delay",
+          "name": "Delay"
+        },
+        {
+          "id": "tuner",
+          "name": "Tuner"
+        },
+        {
+          "id": "reverb",
+          "name": "Reverb"
+        },
+        {
+          "id": "fuzz",
+          "name": "Fuzz"
+        }
+      ],
+      "answer": [
+        "tuner",
+        "fuzz",
+        "delay",
+        "reverb"
+      ],
+      "hintLabel": "Shout to Beau for a hint ",
+      "hintFrom": "BEAU, through the door",
+      "hint": "\" Can't do anything if you ain't tuned. Even you know that! Then make it messy and add everything else before you verb it!\"",
+      "wrong": "(*BZZZ!) Ouch! The little gizmo shocked you. The door does not open. ",
+      "onSolve": {
+        "flag": "door114",
+        "say": "You hear the door unlock and scurrying from inside the room."
+      }
+    }
+  },
+  "diner": {
+    "restCostPerMember": 26,
+    "menu": [
+      {
+        "id": "pie",
+        "name": "A Slice Of Whatever Is Left",
+        "cost": 60,
+        "one": 0.45,
+        "desc": "It is pie. It has been pie for a while. Heals your lowest health player."
+      },
+      {
+        "id": "coffee",
+        "name": "The Pot",
+        "cost": 90,
+        "sweat": -40,
+        "desc": "Not a cup. The whole pot. Everybody sheds 40 sweat."
+      },
+      {
+        "id": "cashew",
+        "name": "Springfield-Style Cashew Chicken",
+        "cost": 120,
+        "one": 1,
+        "desc": "Fried, gravy, green onion. Puts one of you all the way back together."
+      },
+      {
+        "id": "round",
+        "name": "A Round For The Table",
+        "cost": 150,
+        "heal": 0.5,
+        "desc": "Half health back for everybody. Not the same as sleeping."
+      }
+    ]
+  }
+}
