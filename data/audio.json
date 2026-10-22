@@ -154,7 +154,7 @@
     "lake": {
       "name": "No Wake Zone",
       "where": "Lake of the Ozarks",
-      "file": "audio/ImpressionistChip1.wav",
+      "file": "audio/ImpressionistChip1.mp3",
       "bpm": 87.59,
       "root": 38,
       "scale": "minor",
