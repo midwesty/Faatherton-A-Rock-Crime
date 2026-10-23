@@ -21,8 +21,8 @@
 <meta property="og:title" content="FAATHERTON — A Rock Crime">
 <meta property="og:description" content="Seven guys, one lineup, since 2000. Recruit the band, build the rig, play the set.">
 <meta property="og:image" content="preview.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="FAATHERTON — A Rock Crime">
 <meta name="twitter:description" content="Seven guys, one lineup, since 2000. Recruit the band, build the rig, play the set.">
@@ -482,7 +482,7 @@ body.cb .pc.ready .n:before,body.hc .pc.ready .n:before{content:"\25b8 "}
     <button id="mArchive">The Archive</button>
     <button id="mBattle">Battle sandbox (full band)</button>
     <button id="mSet">Settings</button>
-    <p class="ver">v1.33 &middot; ready to share &middot; onboarding · data layer · accessibility · the shot · the archive · cinematics · audio · the finale · duets · overdubs · kfat · the vfw · set streak · cinematic scenes · c-street · the lake · ascension · pedalboard · shop · admin · saves · map · rooms · dialogue · battle</p>
+    <p class="ver">v1.34 &middot; ready to share &middot; onboarding · data layer · accessibility · the shot · the archive · cinematics · audio · the finale · duets · overdubs · kfat · the vfw · set streak · cinematic scenes · c-street · the lake · ascension · pedalboard · shop · admin · saves · map · rooms · dialogue · battle</p>
   </div>
 
   <div id="credits" class="hidden"><div id="crScroll"></div>
@@ -3811,21 +3811,46 @@ function stopMusic(){
   if(A.cur&&A.cur.el){try{A.cur.el.pause();A.cur.el.src='';}catch(e){} }
   A.cur=null; A.curId=null; A.seq=null;
 }
+/* Drop to the placeholder sequence that already lives in the track's own data,
+   and tell him which file is at fault — once per file, not once per battle. */
+const MUSIC_TOLD={};
+function musicFallback(id,tr,say){
+  if(A.timer){clearInterval(A.timer);A.timer=null;}
+  A.cur=null;
+  A.seq=tr; A.step=0;
+  try{ A.nextT=A.ctx.currentTime+0.06; }catch(e){ A.nextT=0; }
+  A.timer=setInterval(schedule,25);
+  if(say&&tr&&tr.file&&!MUSIC_TOLD[tr.file]){
+    MUSIC_TOLD[tr.file]=1;
+    try{ console.warn('[faatherton] could not play '+tr.file+
+      ' \u2014 check the name matches the file exactly, including capitals and spaces.'); }catch(e){}
+    try{ toast('Music file not found',
+      tr.file+' would not play, so '+(tr.name||id)+
+      ' is using its placeholder. Check the name matches the file exactly \u2014 capitals and spaces count.'); }catch(e){}
+  }
+}
 function playMusic(id){
   if(!id||A.curId===id)return;
   if(!A.ctx){ A.pending=id; return; }
   stopMusic();
   const tr=MUSIC[id]; if(!tr)return;
   A.curId=id;
+  /* A file already known to be unplayable should not be retried every battle. */
+  if(tr.file&&A.failed[tr.file]){ STAGE.bpm=tr.bpm; musicFallback(id,tr,false); return; }
   STAGE.bpm=tr.bpm;                                  // the whole game moves to the track
   if(tr.file){
     loadFile(tr.file).then(b=>{
       if(A.curId!==id)return;
       if(b){ A.cur=playBuffer(b,A.musicBus,tr.vol,true); return; }
-      const el2=playElement(tr.file,tr.vol==null?0.5:tr.vol,true);   // file:// path
+      /* playElement hands back an element straight away; a 404 or an
+         unplayable file only surfaces later on its error event. The old code
+         read that element as success, so a music file the browser could not
+         play left the game SILENT — no fallback, no message, nothing to go on.
+         Now a failure drops to the written-in placeholder and names the file. */
+      const el2=playElement(tr.file,tr.vol==null?0.5:tr.vol,true,
+        ()=>{ if(A.curId!==id)return; musicFallback(id,tr,true); });
       if(el2)A.cur={el:el2};
-      else { A.seq=tr; A.step=0; A.nextT=A.ctx.currentTime+0.06;      // last resort
-             A.timer=setInterval(schedule,25); }
+      else musicFallback(id,tr,true);
     });
     return; }
   A.seq=tr; A.step=0; A.nextT=A.ctx.currentTime+0.06;
@@ -6477,7 +6502,7 @@ function markOption(btn,key,label,isExit){
   btn.onclick=(e)=>{ G.seenOpts=G.seenOpts||{}; G.seenOpts[key]=1; if(was)was(e); };
 }
 function toast(title,body){
-  sfx('ui.toast');
+  try{ sfx('ui.toast'); }catch(e){}   // a message must not be lost to a sound
   const host=document.getElementById('toasts');
   const d=document.createElement('div'); d.className='toast';
   d.innerHTML='<b>'+title+'</b>'+body;
@@ -6630,30 +6655,47 @@ function renderArchive(){
   if(ARCH.tab==='shot')renderShotTab(body);
 }
 
-function renderJukebox(host){
+/* The jukebox lists SONGS, not the game's audio slots. One recording used in
+   several places is one entry that says where you hear it, and nothing counts
+   placeholders at the band. Falls back to listing every track while no real
+   recordings exist, so a fresh build still has a working jukebox. */
+function jukeboxList(){
   const ids=Object.keys(MUSIC);
-  const real=ids.filter(k=>MUSIC[k].file).length;
-  host.innerHTML='<h3>Jukebox</h3><p class="sub">Every track in the game</p>'+
-    '<p class="progress">'+real+' of '+ids.length+
-    ' tracks are real recordings \u00b7 '+(ids.length-real)+' still placeholder</p>';
-  ids.forEach(k=>{
-    const tr=MUSIC[k];
+  const real=ids.filter(k=>MUSIC[k]&&MUSIC[k].file);
+  const use=real.length?real:ids;
+  const at={}, out=[];
+  use.forEach(k=>{
+    const tr=MUSIC[k]; if(!tr)return;
+    const key=tr.file||('\u0000'+k);           // same file = same song
+    if(at[key]!=null){
+      const e=out[at[key]];
+      e.ids.push(k);
+      if(tr.where&&e.where.indexOf(tr.where)<0)e.where.push(tr.where);
+      return;
+    }
+    at[key]=out.length;
+    out.push({id:k, ids:[k], name:tr.name||k, bpm:tr.bpm, file:tr.file||null,
+              where:tr.where?[tr.where]:[]});
+  });
+  return out;
+}
+function renderJukebox(host){
+  const songs=jukeboxList();
+  host.innerHTML='<h3>Jukebox</h3><p class="sub">'+
+    (songs.length===1?'One song':songs.length+' songs')+'</p>';
+  songs.forEach(e=>{
+    const on=e.ids.indexOf(A.curId)>=0;
     const row=document.createElement('div');
-    row.className='jrow'+(A.curId===k?' playing':'');
-    row.innerHTML='<div class="info"><b>'+(tr.name||k)+'</b><span>'+
-      (tr.where||'')+' \u00b7 '+tr.bpm+' bpm</span></div>'+
-      '<span class="tag'+(tr.file?' real':'')+'">'+(tr.file?'recording':'placeholder')+'</span>';
+    row.className='jrow'+(on?' playing':'');
+    const sub=[e.where.join(' \u00b7 '), e.bpm?e.bpm+' bpm':''].filter(Boolean).join(' \u00b7 ');
+    row.innerHTML='<div class="info"><b>'+escText(e.name)+'</b><span>'+escText(sub)+'</span></div>';
     const b=document.createElement('button');
-    b.textContent=(A.curId===k)?'Stop':'Play';
+    b.textContent=on?'Stop':'Play';
     b.onclick=()=>{ unlockAudio();
-      if(A.curId===k){stopMusic();} else {playMusic(k);}
+      if(on){stopMusic();} else {playMusic(e.id);}
       renderArchive(); };
     row.appendChild(b); host.appendChild(row);
   });
-  const note=document.createElement('p'); note.className='progress';
-  note.style.marginTop='12px';
-  note.textContent='Placeholders are generated by the game. Drop a file into a track\u2019s row and it plays that instead.';
-  host.appendChild(note);
 }
 
 function renderLiner(host){
