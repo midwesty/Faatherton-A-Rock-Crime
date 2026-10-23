@@ -486,7 +486,7 @@
         ],
         "speaker": "logan",
         "who": "",
-        "text": "The headliner let's out a deafening squeal as it dissolved into 1000 used earplugs and broken strings. You feel the power of the Counsel lose it's grip over you."
+        "text": "The headliner let's out a deafening squeal as it dissolved into 1000 used earplugs and broken strings. You feel the power of the Council lose it's grip over you."
       },
       {
         "bg": "venue",
@@ -509,7 +509,7 @@
         "speaker": "logan",
         "who": "LOGAN",
         "color": "#ff2d7a",
-        "text": "So we’re free. The rock crimes? The Counsel's sentence? The time we dine and dashed at that Denny's in Dekalb? "
+        "text": "So we’re free. The rock crimes? The Council's sentence? The time we dined and dashed at that Denny's in Dekalb? "
       },
       {
         "bg": "venue",
@@ -520,7 +520,7 @@
         "speaker": "promoter",
         "who": "THE PROMOTER",
         "color": "#6cff9e",
-        "text": "Expunged. Forgiven. Erased! All seventeen counts. You are, officially, allowed to turn your half stack up without permission and be sincere unironically again. All of you!"
+        "text": "Expunged. Forgiven. Erased! All forty-plus counts. You are, officially, allowed to turn your half stack up without permission and be sincere unironically again. All of you!"
       },
       {
         "bg": "venue",
@@ -609,7 +609,7 @@
         "speaker": "logan",
         "shot": "panR",
         "who": "",
-        "text": "The van pulls itself up to the loading dock and honks loudly. No one is surprised that it already needs a belt change and has tape a cassette permanently and still stuck in the stereo. Hope y'all like R.E.O."
+        "text": "The van pulls itself up to the loading dock and honks loudly. No one is surprised that it already needs a belt change and has tape a cassette permanently stuck in the stereo. Hope y'all like R.E.O."
       },
       {
         "flag": "headlinerDown"
@@ -765,7 +765,9 @@
         "shot": "close",
         "who": "THE PROMOTER",
         "color": "#6cff9e",
-        "text": "A group of bloodsucking vampires who do some voo doo to overtake community airwaves? Shame. I've signed bands for less."
+        "text": "A group of bloodsucking vampires who do some voo doo to overtake community airwaves? Shame. I've signed bands for less.",
+        "dy": -0.16,
+        "zoom": 1.02
       },
       {
         "room": "booth"

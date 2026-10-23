@@ -335,7 +335,7 @@
         "backroom": {
           "name": "Mat's Hiding Spot",
           "bg": "cstreet",
-          "desc": "A door with no entrance, but someone's been leaving their recycling out every week. From beyond the door, you hear the whir of an aging cassette tape being constantly rewound over and over again. Has this been going on for years? A small slot has been fitted on the front of the door.",
+          "desc": "A door with no knob, but someone's been leaving their recycling out every week. From beyond the door, you hear the whir of an aging cassette tape being constantly rewound over and over again. Has this been going on for years? A small slot has been fitted on the front of the door.",
           "acts": [
             {
               "label": "Slide food through slot",

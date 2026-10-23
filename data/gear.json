@@ -179,7 +179,7 @@
       "cost": 0,
       "sell": 0,
       "tag": "support",
-      "desc": "She wrote a chord chart on the back of a ticket. It is somehow correct.",
+      "desc": "I think it used to be a waffle maker. Link it with a pedal to work like a Clean Boost. +45% damage.",
       "support": "amplify"
     },
     "deadair": {
@@ -187,7 +187,7 @@
       "cost": 0,
       "sell": 0,
       "tag": "weird",
-      "desc": "Eleven minutes of nothing, captured. Play it at somebody and they lose their place.",
+      "desc": "Eleven minutes of nothing, captured. Play it at somebody and they lose their place. Link this with another pedal to increase damage.",
       "mods": {
         "dmg": 1.14,
         "tempo": 0.88
