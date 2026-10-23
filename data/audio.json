@@ -2,7 +2,7 @@
   "_version": 1,
   "music": {
     "menu": {
-      "name": "Load-In",
+      "name": "Achilles' Heel Chiptune",
       "where": "Main menu",
       "file": "audio/Achilles Edit Chip 1.mp3",
       "bpm": 126.05,
@@ -32,7 +32,7 @@
       "lead": false
     },
     "cell": {
-      "name": "Holding Pattern",
+      "name": "Darkroom Debutant Chiptune",
       "where": "The holding cell",
       "file": "audio/Darkroom Chip 1.mp3",
       "bpm": 139.67,
@@ -62,7 +62,7 @@
       "lead": false
     },
     "map": {
-      "name": "Between Towns",
+      "name": "7 Months Chiptune",
       "where": "World map",
       "file": "audio/7 Months chip 1.mp3",
       "bpm": 99.38,
@@ -92,7 +92,7 @@
       "lead": true
     },
     "storage": {
-      "name": "Unit 114",
+      "name": "Fandango Chiptune (Drum and Bass Only)",
       "where": "Self-Storage",
       "file": "audio/Fandango DandBonly chip 1.mp3",
       "bpm": 156.61,
@@ -122,7 +122,7 @@
       "lead": false
     },
     "pawn": {
-      "name": "Open All Night",
+      "name": "Fandango Chiptune (Drum and Bass Only)",
       "where": "Hoffman’s Pawn",
       "file": "audio/Fandango DandBonly chip 1.mp3",
       "bpm": 156.61,
@@ -152,7 +152,7 @@
       "lead": false
     },
     "lake": {
-      "name": "No Wake Zone",
+      "name": "The Impressionist Chiptune",
       "where": "Lake of the Ozarks",
       "file": "audio/ImpressionistChip1.mp3",
       "bpm": 87.59,
@@ -182,7 +182,7 @@
       "lead": true
     },
     "cstreet": {
-      "name": "Four Blocks",
+      "name": "Oxygen Mask Chiptune",
       "where": "C-Street",
       "file": "audio/OxygenMaskChip1.mp3",
       "bpm": 105.47,
@@ -212,7 +212,7 @@
       "lead": true
     },
     "vfw": {
-      "name": "Five Dollars, All Ages",
+      "name": "Achilles' Heel Chiptune",
       "where": "The VFW Hall",
       "file": "audio/Achilles Edit Chip 1.mp3",
       "bpm": 126.05,
@@ -242,7 +242,7 @@
       "lead": true
     },
     "radio": {
-      "name": "Dead Air",
+      "name": "Darkroom Debutant Chiptune",
       "where": "Community Radio KFAT",
       "file": "audio/Darkroom Chip 1.mp3",
       "bpm": 139.67,
@@ -272,9 +272,9 @@
       "lead": true
     },
     "highway": {
-      "name": "Mile 82",
+      "name": "The Impressionist Chiptune",
       "where": "The Highway",
-      "file": "audio/ImpressionistChip1.wav",
+      "file": "audio/ImpressionistChip1.mp3",
       "bpm": 87.59,
       "root": 40,
       "scale": "dorian",
@@ -302,7 +302,7 @@
       "lead": true
     },
     "venue": {
-      "name": "Twenty Years",
+      "name": "Oxygen Mask Chiptune",
       "where": "The Venue",
       "file": "audio/OxygenMaskChip1.mp3",
       "bpm": 105.47,
@@ -332,7 +332,7 @@
       "lead": true
     },
     "fight": {
-      "name": "The Set",
+      "name": "Lights Out Chiptune",
       "where": "Most fights",
       "file": "audio/Lights Out Chip1.mp3",
       "bpm": 97.51,
@@ -362,7 +362,7 @@
       "lead": true
     },
     "boss": {
-      "name": "Bad Bill",
+      "name": "Achilles' Heel Chiptune",
       "where": "Boss fights",
       "file": "audio/Achilles Edit Chip 1.mp3",
       "bpm": 126.05,
@@ -392,7 +392,7 @@
       "lead": true
     },
     "finale": {
-      "name": "Closing Time",
+      "name": "Lights Out Chiptune",
       "where": "The finale",
       "file": "audio/Lights Out Chip1.mp3",
       "bpm": 97.51,
@@ -422,7 +422,7 @@
       "lead": true
     },
     "diner": {
-      "name": "Nite Owl",
+      "name": "Darkroom Debutant Chiptune",
       "where": "The Nite Owl",
       "file": "audio/Darkroom Chip 1.mp3",
       "bpm": 139.67,
@@ -452,7 +452,7 @@
       "lead": true
     },
     "barroom": {
-      "name": "Sign-Up Sheet",
+      "name": "Achilles' Heel Chiptune",
       "where": "Ozark Open Mic",
       "file": "audio/Achilles Edit Chip 1.mp3",
       "bpm": 126.05,
@@ -482,7 +482,7 @@
       "lead": true
     },
     "credits": {
-      "name": "Load-Out",
+      "name": "Achilles' Heel Chiptune",
       "where": "Credits",
       "file": "audio/Achilles Edit Chip 1.mp3",
       "bpm": 126.05,

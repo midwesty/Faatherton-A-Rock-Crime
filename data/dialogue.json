@@ -153,7 +153,7 @@
       "color": "#8a7f9c",
       "nodes": {
         "a": {
-          "text": "Twenty years of stickers, layered like sediment. Bands that lasted a weekend. Bands that lasted two. A layered history of bands who rocked. You see all they band's you've ever played with and every band you've met along this journey.",
+          "text": "Twenty years of stickers, layered like sediment. Bands that lasted a weekend. Bands that lasted two. A layered history of bands who came and rocked. You see every band's you've ever played with and every band you've met along the way. ",
           "opts": [
             {
               "label": "Leave it.",
@@ -349,7 +349,7 @@
           ]
         },
         "b": {
-          "text": "Then maybe you should help! He's somewhere in, on, or around the hunk of junk.",
+          "text": "Then maybe you should help! He's somewhere in, on, or around that hunk of junk.",
           "flag": "knowVan",
           "opts": [
             {
@@ -387,7 +387,7 @@
           ]
         },
         "e": {
-          "text": "Back lot then. And hey, don't rev the engine full throttle. Those gremlin wizards get real miffed over noise pollution. Kinds weird for a loud band like that, jamming all the time...",
+          "text": "Back lot then. And hey, don't rev the engine full throttle. Those gremlin wizards' minions get real miffed over noise pollution. Kinda weird for a such a loud band to take offense to that...",
           "opts": [
             {
               "label": "\"Noted.\"",
@@ -921,7 +921,7 @@
       "color": "#ffb43c",
       "nodes": {
         "a": {
-          "text": "Acts sign up at 7 for the show at 8. No we don't have a D.I., no we don't have bathrooms, and no there is no drink specials for the acts. What are you, a juggling group or something?",
+          "text": "Acts sign up at 7 for the show at 8. No we don't have a D.I., no we don't have bathrooms, and no there are no drink specials for the acts. What are you, a juggling group or something?",
           "opts": [
             {
               "label": "\"We're looking for someone. Bass player, hair too long, tells \"jokes\". Heard he's around here.\"",
